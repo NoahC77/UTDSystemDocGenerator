@@ -1,5 +1,11 @@
 .. Changelog
    -----------------------------------------------------------------------
+.. 1.3 - Template
+	-RST forked. Used to be Ganymede documentation, now used for generating all kinds of system docs
+.. 1.2.2 - Add AUG
+	-Add Acceptable User Guidelines section
+	-Add AUG pdf
+	-Add Acceptable User Guidelines hyperlink to pdf
 .. 1.2.1 - Compiled with Sphinx
    -Spell correction
    -Added css files to _static in sphinx
@@ -114,6 +120,11 @@ UTDallas HPC Cluster Users Guide
 ================================
 
 .. contents:: Table of Contents
+
+
+Acceptable User Guidelines
+//////////////////////////
+OIT CI Research Computing (OIT-CIRC) resources are deployed, configured, and operated to serve a large, diverse user community. It is important that all users are aware of and abide by OIT-CIRC Usage Policies. Failure to do so may result in suspension or cancellation of the project and associated allocation and closure of all associated logins. Illegal transgressions will be addressed through University of Texas at Dallas (UT-D) and/or legal authorities. See the :download:`Acceptable User Guidelines <./AUG.pdf>` for more information.
 
 Introduction
 /////////////
