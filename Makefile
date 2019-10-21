@@ -29,7 +29,7 @@ cd GanymedeDocs
 cd source
 
 # Changing the CBuppersysname var to it's value then go out generate the sphinx-build then change it back to the var
-sed -i "s/CBuppersysname/$(echo $SPuppersysName)/g" index.rst
+sed -i "s/SPuppersysname/$(echo $SPuppersysName)/g" index.rst
 
 cd ..
 
@@ -40,7 +40,7 @@ sphinx-build -b html ./source ./build
 cd source
 
 # Changing SPuppersysname's value in the title back to the variable
-sed -i "s/$(echo $SPuppersysName)/CBuppersysname/g" index.rst
+sed -i "s/$(echo $SPuppersysName)/SPuppersysname/g" index.rst
 
 # Moving back to build's parent directory
 cd ..
