@@ -1,4 +1,6 @@
-# This is MakeFile is used to generate the documents for a generic UTD HPC system. The template
+ptions:
+
+#This is MakeFile is used to generate the documents for a generic UTD HPC system. The template
 # is based off of Ganymede"s docs as of 9/23/2019. Firstly the we change directories to the
 # ./GanymedeDocs-master directory. Once in that directory we call the sphinx-build MakeFile
 # to generate the html. While much substituion is done by rst and sphinx in this step, sphinx doesn"t
@@ -29,7 +31,7 @@ sphinx-build -b html ./source ./build
 # Removing alabaster.css
 cd build
 cd _static
-rm alabaster.css
+# rm alabaster.css
 
 # Going back to where the main html is stored and replacing the variables (now in build)
 cd ..
@@ -44,6 +46,9 @@ sed -i "s/\[CNChapter5.5.1\]/$(echo $CNChapter551)/g" Ganymede-Training-v1.2.htm
 sed -i "s/\[CNChapter5.5.5\]/$(echo $CNChapter551)/g" Ganymede-Training-v1.2.html
 sed -i "s/\[CNChapter5.5.2\]/$(echo $CNChapter552)/g" Ganymede-Training-v1.2.html
 sed -i "s/\[CNChapter5.5.3\]/$(echo $CNChapter553)/g" Ganymede-Training-v1.2.html
+
+sed -i "s/\[CBuppersysname\]/$(echo $SPuppersysName)/g" index.html
+
 
 
 

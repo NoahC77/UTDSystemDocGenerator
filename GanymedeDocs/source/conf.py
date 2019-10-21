@@ -41,10 +41,10 @@ templates_path = ['_templates']
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = []
 
-def setup(app):
-    app.add_stylesheet('pygments.css')
-    app.add_stylesheet('nature.css')
-    app.add_stylesheet('utd.css')
+# def setup(app):
+#     app.add_stylesheet('pygments.css')
+#     app.add_stylesheet('nature.css')
+#     app.add_stylesheet('utd.css')
 
 
 
@@ -59,6 +59,17 @@ def setup(app):
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+html_css_files = [
+		'_static/alabaster.css',
+		'_static/basic.css',
+		'_static/custom.css',
+		'_static/nature.css',
+		'_static/pygments.css',
+		'_static/utd.css',
+]
+
+html_style = 'utd.css'
 
 html_theme_options = {
     
