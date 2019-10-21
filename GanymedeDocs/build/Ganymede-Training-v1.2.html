@@ -5,11 +5,14 @@
   <head>
     <meta charset="utf-8" />
     <title>UTDallas HPC Cluster Users Guide &#8212; UTDallas HPC Cluster Users Guide 1.2 documentation</title>
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/utd.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/nature.css" />
-    <link rel="stylesheet" type="text/css" href="_static/utd.css" />
+    <link rel="stylesheet" type="text/css" href="_static/_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="_static/_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/_static/nature.css" />
+    <link rel="stylesheet" type="text/css" href="_static/_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/_static/utd.css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
@@ -17,7 +20,7 @@
     <script type="text/javascript" src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Welcome to GanymedeDocs’s documentation!" href="index.html" />
+    <link rel="prev" title="Welcome to Europa’s documentation!" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -41,123 +44,128 @@
 <ul class="simple">
 <li><p><a class="reference internal" href="#utdallas-hpc-cluster-users-guide" id="id5">UTDallas HPC Cluster Users Guide</a></p>
 <ul>
-<li><p><a class="reference internal" href="#introduction" id="id6">Introduction</a></p></li>
-<li><p><a class="reference internal" href="#connecting-to-systemname" id="id7">1 - Connecting to GanymedeTest</a></p>
+<li><p><a class="reference internal" href="#acceptable-user-guidelines" id="id6">Acceptable User Guidelines</a></p></li>
+<li><p><a class="reference internal" href="#introduction" id="id7">Introduction</a></p></li>
+<li><p><a class="reference internal" href="#connecting-to-systemname" id="id8">1 - Connecting to Europa</a></p>
 <ul>
-<li><p><a class="reference internal" href="#microsoft-windows" id="id8">1.1 - Microsoft Windows</a></p>
+<li><p><a class="reference internal" href="#microsoft-windows" id="id9">1.1 - Microsoft Windows</a></p>
 <ul>
-<li><p><a class="reference internal" href="#putty" id="id9">1.1.1 - PuTTY:</a></p></li>
-<li><p><a class="reference internal" href="#bitvise" id="id10">1.1.2 - Bitvise:</a></p></li>
-<li><p><a class="reference internal" href="#mobaxterm" id="id11">1.1.3 - MobaXTerm:</a></p></li>
+<li><p><a class="reference internal" href="#putty" id="id10">1.1.1 - PuTTY:</a></p></li>
+<li><p><a class="reference internal" href="#bitvise" id="id11">1.1.2 - Bitvise:</a></p></li>
+<li><p><a class="reference internal" href="#mobaxterm" id="id12">1.1.3 - MobaXTerm:</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#for-mac-users" id="id12">1.2 - For Mac Users</a></p></li>
-<li><p><a class="reference internal" href="#for-linux-users" id="id13">1.3 - For Linux Users</a></p></li>
-<li><p><a class="reference internal" href="#mailing-list" id="id14">1.4 - Mailing List</a></p></li>
+<li><p><a class="reference internal" href="#for-mac-users" id="id13">1.2 - For Mac Users</a></p></li>
+<li><p><a class="reference internal" href="#for-linux-users" id="id14">1.3 - For Linux Users</a></p></li>
+<li><p><a class="reference internal" href="#mailing-list" id="id15">1.4 - Mailing List</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#moving-around-systemname" id="id15">2 - Moving around GanymedeTest</a></p>
+<li><p><a class="reference internal" href="#moving-around-systemname" id="id16">2 - Moving around Europa</a></p>
 <ul>
-<li><p><a class="reference internal" href="#linux-commands" id="id16">2.1 - Linux Commands</a></p>
+<li><p><a class="reference internal" href="#linux-commands" id="id17">2.1 - Linux Commands</a></p>
 <ul>
-<li><p><a class="reference internal" href="#moving-around" id="id17">2.1.1 - Moving Around</a></p></li>
-<li><p><a class="reference internal" href="#making-files-and-directories" id="id18">2.1.2 - Making Files and Directories</a></p></li>
-<li><p><a class="reference internal" href="#moving-files-and-directories" id="id19">2.1.3 - Moving Files and Directories</a></p></li>
-<li><p><a class="reference internal" href="#removing-files-and-directories" id="id20">2.1.4 - Removing Files and Directories</a></p></li>
-<li><p><a class="reference internal" href="#viewing-and-editing-files" id="id21">2.1.5 - Viewing and Editing Files</a></p></li>
-<li><p><a class="reference internal" href="#automating-commands" id="id22">2.1.6 - Automating Commands</a></p></li>
+<li><p><a class="reference internal" href="#moving-around" id="id18">2.1.1 - Moving Around</a></p></li>
+<li><p><a class="reference internal" href="#making-files-and-directories" id="id19">2.1.2 - Making Files and Directories</a></p></li>
+<li><p><a class="reference internal" href="#moving-files-and-directories" id="id20">2.1.3 - Moving Files and Directories</a></p></li>
+<li><p><a class="reference internal" href="#removing-files-and-directories" id="id21">2.1.4 - Removing Files and Directories</a></p></li>
+<li><p><a class="reference internal" href="#viewing-and-editing-files" id="id22">2.1.5 - Viewing and Editing Files</a></p></li>
+<li><p><a class="reference internal" href="#automating-commands" id="id23">2.1.6 - Automating Commands</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#systemname-specific-instructions-and-programs" id="id23">2.2 - GanymedeTest Specific Instructions and Programs</a></p>
+<li><p><a class="reference internal" href="#systemname-specific-instructions-and-programs" id="id24">2.2 - Europa Specific Instructions and Programs</a></p>
 <ul>
-<li><p><a class="reference internal" href="#environmental-variables" id="id24">2.2.1 - Environmental Variables</a></p></li>
-<li><p><a class="reference internal" href="#custom-programs" id="id25">2.2.2 - Custom Programs</a></p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#systemname-space-constraints" id="id26">3 - GanymedeTest Space Constraints</a></p>
-<ul>
-<li><p><a class="reference internal" href="#types-of-space" id="id27">3.1 - Types of Space</a></p></li>
-<li><p><a class="reference internal" href="#space-policies" id="id28">3.2 - Space Policies</a></p></li>
-<li><p><a class="reference internal" href="#checking-available-space" id="id29">3.3 - Checking Available Space</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#systemname-compilers-and-modules" id="id30">4 - GanymedeTest Compilers and Modules</a></p>
-<ul>
-<li><p><a class="reference internal" href="#modules" id="id31">4.1 - Modules</a></p>
-<ul>
-<li><p><a class="reference internal" href="#displaying-loaded-modules" id="id32">4.1.1 - Displaying Loaded Modules</a></p></li>
-<li><p><a class="reference internal" href="#listing-available-modules" id="id33">4.1.2 - Listing Available Modules</a></p></li>
-<li><p><a class="reference internal" href="#adding-modules-to-a-user-s-account" id="id34">4.1.3 - Adding Modules to a User’s Account</a></p></li>
-<li><p><a class="reference internal" href="#removing-modules-from-your-account" id="id35">4.1.4 - Removing Modules From Your Account</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#compilers" id="id36">4.2 - Compilers</a></p>
-<ul>
-<li><p><a class="reference internal" href="#list-available-compilers-and-mpi-stacks" id="id37">4.2.1 - List Available Compilers and MPI Stacks</a></p></li>
-<li><p><a class="reference internal" href="#changing-currently-loaded-compilers-or-mpi-stacks" id="id38">4.2.2 - Changing Currently Loaded Compilers or MPI Stacks</a></p></li>
+<li><p><a class="reference internal" href="#environmental-variables" id="id25">2.2.1 - Environmental Variables</a></p></li>
+<li><p><a class="reference internal" href="#custom-programs" id="id26">2.2.2 - Custom Programs</a></p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#running-jobs-on-systemname" id="id39">5 - Running Jobs on GanymedeTest</a></p>
+<li><p><a class="reference internal" href="#systemname-space-constraints" id="id27">3 - Europa Space Constraints</a></p>
 <ul>
-<li><p><a class="reference internal" href="#preparing-to-queue-a-task" id="id40">5.1 - Preparing to Queue a Task</a></p></li>
-<li><p><a class="reference internal" href="#queuing-a-task" id="id41">5.2 - Queuing a Task</a></p>
-<ul>
-<li><p><a class="reference internal" href="#serial-task" id="id42">5.2.1 - Serial Task</a></p></li>
-<li><p><a class="reference internal" href="#parallel-tasks" id="id43">5.2.2 - Parallel Tasks</a></p></li>
+<li><p><a class="reference internal" href="#types-of-space" id="id28">3.1 - Types of Space</a></p></li>
+<li><p><a class="reference internal" href="#space-policies" id="id29">3.2 - Space Policies</a></p></li>
+<li><p><a class="reference internal" href="#checking-available-space" id="id30">3.3 - Checking Available Space</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#checking-on-a-running-task" id="id44">5.3 - Checking on a Running Task</a></p></li>
-<li><p><a class="reference internal" href="#debugging-mpi-with-slurm-and-gdb" id="id45">5.4 Debugging MPI with Slurm and gdb</a></p></li>
-<li><p><a class="reference internal" href="#running-interactive-jobs" id="id46">5.5 - Running Interactive Jobs</a></p>
+<li><p><a class="reference internal" href="#systemname-compilers-and-modules" id="id31">4 - Europa Compilers and Modules</a></p>
 <ul>
-<li><p><a class="reference internal" href="#running-one-time-instance-jobs" id="id47">5.5.1 - Running One-Time Instance Jobs</a></p></li>
-<li><p><a class="reference internal" href="#running-persistent-jobs" id="id48">5.5.2 - Running Persistent Jobs</a></p></li>
-<li><p><a class="reference internal" href="#logging-into-a-particular-node" id="id49">5.5.3 - Logging into a Particular Node</a></p></li>
+<li><p><a class="reference internal" href="#modules" id="id32">4.1 - Modules</a></p>
+<ul>
+<li><p><a class="reference internal" href="#displaying-loaded-modules" id="id33">4.1.1 - Displaying Loaded Modules</a></p></li>
+<li><p><a class="reference internal" href="#listing-available-modules" id="id34">4.1.2 - Listing Available Modules</a></p></li>
+<li><p><a class="reference internal" href="#adding-modules-to-a-user-s-account" id="id35">4.1.3 - Adding Modules to a User’s Account</a></p></li>
+<li><p><a class="reference internal" href="#removing-modules-from-your-account" id="id36">4.1.4 - Removing Modules From Your Account</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#viewing-results" id="id50">5.6 - Viewing Results</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#application-specific-instructions" id="id51">6 - Application Specific Instructions</a></p>
+<li><p><a class="reference internal" href="#compilers" id="id37">4.2 - Compilers</a></p>
 <ul>
-<li><p><a class="reference internal" href="#matlab" id="id52">6.1 - Matlab</a></p>
-<ul>
-<li><p><a class="reference internal" href="#job-types" id="id53">6.1.1 - Job Types</a></p>
-<ul>
-<li><p><a class="reference internal" href="#serial-jobs" id="id54">6.1.1.1 - Serial Jobs</a></p></li>
-<li><p><a class="reference internal" href="#parallel-computing-toolkit-pct-jobs" id="id55">6.1.1.2 - Parallel Computing Toolkit (PCT) Jobs</a></p></li>
-<li><p><a class="reference internal" href="#distributed-compute-server-dcs-jobs" id="id56">6.1.1.3 - Distributed Compute Server (DCS) Jobs</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#matlab-job-modes" id="id57">6.1.2 - Matlab Job Modes</a></p>
-<ul>
-<li><p><a class="reference internal" href="#batch-jobs" id="id58">6.1.2.1 - Batch Jobs</a></p></li>
-<li><p><a class="reference internal" href="#interactive-matlab" id="id59">6.1.2.2 - Interactive Matlab</a></p></li>
+<li><p><a class="reference internal" href="#list-available-compilers-and-mpi-stacks" id="id38">4.2.1 - List Available Compilers and MPI Stacks</a></p></li>
+<li><p><a class="reference internal" href="#changing-currently-loaded-compilers-or-mpi-stacks" id="id39">4.2.2 - Changing Currently Loaded Compilers or MPI Stacks</a></p></li>
 </ul>
 </li>
 </ul>
 </li>
+<li><p><a class="reference internal" href="#running-jobs-on-systemname" id="id40">5 - Running Jobs on Europa</a></p>
+<ul>
+<li><p><a class="reference internal" href="#preparing-to-queue-a-task" id="id41">5.1 - Preparing to Queue a Task</a></p></li>
+<li><p><a class="reference internal" href="#queuing-a-task" id="id42">5.2 - Queuing a Task</a></p>
+<ul>
+<li><p><a class="reference internal" href="#serial-task" id="id43">5.2.1 - Serial Task</a></p></li>
+<li><p><a class="reference internal" href="#parallel-tasks" id="id44">5.2.2 - Parallel Tasks</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#appendices" id="id60">Appendices</a></p>
+<li><p><a class="reference internal" href="#checking-on-a-running-task" id="id45">5.3 - Checking on a Running Task</a></p></li>
+<li><p><a class="reference internal" href="#debugging-mpi-with-slurm-and-gdb" id="id46">5.4 Debugging MPI with Slurm and gdb</a></p></li>
+<li><p><a class="reference internal" href="#running-interactive-jobs" id="id47">5.5 - Running Interactive Jobs</a></p>
 <ul>
-<li><p><a class="reference internal" href="#appendix-a-linux-commands" id="id61">Appendix A - Linux Commands</a></p></li>
-<li><p><a class="reference internal" href="#appendix-b-slurm-commands" id="id62">Appendix B - Slurm Commands</a></p></li>
+<li><p><a class="reference internal" href="#running-one-time-instance-jobs" id="id48">5.5.1 - Running One-Time Instance Jobs</a></p></li>
+<li><p><a class="reference internal" href="#running-persistent-jobs" id="id49">5.5.2 - Running Persistent Jobs</a></p></li>
+<li><p><a class="reference internal" href="#logging-into-a-particular-node" id="id50">5.5.3 - Logging into a Particular Node</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#viewing-results" id="id51">5.6 - Viewing Results</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#application-specific-instructions" id="id52">6 - Application Specific Instructions</a></p>
+<ul>
+<li><p><a class="reference internal" href="#matlab" id="id53">6.1 - Matlab</a></p>
+<ul>
+<li><p><a class="reference internal" href="#job-types" id="id54">6.1.1 - Job Types</a></p>
+<ul>
+<li><p><a class="reference internal" href="#serial-jobs" id="id55">6.1.1.1 - Serial Jobs</a></p></li>
+<li><p><a class="reference internal" href="#parallel-computing-toolkit-pct-jobs" id="id56">6.1.1.2 - Parallel Computing Toolkit (PCT) Jobs</a></p></li>
+<li><p><a class="reference internal" href="#distributed-compute-server-dcs-jobs" id="id57">6.1.1.3 - Distributed Compute Server (DCS) Jobs</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#matlab-job-modes" id="id58">6.1.2 - Matlab Job Modes</a></p>
+<ul>
+<li><p><a class="reference internal" href="#batch-jobs" id="id59">6.1.2.1 - Batch Jobs</a></p></li>
+<li><p><a class="reference internal" href="#interactive-matlab" id="id60">6.1.2.2 - Interactive Matlab</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#appendices" id="id61">Appendices</a></p>
+<ul>
+<li><p><a class="reference internal" href="#appendix-a-linux-commands" id="id62">Appendix A - Linux Commands</a></p></li>
+<li><p><a class="reference internal" href="#appendix-b-slurm-commands" id="id63">Appendix B - Slurm Commands</a></p></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </div>
+<div class="section" id="acceptable-user-guidelines">
+<h2><a class="toc-backref" href="#id6">Acceptable User Guidelines</a><a class="headerlink" href="#acceptable-user-guidelines" title="Permalink to this headline">¶</a></h2>
+<p>OIT CI Research Computing (OIT-CIRC) resources are deployed, configured, and operated to serve a large, diverse user community. It is important that all users are aware of and abide by OIT-CIRC Usage Policies. Failure to do so may result in suspension or cancellation of the project and associated allocation and closure of all associated logins. Illegal transgressions will be addressed through University of Texas at Dallas (UT-D) and/or legal authorities. See the <a class="reference download internal" download="" href="_downloads/e8fb55cc7900ffba95fbc69391ff6936/AUG.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Acceptable</span> <span class="pre">User</span> <span class="pre">Guidelines</span></code></a> for more information.</p>
+</div>
 <div class="section" id="introduction">
-<h2><a class="toc-backref" href="#id6">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p><strong>What is GanymedeTest:</strong></p>
+<h2><a class="toc-backref" href="#id7">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p><strong>What is Europa:</strong></p>
 <blockquote>
-<div><p>GanymedeTest is a 4008 core cluster with 14 TB of memory based on Centos 7.5 / OpenHPC. It has a 10 Gigabit ethernet network and a QDR (40 Gbps) InfiniBand interconnect configured in a fat-tree topology. It has two distributed file systems, one for the home directories over the 10 Gigabit Ethernet network available via NFS and one for the work file system that is a 525 TB high-performance parallel file system (GPFS) accessible over the InfiniBand network. The GPFS file system uses Data Direct Networks (DDN) directly attached to InfiniBand storage for the back end hardware. Compute nodes are all dual processor with many core systems with a variety of Intel architectures including Sandy Bridge, Haswell and Broadwell. Additionally, several nodes in the system have Nvidia Quadro GPUs based on the Nvidia Kepler architecture.</p>
+<div><p>Europa is a 4008 core cluster with 14 TB of memory based on Centos 7.5 / OpenHPC. It has a 10 Gigabit ethernet network and a QDR (40 Gbps) InfiniBand interconnect configured in a fat-tree topology. It has two distributed file systems, one for the home directories over the 10 Gigabit Ethernet network available via NFS and one for the work file system that is a 525 TB high-performance parallel file system (GPFS) accessible over the InfiniBand network. The GPFS file system uses Data Direct Networks (DDN) directly attached to InfiniBand storage for the back end hardware. Compute nodes are all dual processor with many core systems with a variety of Intel architectures including Sandy Bridge, Haswell and Broadwell. Additionally, several nodes in the system have Nvidia Quadro GPUs based on the Nvidia Kepler architecture.</p>
 </div></blockquote>
 <p><strong>What is SLURM:</strong></p>
 <blockquote>
@@ -169,11 +177,11 @@
 </dl>
 </div>
 <div class="section" id="connecting-to-systemname">
-<h2><a class="toc-backref" href="#id7">1 - Connecting to GanymedeTest</a><a class="headerlink" href="#connecting-to-systemname" title="Permalink to this headline">¶</a></h2>
-<p>It is important to note that the individual nodes can only be accessed after the user has logged into the GanymedeTest node, and have a running job on compute nodes.</p>
+<h2><a class="toc-backref" href="#id8">1 - Connecting to Europa</a><a class="headerlink" href="#connecting-to-systemname" title="Permalink to this headline">¶</a></h2>
+<p>It is important to note that the individual nodes can only be accessed after the user has logged into the Europa node, and have a running job on compute nodes.</p>
 <div class="section" id="microsoft-windows">
-<h3><a class="toc-backref" href="#id8">1.1 - Microsoft Windows</a><a class="headerlink" href="#microsoft-windows" title="Permalink to this headline">¶</a></h3>
-<p>Once the user’s account has been created the user can access GanymedeTest using multiple Secure Shell (SSH) terminal software such as:</p>
+<h3><a class="toc-backref" href="#id9">1.1 - Microsoft Windows</a><a class="headerlink" href="#microsoft-windows" title="Permalink to this headline">¶</a></h3>
+<p>Once the user’s account has been created the user can access Europa using multiple Secure Shell (SSH) terminal software such as:</p>
 <ul class="simple">
 <li><p>PuTTY</p></li>
 <li><p>Bitwise</p></li>
@@ -181,47 +189,47 @@
 </ul>
 <p>This guide is written from the prospective that the user is connected to the UT Dallas network.  If the user is working outside of the UT Dallas network, follow the VPN guide at <a class="reference external" href="https://www.utdallas.edu/oit/vpn/">https://www.utdallas.edu/oit/vpn/</a> or to connect via the command line the SSH guide at <a class="reference external" href="https://www.utdallas.edu/oit/howto/create-an-ssh-connection/">https://www.utdallas.edu/oit/howto/create-an-ssh-connection/</a>  to connect to the campus securely.</p>
 <div class="section" id="putty">
-<h4><a class="toc-backref" href="#id9">1.1.1 - PuTTY:</a><a class="headerlink" href="#putty" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id10">1.1.1 - PuTTY:</a><a class="headerlink" href="#putty" title="Permalink to this headline">¶</a></h4>
 <p>PuTTY for the Microsoft Windows environment can be installed by going to www.putty.org. Download and install the latest version of Putty.</p>
 <img alt="./assets/1.1.1-1.png" src="./assets/1.1.1-1.png" />
-<p>Once running PuTTY, in the Host Name section type <strong>testGanymedeSysName.utdallas.edu</strong>.  Go down to the saved sessions section, name the server with a meaningful name (in this case GanymedeTest) and press save.  By doing this, time can be saved in the future by clicking your particular saved session and pressing load.  Once loaded into the host name, click on the open button.</p>
+<p>Once running PuTTY, in the Host Name section type <strong>europa.utdallas.edu</strong>.  Go down to the saved sessions section, name the server with a meaningful name (in this case Europa) and press save.  By doing this, time can be saved in the future by clicking your particular saved session and pressing load.  Once loaded into the host name, click on the open button.</p>
 <img alt="./assets/1.1.1-2.jpg" src="./assets/1.1.1-2.jpg" />
 <p>A Putty Security Alert window will open for the first time prompting you for a Yes/No/Cancel answer to the question of saving a new host key. Click the Yes button and now you will be asked for login-id and password. Your login-id is your UTD NetID and your password is the same as your UTD NetID password.</p>
 <img alt="./assets/1.1.1-3.png" src="./assets/1.1.1-3.png" />
 </div>
 <div class="section" id="bitvise">
-<h4><a class="toc-backref" href="#id10">1.1.2 - Bitvise:</a><a class="headerlink" href="#bitvise" title="Permalink to this headline">¶</a></h4>
-<p>Bitvise can be installed by going to <a class="reference external" href="https://www.bitvise.com/index">https://www.bitvise.com/index</a> and pressing the download tab across the top banner.  Press the first option, <strong>Download Bitvise SSH Client (Tunnelier)</strong> the press <strong>Bitvise SSH Client Installer</strong> and follow the instructions for to install the software. Similar to PuTTY, the Host Name section type <strong>testGanymedeSysName.utdallas.edu</strong>.  Go down to the “Save profile as” button, name the file with a meaningful name (in this case ganymedeTest.tlp) and press save.  By doing this, time can be saved in the future by clicking “Load profile”.  Once loaded into the host name, click on the Login button.</p>
+<h4><a class="toc-backref" href="#id11">1.1.2 - Bitvise:</a><a class="headerlink" href="#bitvise" title="Permalink to this headline">¶</a></h4>
+<p>Bitvise can be installed by going to <a class="reference external" href="https://www.bitvise.com/index">https://www.bitvise.com/index</a> and pressing the download tab across the top banner.  Press the first option, <strong>Download Bitvise SSH Client (Tunnelier)</strong> the press <strong>Bitvise SSH Client Installer</strong> and follow the instructions for to install the software. Similar to PuTTY, the Host Name section type <strong>europa.utdallas.edu</strong>.  Go down to the “Save profile as” button, name the file with a meaningful name (in this case europa.tlp) and press save.  By doing this, time can be saved in the future by clicking “Load profile”.  Once loaded into the host name, click on the Login button.</p>
 <img alt="./assets/1.1.2.png" src="./assets/1.1.2.png" />
 </div>
 <div class="section" id="mobaxterm">
-<h4><a class="toc-backref" href="#id11">1.1.3 - MobaXTerm:</a><a class="headerlink" href="#mobaxterm" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id12">1.1.3 - MobaXTerm:</a><a class="headerlink" href="#mobaxterm" title="Permalink to this headline">¶</a></h4>
 <p>MobaXterm can be installed from <a class="reference external" href="http://mobaxterm.mobatek.net/download.html">http://mobaxterm.mobatek.net/download.html</a>. The program can be demo-ed from site <a class="reference external" href="http://mobaxterm.mobatek.net/demo.html">http://mobaxterm.mobatek.net/demo.html</a>.</p>
-<p>To login, type <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">&lt;NetID&gt;&#64;testGanymedeSysName.utdallas.edu</span></code>. Once logged in, all of the available Linux files and directory information will be displayed on the left white pane. Within the MobaXterm interface, one can securely copy files between Linux and Windows desktops.  To open a file, right click on it and choosing option “open with default text editor”. Changes can then be made to a file and the changes can then be saved.</p>
+<p>To login, type <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">&lt;NetID&gt;&#64;europa.utdallas.edu</span></code>. Once logged in, all of the available Linux files and directory information will be displayed on the left white pane. Within the MobaXterm interface, one can securely copy files between Linux and Windows desktops.  To open a file, right click on it and choosing option “open with default text editor”. Changes can then be made to a file and the changes can then be saved.</p>
 <img alt="./assets/1.1.3.png" src="./assets/1.1.3.png" />
 </div>
 </div>
 <div class="section" id="for-mac-users">
-<h3><a class="toc-backref" href="#id12">1.2 - For Mac Users</a><a class="headerlink" href="#for-mac-users" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id13">1.2 - For Mac Users</a><a class="headerlink" href="#for-mac-users" title="Permalink to this headline">¶</a></h3>
 <p>For MAC users MobaXterm is not available.  Install XQuartz from <a class="reference external" href="https://www.xquartz.org">https://www.xquartz.org</a>. Additionally, the user could use terminal application as an SSH terminal client.</p>
 </div>
 <div class="section" id="for-linux-users">
-<h3><a class="toc-backref" href="#id13">1.3 - For Linux Users</a><a class="headerlink" href="#for-linux-users" title="Permalink to this headline">¶</a></h3>
-<p>For Linux users, the ssh command is built into the operating system.  To connect to the GanymedeTest server, open the terminal agent and type: <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">&lt;NET-ID&gt;&#64;testGanymedeSysName.utdallas.edu.</span></code></p>
+<h3><a class="toc-backref" href="#id14">1.3 - For Linux Users</a><a class="headerlink" href="#for-linux-users" title="Permalink to this headline">¶</a></h3>
+<p>For Linux users, the ssh command is built into the operating system.  To connect to the Europa server, open the terminal agent and type: <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">&lt;NET-ID&gt;&#64;europa.utdallas.edu.</span></code></p>
 </div>
 <div class="section" id="mailing-list">
-<h3><a class="toc-backref" href="#id14">1.4 - Mailing List</a><a class="headerlink" href="#mailing-list" title="Permalink to this headline">¶</a></h3>
-<p>Another way for users to connect to GanymedeTest is to connect with other users.  The admin team has set up a mailing list that can allow users to interact with each other and find solutions through searchable archives.  Because the admins are members of the group, timely answers and solutions pass through the group.  The users should think of this as an additional form of documentation to reference.  This list can be accessed at <a class="reference external" href="mailto:ganymedeusers&#37;&#52;&#48;lists&#46;utdallas&#46;edu">ganymedeusers<span>&#64;</span>lists<span>&#46;</span>utdallas<span>&#46;</span>edu</a>.</p>
+<h3><a class="toc-backref" href="#id15">1.4 - Mailing List</a><a class="headerlink" href="#mailing-list" title="Permalink to this headline">¶</a></h3>
+<p>Another way for users to connect to Europa is to connect with other users.  The admin team has set up a mailing list that can allow users to interact with each other and find solutions through searchable archives.  Because the admins are members of the group, timely answers and solutions pass through the group.  The users should think of this as an additional form of documentation to reference.  This list can be accessed at <a class="reference external" href="mailto:europausers&#37;&#52;&#48;lists&#46;utdallas&#46;edu">europausers<span>&#64;</span>lists<span>&#46;</span>utdallas<span>&#46;</span>edu</a>.</p>
 </div>
 </div>
 <div class="section" id="moving-around-systemname">
-<h2><a class="toc-backref" href="#id15">2 - Moving around GanymedeTest</a><a class="headerlink" href="#moving-around-systemname" title="Permalink to this headline">¶</a></h2>
-<p>Now that the user is logged in, lets navigate around GanymedeTest using Linux shell commands:</p>
+<h2><a class="toc-backref" href="#id16">2 - Moving around Europa</a><a class="headerlink" href="#moving-around-systemname" title="Permalink to this headline">¶</a></h2>
+<p>Now that the user is logged in, lets navigate around Europa using Linux shell commands:</p>
 <div class="section" id="linux-commands">
-<h3><a class="toc-backref" href="#id16">2.1 - Linux Commands</a><a class="headerlink" href="#linux-commands" title="Permalink to this headline">¶</a></h3>
-<p>A basic knowledge of Linux commands is required to effectively use the GanymedeTest system. If you have basic knowledge of Linux Commands and Shell Scripting, feel free to skip this section. Note that a condensed version of useful Linux Commands can be found in Appendix A.</p>
+<h3><a class="toc-backref" href="#id17">2.1 - Linux Commands</a><a class="headerlink" href="#linux-commands" title="Permalink to this headline">¶</a></h3>
+<p>A basic knowledge of Linux commands is required to effectively use the Europa system. If you have basic knowledge of Linux Commands and Shell Scripting, feel free to skip this section. Note that a condensed version of useful Linux Commands can be found in Appendix A.</p>
 <div class="section" id="moving-around">
-<h4><a class="toc-backref" href="#id17">2.1.1 - Moving Around</a><a class="headerlink" href="#moving-around" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id18">2.1.1 - Moving Around</a><a class="headerlink" href="#moving-around" title="Permalink to this headline">¶</a></h4>
 <p>First, it is important to know where one is in the system in order to move around to desired directories (sometimes called folders).  The first function prints the working (current) directory.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">pubssh</span><span class="p">:</span><span class="o">~/</span><span class="n">home</span><span class="p">}</span> <span class="n">pwd</span>
 <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="mi">013</span><span class="o">/</span><span class="n">j</span><span class="o">/</span><span class="n">jx</span><span class="o">/</span><span class="n">jxw150830</span><span class="o">/</span><span class="n">home</span>
@@ -268,7 +276,7 @@
 </div>
 </div>
 <div class="section" id="making-files-and-directories">
-<h4><a class="toc-backref" href="#id18">2.1.2 - Making Files and Directories</a><a class="headerlink" href="#making-files-and-directories" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id19">2.1.2 - Making Files and Directories</a><a class="headerlink" href="#making-files-and-directories" title="Permalink to this headline">¶</a></h4>
 <p>Now that the user can move around, next is to make files and directories.  First, to create a new file in <code class="docutils literal notranslate"><span class="pre">/home/Documents/Research</span></code>, we will move into <code class="docutils literal notranslate"><span class="pre">/Research</span></code> and create the file using the <code class="docutils literal notranslate"><span class="pre">touch</span></code> command.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">pubssh</span><span class="p">:</span><span class="o">~/</span><span class="n">home</span><span class="o">/</span><span class="n">Documents</span><span class="o">/</span><span class="n">Research</span><span class="p">}</span> <span class="n">touch</span> <span class="n">project</span><span class="o">-</span><span class="n">day1</span>
 <span class="p">{</span><span class="n">pubssh</span><span class="p">:</span><span class="o">~/</span><span class="n">home</span><span class="o">/</span><span class="n">Documents</span><span class="o">/</span><span class="n">Research</span><span class="p">}</span> <span class="n">ls</span>
@@ -297,7 +305,7 @@
 <p>Note that the “\ ” allows the user to define spaces in naming both files and directories.</p>
 </div>
 <div class="section" id="moving-files-and-directories">
-<h4><a class="toc-backref" href="#id19">2.1.3 - Moving Files and Directories</a><a class="headerlink" href="#moving-files-and-directories" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id20">2.1.3 - Moving Files and Directories</a><a class="headerlink" href="#moving-files-and-directories" title="Permalink to this headline">¶</a></h4>
 <p>Now that the user has created files and directories, it may be valuable to move them using the command <code class="docutils literal notranslate"><span class="pre">mv</span></code>.  To begin, we will move the data files and project files into the appropriate directories.:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">pubssh</span><span class="p">:</span><span class="o">~/</span><span class="n">home</span><span class="o">/</span><span class="n">Documents</span><span class="o">/</span><span class="n">Research</span><span class="p">}</span> <span class="n">mv</span> <span class="n">datafile</span><span class="o">.</span><span class="n">dat</span> <span class="n">datafiles</span><span class="o">/</span>
 <span class="p">{</span><span class="n">pubssh</span><span class="p">:</span><span class="o">~/</span><span class="n">home</span><span class="o">/</span><span class="n">Documents</span><span class="o">/</span><span class="n">Research</span><span class="p">}</span> <span class="n">mv</span> <span class="o">-</span><span class="n">t</span> <span class="n">project</span>\ <span class="n">files</span><span class="o">/</span> <span class="n">project</span><span class="o">-</span><span class="n">day1</span> <span class="n">project</span><span class="o">-</span><span class="n">day2</span> <span class="n">project</span><span class="o">-</span><span class="n">day3</span>
@@ -348,17 +356,17 @@
 <span class="o">-</span><span class="n">rw</span><span class="o">-------+</span> <span class="mi">1</span> <span class="n">jxw150830</span> <span class="n">ee</span> <span class="mi">0</span> <span class="n">May</span> <span class="mi">21</span> <span class="mi">11</span><span class="p">:</span><span class="mi">48</span> <span class="n">project</span><span class="o">-</span><span class="n">day3</span><span class="o">.</span><span class="n">prj</span>
 </pre></div>
 </div>
-<p>To move files to or from the GanymedeTest server, the use of secure copying is used, <code class="docutils literal notranslate"><span class="pre">scp</span></code>.  The method below will detail how to move a file from the GanymedeTest server to the user’s computer via the command line, but the process would be similar for data moving the other direction.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">pubssh</span><span class="p">:</span><span class="o">~</span><span class="p">}</span> <span class="n">scp</span> <span class="o">./</span><span class="n">gany</span><span class="o">.</span><span class="n">sh</span> <span class="n">jxw150830</span><span class="nd">@ganymede</span><span class="o">.</span><span class="n">utdallas</span><span class="o">.</span><span class="n">edu</span><span class="p">:</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">jxw150830</span><span class="o">/</span>
-<span class="n">jxw150830</span><span class="nd">@ganymede</span><span class="o">.</span><span class="n">utdallas</span><span class="o">.</span><span class="n">edu</span><span class="s1">&#39;s password:</span>
-<span class="n">gany</span><span class="o">.</span><span class="n">sh</span>                                                    <span class="mi">100</span><span class="o">%</span>   <span class="mi">51</span>     <span class="mf">0.1</span><span class="n">KB</span><span class="o">/</span><span class="n">s</span>   <span class="mi">00</span><span class="p">:</span><span class="mi">00</span>
+<p>To move files to or from the Europa server, the use of secure copying is used, <code class="docutils literal notranslate"><span class="pre">scp</span></code>.  The method below will detail how to move a file from the Europa server to the user’s computer via the command line, but the process would be similar for data moving the other direction.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">pubssh</span><span class="p">:</span><span class="o">~</span><span class="p">}</span> <span class="n">scp</span> <span class="o">./</span><span class="n">euro</span><span class="o">.</span><span class="n">sh</span> <span class="n">jxw150830</span><span class="nd">@europa</span><span class="o">.</span><span class="n">utdallas</span><span class="o">.</span><span class="n">edu</span><span class="p">:</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">jxw150830</span><span class="o">/</span>
+<span class="n">jxw150830</span><span class="nd">@europa</span><span class="o">.</span><span class="n">utdallas</span><span class="o">.</span><span class="n">edu</span><span class="s1">&#39;s password:</span>
+<span class="n">euro</span><span class="o">.</span><span class="n">sh</span>                                                    <span class="mi">100</span><span class="o">%</span>   <span class="mi">51</span>     <span class="mf">0.1</span><span class="n">KB</span><span class="o">/</span><span class="n">s</span>   <span class="mi">00</span><span class="p">:</span><span class="mi">00</span>
 <span class="p">{</span><span class="n">pubssh</span><span class="p">:</span><span class="o">~</span><span class="p">}</span>
 </pre></div>
 </div>
-<p>The above example is moving information from a user’s home folder on the server to the GanymedeTest home area.  Note that this process could go backwards as well.</p>
+<p>The above example is moving information from a user’s home folder on the server to the Europa home area.  Note that this process could go backwards as well.</p>
 <p>Another tool that is useful for keeping items up to date through remote synchronization is <code class="docutils literal notranslate"><span class="pre">rsync</span></code>.  The <code class="docutils literal notranslate"><span class="pre">rsync</span></code> command works to keep items up to date across multiple devices by updating information that has changed.  This method of keeping files up to date is more time efficient for large data sets where only minor changes are made; that is, <em>the changes, instead of the data set</em>, will be moved.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">pubssh</span><span class="p">:</span><span class="o">~</span><span class="p">}</span> <span class="n">rsync</span> <span class="o">-</span><span class="n">avtr</span> <span class="o">./</span><span class="n">dataset</span><span class="o">/</span> <span class="n">jxw150830</span><span class="nd">@ganymede</span><span class="o">.</span><span class="n">utdallas</span><span class="o">.</span><span class="n">edu</span><span class="p">:</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">jxw150830</span><span class="o">/</span>
-<span class="n">jxw150830</span><span class="nd">@ganymede</span><span class="o">.</span><span class="n">utdallas</span><span class="o">.</span><span class="n">edu</span><span class="s1">&#39;s password:</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">pubssh</span><span class="p">:</span><span class="o">~</span><span class="p">}</span> <span class="n">rsync</span> <span class="o">-</span><span class="n">avtr</span> <span class="o">./</span><span class="n">dataset</span><span class="o">/</span> <span class="n">jxw150830</span><span class="nd">@europa</span><span class="o">.</span><span class="n">utdallas</span><span class="o">.</span><span class="n">edu</span><span class="p">:</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">jxw150830</span><span class="o">/</span>
+<span class="n">jxw150830</span><span class="nd">@europa</span><span class="o">.</span><span class="n">utdallas</span><span class="o">.</span><span class="n">edu</span><span class="s1">&#39;s password:</span>
 <span class="n">sending</span> <span class="n">incremental</span> <span class="n">file</span> <span class="nb">list</span>
 <span class="o">./</span>
 <span class="n">data1</span><span class="o">.</span><span class="n">dat</span>
@@ -370,9 +378,9 @@
 <span class="p">{</span><span class="n">pubssh</span><span class="p">:</span><span class="o">~</span><span class="p">}</span>
 </pre></div>
 </div>
-<p>In the above example, each item is moved to GanymedeTest.  If the user does not want to see all of the files transferred, the user can remove <code class="docutils literal notranslate"><span class="pre">-v</span></code>.  Similarly, the <code class="docutils literal notranslate"><span class="pre">-r</span></code> is the recursive command which will go down the folder structure to extract everything.  The <code class="docutils literal notranslate"><span class="pre">-at</span></code> should remain for file continuity.  If the user were to run the same command again, notice that a small amount of data was sent to check for updates, but the full files were not resent.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">pubssh</span><span class="p">:</span><span class="o">~</span><span class="p">}</span> <span class="n">rsync</span> <span class="o">-</span><span class="n">avtr</span> <span class="o">./</span><span class="n">dataset</span><span class="o">/</span> <span class="n">jxw150830</span><span class="nd">@ganymede</span><span class="o">.</span><span class="n">utdallas</span><span class="o">.</span><span class="n">edu</span><span class="p">:</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">jxw150830</span><span class="o">/</span>
-<span class="n">jxw150830</span><span class="nd">@ganymede</span><span class="o">.</span><span class="n">utdallas</span><span class="o">.</span><span class="n">edu</span><span class="s1">&#39;s password:</span>
+<p>In the above example, each item is moved to Europa.  If the user does not want to see all of the files transferred, the user can remove <code class="docutils literal notranslate"><span class="pre">-v</span></code>.  Similarly, the <code class="docutils literal notranslate"><span class="pre">-r</span></code> is the recursive command which will go down the folder structure to extract everything.  The <code class="docutils literal notranslate"><span class="pre">-at</span></code> should remain for file continuity.  If the user were to run the same command again, notice that a small amount of data was sent to check for updates, but the full files were not resent.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">pubssh</span><span class="p">:</span><span class="o">~</span><span class="p">}</span> <span class="n">rsync</span> <span class="o">-</span><span class="n">avtr</span> <span class="o">./</span><span class="n">dataset</span><span class="o">/</span> <span class="n">jxw150830</span><span class="nd">@europa</span><span class="o">.</span><span class="n">utdallas</span><span class="o">.</span><span class="n">edu</span><span class="p">:</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">jxw150830</span><span class="o">/</span>
+<span class="n">jxw150830</span><span class="nd">@europa</span><span class="o">.</span><span class="n">utdallas</span><span class="o">.</span><span class="n">edu</span><span class="s1">&#39;s password:</span>
 <span class="n">sending</span> <span class="n">incremental</span> <span class="n">file</span> <span class="nb">list</span>
 
 <span class="n">sent</span> <span class="mi">83</span> <span class="nb">bytes</span>  <span class="n">received</span> <span class="mi">12</span> <span class="nb">bytes</span>  <span class="mf">12.67</span> <span class="nb">bytes</span><span class="o">/</span><span class="n">sec</span>
@@ -382,7 +390,7 @@
 </div>
 </div>
 <div class="section" id="removing-files-and-directories">
-<h4><a class="toc-backref" href="#id20">2.1.4 - Removing Files and Directories</a><a class="headerlink" href="#removing-files-and-directories" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id21">2.1.4 - Removing Files and Directories</a><a class="headerlink" href="#removing-files-and-directories" title="Permalink to this headline">¶</a></h4>
 <p>Often times files or directories are made in error or are no longer needed.  To remove an item, you use the remove tool <code class="docutils literal notranslate"><span class="pre">rm</span></code>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{pubssh:~/home/Documents/Research/datafiles} ls
 datafile.dat  project files
@@ -402,7 +410,7 @@ bigdata.dat
 </div>
 </div>
 <div class="section" id="viewing-and-editing-files">
-<h4><a class="toc-backref" href="#id21">2.1.5 - Viewing and Editing Files</a><a class="headerlink" href="#viewing-and-editing-files" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id22">2.1.5 - Viewing and Editing Files</a><a class="headerlink" href="#viewing-and-editing-files" title="Permalink to this headline">¶</a></h4>
 <p>Now that the file and directory structure are in the right place, the user has multiple options for viewing and editing.
 For viewing short files, simply using the <code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">&lt;filename&gt;</span></code> command allows the user to see the file printed out in the command line.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">pubssh</span><span class="p">:</span><span class="o">~/</span><span class="n">home</span><span class="o">/</span><span class="n">Documents</span><span class="p">}</span> <span class="n">cat</span> <span class="n">Sample</span><span class="o">.</span><span class="n">txt</span>
@@ -416,7 +424,7 @@ For viewing short files, simply using the <code class="docutils literal notransl
 <p>For editing files there are multiple options.  The programs vim (<a class="reference external" href="https://www.vim.org/">https://www.vim.org/</a>) and nano (<a class="reference external" href="https://www.nano-editor.org/">https://www.nano-editor.org/</a>) are popular projects that come fairly standard on most machines.  Beyond those, there are additional well documented programs out there that allow for the user to edit in the command line but explaining them is out of the scope of this document.</p>
 </div>
 <div class="section" id="automating-commands">
-<h4><a class="toc-backref" href="#id22">2.1.6 - Automating Commands</a><a class="headerlink" href="#automating-commands" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id23">2.1.6 - Automating Commands</a><a class="headerlink" href="#automating-commands" title="Permalink to this headline">¶</a></h4>
 <p>Many of the commands that have been executed, if needed to be executed over and over, would be very time consuming.  To allow for this sort of automation, including the option of user input, there is the shell script.   The bash shell script allows for the user to write programs that consist of other programs or commands that are build into the Linux environment.  The concept of this will be familiar to those users that are familiar with Matlab programming.</p>
 <p>Every shell script must have the file extension .sh and start with and have nothing else but the line: <code class="docutils literal notranslate"><span class="pre">#!</span> <span class="pre">/bin/bash</span></code> This is followed by the commands in the script.  The command <code class="docutils literal notranslate"><span class="pre">echo</span></code> is useful in scripts for printing out to the command line information about what is going on.  To run the script, run <code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">&lt;script</span> <span class="pre">name&gt;</span></code>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">pubssh</span><span class="p">:</span><span class="o">~/</span><span class="n">home</span><span class="o">/</span><span class="n">Documents</span><span class="p">}</span> <span class="n">cat</span> <span class="n">hw</span><span class="o">.</span><span class="n">sh</span>
@@ -435,8 +443,8 @@ To put in input to the command line, follow this example.</p>
 <span class="c1"># from the user input</span>
 <span class="n">echo</span> <span class="s2">&quot;Your name is: $1&quot;</span>
 
-<span class="p">{</span><span class="n">pubssh</span><span class="p">:</span><span class="o">~/</span><span class="n">home</span><span class="o">/</span><span class="n">Documents</span><span class="p">}</span> <span class="n">bash</span> <span class="n">nameupfront</span><span class="o">.</span><span class="n">sh</span> <span class="n">testGanymedeSysName</span>
-<span class="n">Your</span> <span class="n">name</span> <span class="ow">is</span><span class="p">:</span> <span class="n">testGanymedeSysName</span>
+<span class="p">{</span><span class="n">pubssh</span><span class="p">:</span><span class="o">~/</span><span class="n">home</span><span class="o">/</span><span class="n">Documents</span><span class="p">}</span> <span class="n">bash</span> <span class="n">nameupfront</span><span class="o">.</span><span class="n">sh</span> <span class="n">europa</span>
+<span class="n">Your</span> <span class="n">name</span> <span class="ow">is</span><span class="p">:</span> <span class="n">europa</span>
 </pre></div>
 </div>
 <p>To get the input during runtime, the user can read in the value of variables. These variables can be named anything the user would like, and are reached with the <code class="docutils literal notranslate"><span class="pre">$&lt;varName&gt;</span></code> portion of the command.</p>
@@ -449,21 +457,21 @@ echo &quot;Hello $name&quot;
 
 {pubssh:~/home/Documents} bash namelive.sh
 What is your name? :
-testGanymedeSysName
-Hello testGanymedeSysName
+europa
+Hello europa
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="systemname-specific-instructions-and-programs">
-<h3><a class="toc-backref" href="#id23">2.2 - GanymedeTest Specific Instructions and Programs</a><a class="headerlink" href="#systemname-specific-instructions-and-programs" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id24">2.2 - Europa Specific Instructions and Programs</a><a class="headerlink" href="#systemname-specific-instructions-and-programs" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="environmental-variables">
-<h4><a class="toc-backref" href="#id24">2.2.1 - Environmental Variables</a><a class="headerlink" href="#environmental-variables" title="Permalink to this headline">¶</a></h4>
-<p>In GanymedeTest, there are specific environmental varables that are designed to save the user time.  The following table shows the variables with their respective equivalent values.</p>
+<h4><a class="toc-backref" href="#id25">2.2.1 - Environmental Variables</a><a class="headerlink" href="#environmental-variables" title="Permalink to this headline">¶</a></h4>
+<p>In Europa, there are specific environmental varables that are designed to save the user time.  The following table shows the variables with their respective equivalent values.</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 34%" />
-<col style="width: 66%" />
+<col style="width: 36%" />
+<col style="width: 64%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Variable</p></th>
@@ -478,32 +486,32 @@ Hello testGanymedeSysName
 <td><p><code class="docutils literal notranslate"><span class="pre">/home/$USER</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">$SCRATCH</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">/petastore/testGanymedeSysName/scratch/$USER</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">/petastore/europa/scratch/$USER</span></code></p></td>
 </tr>
 </tbody>
 </table>
 <p>These environmental variables are save the user time in typing locations.  Additionally, these can be used by the user in any shell script or command that is input.</p>
 </div>
 <div class="section" id="custom-programs">
-<h4><a class="toc-backref" href="#id25">2.2.2 - Custom Programs</a><a class="headerlink" href="#custom-programs" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id26">2.2.2 - Custom Programs</a><a class="headerlink" href="#custom-programs" title="Permalink to this headline">¶</a></h4>
 <p>To save time, a command has been created to directly change the user’s directory to the Scratch directory.  This command to change to scratch is <code class="docutils literal notranslate"><span class="pre">cds</span></code>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830@testGanymedeSysName ~]$ pwd
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830@europa ~]$ pwd
 /home/jxw150830
-[jxw150830@testGanymedeSysName ~]$ cds
-[jxw150830@testGanymedeSysNamejxw150830]$ pwd
-/petastore/ganymede/scratch/jxw150830
-[jxw150830@testGanymedeSysNamejxw150830]$
+[jxw150830@europa ~]$ cds
+[jxw150830@europa jxw150830]$ pwd
+/petastore/europa/scratch/jxw150830
+[jxw150830@europajxw150830]$
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="systemname-space-constraints">
-<h2><a class="toc-backref" href="#id26">3 - GanymedeTest Space Constraints</a><a class="headerlink" href="#systemname-space-constraints" title="Permalink to this headline">¶</a></h2>
-<p>One of the important considerations in High Performance Computing is the amount of space that is allocated to each user.  The GanymedeTest cluster is space allocated to provide the maximum amount of space while still providing desirable attributes to the cluster user.</p>
+<h2><a class="toc-backref" href="#id27">3 - Europa Space Constraints</a><a class="headerlink" href="#systemname-space-constraints" title="Permalink to this headline">¶</a></h2>
+<p>One of the important considerations in High Performance Computing is the amount of space that is allocated to each user.  The Europa cluster is space allocated to provide the maximum amount of space while still providing desirable attributes to the cluster user.</p>
 <div class="section" id="types-of-space">
-<h3><a class="toc-backref" href="#id27">3.1 - Types of Space</a><a class="headerlink" href="#types-of-space" title="Permalink to this headline">¶</a></h3>
-<p>There are currently 2 types of space available to the user, home space and scratch space. Home space is located in the <code class="docutils literal notranslate"><span class="pre">/home/$USER</span></code> folder and the scratch folder is located in the <code class="docutils literal notranslate"><span class="pre">/petastore/testGanymedeSysName/scratch/$USER</span></code> folder. For convenience, the scratch folder is symbolically linked inside the user’s home folder in <code class="docutils literal notranslate"><span class="pre">/home/$USER/scratch</span></code> The following table compares the attributes of the two available spaces.</p>
+<h3><a class="toc-backref" href="#id28">3.1 - Types of Space</a><a class="headerlink" href="#types-of-space" title="Permalink to this headline">¶</a></h3>
+<p>There are currently 2 types of space available to the user, home space and scratch space. Home space is located in the <code class="docutils literal notranslate"><span class="pre">/home/$USER</span></code> folder and the scratch folder is located in the <code class="docutils literal notranslate"><span class="pre">/petastore/europa/scratch/$USER</span></code> folder. For convenience, the scratch folder is symbolically linked inside the user’s home folder in <code class="docutils literal notranslate"><span class="pre">/home/$USER/scratch</span></code> The following table compares the attributes of the two available spaces.</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 22%" />
@@ -534,7 +542,7 @@ or trying ideas</p></td>
 </table>
 </div>
 <div class="section" id="space-policies">
-<h3><a class="toc-backref" href="#id28">3.2 - Space Policies</a><a class="headerlink" href="#space-policies" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id29">3.2 - Space Policies</a><a class="headerlink" href="#space-policies" title="Permalink to this headline">¶</a></h3>
 <p>In addition to the attributes listed above, there are space considerations that need to be addressed due to limited storage.  Each of the users must stay within a certain quota. Should the quota be exceeded, the user will be warned by the following statement : <code class="docutils literal notranslate"><span class="pre">dm-0:</span> <span class="pre">warning,</span> <span class="pre">user</span> <span class="pre">block</span> <span class="pre">quota</span> <span class="pre">exceeded.</span></code>  The user will not loose data, but instead is given a short period of time to comply to the block quota.  If the user runs a process that exceeds the Hard Limit, then the process will be stopped and the user will get the following error : <code class="docutils literal notranslate"><span class="pre">dm-0:</span> <span class="pre">write</span> <span class="pre">failed,</span> <span class="pre">user</span> <span class="pre">block</span> <span class="pre">limit</span> <span class="pre">reached.</span></code>  The following table compares the different space limitations that exist on the particular</p>
 <table class="docutils align-default">
 <colgroup>
@@ -565,7 +573,7 @@ or trying ideas</p></td>
 </table>
 <dl class="footnote brackets">
 <dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">*</a></span></dt>
-<dd><p>The scratch space is located in <code class="docutils literal notranslate"><span class="pre">/petastore/testGanymedeSysName/scratch/$USER</span></code> but does not count against the storage in the home space, even with the symbolic link.</p>
+<dd><p>The scratch space is located in <code class="docutils literal notranslate"><span class="pre">/petastore/europa/scratch/$USER</span></code> but does not count against the storage in the home space, even with the symbolic link.</p>
 </dd>
 <dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id2">†</a></span></dt>
 <dd><p>While the petabyte storage device is not metered, the scratch space should be cleaned up when a project is finished to ensure that there is enough room for others interested in using the space.</p>
@@ -573,9 +581,9 @@ or trying ideas</p></td>
 </dl>
 </div>
 <div class="section" id="checking-available-space">
-<h3><a class="toc-backref" href="#id29">3.3 - Checking Available Space</a><a class="headerlink" href="#checking-available-space" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id30">3.3 - Checking Available Space</a><a class="headerlink" href="#checking-available-space" title="Permalink to this headline">¶</a></h3>
 <p>The user should be aware of the amount of free space that is remaining, in order to ensure that the user does not run out of space for data during a run of a program or module.  In order to check the amount of space, the user needs to check the <code class="docutils literal notranslate"><span class="pre">quota</span></code>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830@testGanymedeSysName~]$ quota -s
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830@europa~]$ quota -s
 Disk quotas for user jxw150830 (uid 532471):
      Filesystem   space   quota   limit   grace   files   quota   limit   grace
 /dev/mapper/volgroup0-lvolexport
@@ -583,7 +591,7 @@ Disk quotas for user jxw150830 (uid 532471):
 </pre></div>
 </div>
 <p>In the case above, the entire 20 GB is available to be used.  After running a couple of processes, the <code class="docutils literal notranslate"><span class="pre">/home</span></code> space is filled above the quota.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830@testGanymedeSysName~]$ quota -s
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830@europa~]$ quota -s
 Disk quotas for user jxw150830 (uid 532471):
      Filesystem   space   quota   limit   grace   files   quota   limit   grace
 /dev/mapper/volgroup0-lvolexport
@@ -594,15 +602,15 @@ Disk quotas for user jxw150830 (uid 532471):
 </div>
 </div>
 <div class="section" id="systemname-compilers-and-modules">
-<h2><a class="toc-backref" href="#id30">4 - GanymedeTest Compilers and Modules</a><a class="headerlink" href="#systemname-compilers-and-modules" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id31">4 - Europa Compilers and Modules</a><a class="headerlink" href="#systemname-compilers-and-modules" title="Permalink to this headline">¶</a></h2>
 <p>The compilers, MPI stacks, and environmental modules are all considered modules.  All environmental functionality are controlled by the modules system.</p>
 <div class="section" id="modules">
-<h3><a class="toc-backref" href="#id31">4.1 - Modules</a><a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h3>
-<p>Modules allow the user to set up an environment in the way that best fits their needs. Many of the modules are cross compiled with a number of different compilers to give the HPC cluster a large amount of flexibility.  If you notice a module that you would like installed but is not, please send an email to <a class="reference external" href="mailto:ganymedeadmins&#37;&#52;&#48;utdallas&#46;edu">ganymedeadmins<span>&#64;</span>utdallas<span>&#46;</span>edu</a>.</p>
+<h3><a class="toc-backref" href="#id32">4.1 - Modules</a><a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h3>
+<p>Modules allow the user to set up an environment in the way that best fits their needs. Many of the modules are cross compiled with a number of different compilers to give the HPC cluster a large amount of flexibility.  If you notice a module that you would like installed but is not, please send an email to <a class="reference external" href="mailto:europaadmins&#37;&#52;&#48;utdallas&#46;edu">europaadmins<span>&#64;</span>utdallas<span>&#46;</span>edu</a>.</p>
 <div class="section" id="displaying-loaded-modules">
-<h4><a class="toc-backref" href="#id32">4.1.1 - Displaying Loaded Modules</a><a class="headerlink" href="#displaying-loaded-modules" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id33">4.1.1 - Displaying Loaded Modules</a><a class="headerlink" href="#displaying-loaded-modules" title="Permalink to this headline">¶</a></h4>
 <p>The first step a user should follow is to display the modules that are currently loaded by their account.  This is done using the <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">list</span></code> command.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830@testGanymedeSysName~]$ module list
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830@europa~]$ module list
 
 Currently Loaded Modules:
   1) autotools   2) prun/1.2   3) intel/18.0.2.199   4) mvapich2/2.2   5) ohpc
@@ -611,9 +619,9 @@ Currently Loaded Modules:
 <p>Notice that each of the modules is shown along with the version has been compiled for that program.</p>
 </div>
 <div class="section" id="listing-available-modules">
-<h4><a class="toc-backref" href="#id33">4.1.2 - Listing Available Modules</a><a class="headerlink" href="#listing-available-modules" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id34">4.1.2 - Listing Available Modules</a><a class="headerlink" href="#listing-available-modules" title="Permalink to this headline">¶</a></h4>
 <p>The user can list the modules that have been loaded into their account, but with the different dependencies that are available for each of these modules.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830@testGanymedeSysName~]$ module avail
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830@europa~]$ module avail
 
 ------------------------------------------------ /opt/ohpc/pub/moduledeps/intel-mvapich2 ------------------------------------------------
  adios/1.13.0    mfem/3.3.2              netcdf/4.5.0     ptscotch/6.0.4      scalasca/2.3.1    superlu_dist/5.3.0
@@ -639,9 +647,9 @@ Use &quot;module keyword key1 key2 ...&quot; to search for all possible modules 
 </div>
 </div>
 <div class="section" id="adding-modules-to-a-user-s-account">
-<h4><a class="toc-backref" href="#id34">4.1.3 - Adding Modules to a User’s Account</a><a class="headerlink" href="#adding-modules-to-a-user-s-account" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id35">4.1.3 - Adding Modules to a User’s Account</a><a class="headerlink" href="#adding-modules-to-a-user-s-account" title="Permalink to this headline">¶</a></h4>
 <p>A number of modules exist that are not initially loaded into the user’s account.  The first step in finding a module that the user wants is to search for it using the <code class="docutils literal notranslate"><span class="pre">spider</span></code> command. To list all available packages, type <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">spider</span></code>.  To search more specifically, type <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">spider</span> <span class="pre">&lt;name</span> <span class="pre">of</span> <span class="pre">software</span> <span class="pre">package&gt;</span></code>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830@testGanymedeSysName~]$ module spider py2
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830@europa~]$ module spider py2
 
 -----------------------------------------------------------------------------------
   py2-mpi4py:
@@ -656,8 +664,8 @@ Use &quot;module keyword key1 key2 ...&quot; to search for all possible modules 
 </pre></div>
 </div>
 <p>Now that the correct version and name has been found, the next step is to load the desired module or modules to the user’s account, using <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">&lt;modulename&gt;</span></code>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830@testGanymedeSysName~]$ module load py2-mpi4py
-[jxw150830@testGanymedeSysName~]$ module list
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830@europa~]$ module load py2-mpi4py
+[jxw150830@europa~]$ module list
 
 Currently Loaded Modules:
   1) autotools   2) prun/1.2   3) intel/18.0.2.199   4) mvapich2/2.2   5) ohpc   6) py2-mpi4py/3.0.0
@@ -666,10 +674,10 @@ Currently Loaded Modules:
 <p>Now the desired module has been added to the environment.</p>
 </div>
 <div class="section" id="removing-modules-from-your-account">
-<h4><a class="toc-backref" href="#id35">4.1.4 - Removing Modules From Your Account</a><a class="headerlink" href="#removing-modules-from-your-account" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id36">4.1.4 - Removing Modules From Your Account</a><a class="headerlink" href="#removing-modules-from-your-account" title="Permalink to this headline">¶</a></h4>
 <p>When the user no longer needs a module, the module can be removed, or unloaded, by using the command <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">unload</span> <span class="pre">&lt;modulename&gt;</span></code>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830@testGanymedeSysName ~]$ module unload py2-mpi4py/3.0.0
-[jxw150830@testGanymedeSysName~]$ module list
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830@europa ~]$ module unload py2-mpi4py/3.0.0
+[jxw150830@europa~]$ module list
 
 Currently Loaded Modules:
   1) autotools   2) prun/1.2   3) intel/18.0.2.199   4) mvapich2/2.2   5) ohpc
@@ -678,16 +686,16 @@ Currently Loaded Modules:
 </div>
 </div>
 <div class="section" id="compilers">
-<h3><a class="toc-backref" href="#id36">4.2 - Compilers</a><a class="headerlink" href="#compilers" title="Permalink to this headline">¶</a></h3>
-<p>Along with being pre-loaded with substantial compilers and mpi stacks, GanymedeTest provides the ability to change currently loaded compilers and MPI stacks.</p>
+<h3><a class="toc-backref" href="#id37">4.2 - Compilers</a><a class="headerlink" href="#compilers" title="Permalink to this headline">¶</a></h3>
+<p>Along with being pre-loaded with substantial compilers and mpi stacks, Europa provides the ability to change currently loaded compilers and MPI stacks.</p>
 <div class="section" id="list-available-compilers-and-mpi-stacks">
-<h4><a class="toc-backref" href="#id37">4.2.1 - List Available Compilers and MPI Stacks</a><a class="headerlink" href="#list-available-compilers-and-mpi-stacks" title="Permalink to this headline">¶</a></h4>
-<p>GanymedeTest is pre-loaded with the following compilers:</p>
+<h4><a class="toc-backref" href="#id38">4.2.1 - List Available Compilers and MPI Stacks</a><a class="headerlink" href="#list-available-compilers-and-mpi-stacks" title="Permalink to this headline">¶</a></h4>
+<p>Europa is pre-loaded with the following compilers:</p>
 <ul class="simple">
 <li><p>Intel</p></li>
 <li><p>GNU7</p></li>
 </ul>
-<p>GanymedeTest is pre-loaded with the following mpi stacks:</p>
+<p>Europa is pre-loaded with the following mpi stacks:</p>
 <ul class="simple">
 <li><p>mvapich2</p></li>
 <li><p>impi</p></li>
@@ -695,12 +703,12 @@ Currently Loaded Modules:
 <li><p>openmpi3</p></li>
 </ul>
 <p>Note that the each of the mpi stacks are cross built to allow them to work with the available compilers.  The default compiler is <strong>Intel</strong> and the default mpi stack is <strong>mvapich2</strong>.</p>
-<p>Upon noticing a compiler or MPI stack that is needed, the user is encouraged to reach out to <a class="reference external" href="mailto:ganymedeadmins&#37;&#52;&#48;utdallas&#46;edu">ganymedeadmins<span>&#64;</span>utdallas<span>&#46;</span>edu</a> for further instructions on adding the desired compilers or stacks.</p>
+<p>Upon noticing a compiler or MPI stack that is needed, the user is encouraged to reach out to <a class="reference external" href="mailto:europaadmins&#37;&#52;&#48;utdallas&#46;edu">europaadmins<span>&#64;</span>utdallas<span>&#46;</span>edu</a> for further instructions on adding the desired compilers or stacks.</p>
 </div>
 <div class="section" id="changing-currently-loaded-compilers-or-mpi-stacks">
-<h4><a class="toc-backref" href="#id38">4.2.2 - Changing Currently Loaded Compilers or MPI Stacks</a><a class="headerlink" href="#changing-currently-loaded-compilers-or-mpi-stacks" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id39">4.2.2 - Changing Currently Loaded Compilers or MPI Stacks</a><a class="headerlink" href="#changing-currently-loaded-compilers-or-mpi-stacks" title="Permalink to this headline">¶</a></h4>
 <p>The current loaded compiler or MPI stack can be changed, or swapped, as needed to meet the programmers needs.  The command to this is <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">swap</span> <span class="pre">&lt;current</span> <span class="pre">compiler&gt;</span> <span class="pre">&lt;new</span> <span class="pre">compiler&gt;</span></code>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830@testGanymedeSysName ~]$ module swap intel/18.0.2.199 gnu7/7.3.0
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830@europa ~]$ module swap intel/18.0.2.199 gnu7/7.3.0
 
 Due to MODULEPATH changes, the following have been reloaded:
   1) mvapich2/2.2
@@ -708,33 +716,33 @@ Due to MODULEPATH changes, the following have been reloaded:
 </div>
 <p>Now the intel compiler is unloaded in the environment and the GNU7 compiler has been loaded. The mvapich2 module was automatically changed to run with the new compiler.</p>
 <p>The user is also able to swap the loaded mpi stack without changing the current compiler.  The command to do this is the same as above, with the diffence being the mpi stacks as the passed inputs <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">swap</span> <span class="pre">&lt;current</span> <span class="pre">mpistack&gt;</span> <span class="pre">&lt;new</span> <span class="pre">mpistack&gt;</span></code>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830@testGanymedeSysName jxw150830$ module list
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830@europa jxw150830$ module list
 
 Currently Loaded Modules:
   1) autotools   2) prun/1.2   3) intel/18.0.2.199   4) mvapich2/2.2   5) ohpc
 
-[jxw150830@testGanymedeSysName jxw150830]$ module swap mvapich2/2.2 impi
-[jxw150830@testGanymedeSysName jxw150830]$ module list
+[jxw150830@europa jxw150830]$ module swap mvapich2/2.2 impi
+[jxw150830@europa jxw150830]$ module list
 
 Currently Loaded Modules:
   1) autotools   2) prun/1.2   3) intel/18.0.2.199   4) ohpc   5) impi/2018.2.199
 
-[jxw150830@testGanymedeSysName jxw150830]$
+[jxw150830@europa jxw150830]$
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="running-jobs-on-systemname">
-<h2><a class="toc-backref" href="#id39">5 - Running Jobs on GanymedeTest</a><a class="headerlink" href="#running-jobs-on-systemname" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id40">5 - Running Jobs on Europa</a><a class="headerlink" href="#running-jobs-on-systemname" title="Permalink to this headline">¶</a></h2>
 <p><strong>What is Slurm</strong></p>
 <blockquote>
 <div><p>Slurm is an open source, fault-tolerant, and highly scalable cluster management and job scheduling system for large and small Linux clusters. Slurm requires no kernel modifications for it’s operation and is relatively self-contained. Slurm has a centralized manager to monitor resources and work. There may also be a backup manager to assume those responsibilities in the event of failure.</p>
 </div></blockquote>
 <div class="section" id="preparing-to-queue-a-task">
-<h3><a class="toc-backref" href="#id40">5.1 - Preparing to Queue a Task</a><a class="headerlink" href="#preparing-to-queue-a-task" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id41">5.1 - Preparing to Queue a Task</a><a class="headerlink" href="#preparing-to-queue-a-task" title="Permalink to this headline">¶</a></h3>
 <p>Before the user can queues a task, the user should check and see the status of cluster.  This is done by running the command <code class="docutils literal notranslate"><span class="pre">sinfo</span></code>. By doing this, the user can see what resources are available.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830@testGanymedeSysName ~]$ sinfo
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830@europa ~]$ sinfo
 PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
 debug        up    2:00:00      2   idle compute-6-9-[0-1]
 normal*      up 4-00:00:00      4  down* compute-7-2-[14,16],compute-7-6-[23,25]
@@ -744,7 +752,7 @@ normal*      up 4-00:00:00     40   idle compute-7-2-[3-9,21-39],compute-7-3-[32
 </div>
 <p>In the example above, there are 96 nodes in the cluster.  The different states describe the nodes.  The nodes that are <code class="docutils literal notranslate"><span class="pre">alloc</span></code> are currently running tasks and are unavailable at this time.  The nodes that are <code class="docutils literal notranslate"><span class="pre">idle</span></code> are available to be used and the nodes that are <code class="docutils literal notranslate"><span class="pre">down</span></code> are down for service or because of an error.  Currently, if the user were to schedule a task, the idle nodes would be used first to process the queued task.  If all of the nodes are allocated, then Slurm steps in and will queue the job and process it as resources become available.</p>
 <p>It is worth noting there are currently 2 debug nodes that allow the user to compile software and to test out the code that is to be run on the main worker nodes.  This means that the user can queue a process knowing that it will run instead of waiting for the queue to run their process only to find it does not work. <strong>Debugging/ Prototying should never be done on the normal nodes</strong>.  The following is an example of a test script that the user user should following in debugging.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> [jxp180019@ganymede Linux]$ cat chessjob.sh
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> [jxw150830@europa Linux]$ cat chessjob.sh
  #!/bin/bash
  #SBATCH --ntasks=1
  #SBATCH --time=00:01:00
@@ -752,18 +760,18 @@ normal*      up 4-00:00:00     40   idle compute-7-2-[3-9,21-39],compute-7-3-[32
  #SBATCH --mail-type=ALL
  #SBATCH -p debug
 
- cd /home/jxp180019/scratch/stockfish-9-linux/Linux
+ cd /home/jxw150830/scratch/stockfish-9-linux/Linux
  ./chessrun
-[jxp180019@ganymede Linux]$
+[jxp180019@europa Linux]$
 </pre></div>
 </div>
 <p>Line 1 is the required bash script setup. Line 2 sets of the number of cores, which should be 1 since all users can only access 2 debug nodes.  The next line is the time to run, which is a minute.  The amount of time should be long enough for to ensure that the program works, but no longer.  In this case, a minute was enough to know that no errors had occured.</p>
 </div>
 <div class="section" id="queuing-a-task">
-<h3><a class="toc-backref" href="#id41">5.2 - Queuing a Task</a><a class="headerlink" href="#queuing-a-task" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id42">5.2 - Queuing a Task</a><a class="headerlink" href="#queuing-a-task" title="Permalink to this headline">¶</a></h3>
 <p>Now that you have done the preoperative tasks, it is time to queue a task.  To queue a task with Slurm, the request should be submitted as a shell script.  A number of attributes that are Slurm directives need to be established in order to queue the job.  There are two major types of tasks, serial and parallel.</p>
 <div class="section" id="serial-task">
-<h4><a class="toc-backref" href="#id42">5.2.1 - Serial Task</a><a class="headerlink" href="#serial-task" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id43">5.2.1 - Serial Task</a><a class="headerlink" href="#serial-task" title="Permalink to this headline">¶</a></h4>
 <p>The following is a simple serial task template for the operating script.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830 ~]$ cat job.serial
 #!/bin/bash
@@ -783,7 +791,7 @@ sleep 10
 <p>In the example above the user submitted a job named <code class="docutils literal notranslate"><span class="pre">job.serial</span></code>. It will send the user an email when the job starts and finishes. The job is submitted to <em>1 compute node</em> and asked for <em>1 core</em> in that node. If the user requires more cores, more nodes may be used (ex: user requests 35 cores &#64; 16 cores per node, they get 3 nodes.)  The output of the program will go to <code class="docutils literal notranslate"><span class="pre">job.&lt;JobID&gt;.out</span></code> file. While this choice is arbitrary, if the user intends to export these to Windows, the best file output would be .txt . When the user submits the job, this file will be created for the user in their home directory. The choose partition <code class="docutils literal notranslate"><span class="pre">normal</span></code> and the user’s account is <code class="docutils literal notranslate"><span class="pre">jxw150830</span></code>. Note that the <strong>partition name is case sensitive</strong>. The optional command <code class="docutils literal notranslate"><span class="pre">sleep</span> <span class="pre">10</span></code> is used just for example purposes. It says wait another 10 seconds before ending the job.  For a complete listing of slurm commands, see Appendix B - Slurm Commands.</p>
 </div>
 <div class="section" id="parallel-tasks">
-<h4><a class="toc-backref" href="#id43">5.2.2 - Parallel Tasks</a><a class="headerlink" href="#parallel-tasks" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id44">5.2.2 - Parallel Tasks</a><a class="headerlink" href="#parallel-tasks" title="Permalink to this headline">¶</a></h4>
 <p>Parallel tasks use mpi technology to run multiple tasks at a time.  The script to submit an MPI script is similar to the serial, but there are some differences.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830 ~]$ cat job.mpi
 #!/bin/bash
@@ -804,7 +812,7 @@ prun ./a.out
 Submitted batch job 405
 </pre></div>
 </div>
-<p>This informs the user of the job number.  The user will also receive an email from <a class="reference external" href="mailto:slurm&#37;&#52;&#48;ganymede&#46;utdallas&#46;edu">slurm<span>&#64;</span>ganymede<span>&#46;</span>utdallas<span>&#46;</span>edu</a> informing that the job has started.  If the user ever forgets the job number, or has logged into GanymedeTest to determine if and which jobs are running, the user can type the command <code class="docutils literal notranslate"><span class="pre">squeue</span> <span class="pre">-u</span> <span class="pre">$USER</span></code>.  This will show all current running tasks to the user, with the first number being the Job ID.</p>
+<p>This informs the user of the job number.  The user will also receive an email from <a class="reference external" href="mailto:slurm&#37;&#52;&#48;europa&#46;utdallas&#46;edu">slurm<span>&#64;</span>europa<span>&#46;</span>utdallas<span>&#46;</span>edu</a> informing that the job has started.  If the user ever forgets the job number, or has logged into Europa to determine if and which jobs are running, the user can type the command <code class="docutils literal notranslate"><span class="pre">squeue</span> <span class="pre">-u</span> <span class="pre">$USER</span></code>.  This will show all current running tasks to the user, with the first number being the Job ID.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830 ~]$ squeue -u $USER
   JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
     405    normal     test jxw15083  R       0:01      1 compute-7-2-21
@@ -814,7 +822,7 @@ Submitted batch job 405
 </div>
 </div>
 <div class="section" id="checking-on-a-running-task">
-<h3><a class="toc-backref" href="#id44">5.3 - Checking on a Running Task</a><a class="headerlink" href="#checking-on-a-running-task" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id45">5.3 - Checking on a Running Task</a><a class="headerlink" href="#checking-on-a-running-task" title="Permalink to this headline">¶</a></h3>
 <p>Once the task is running, the user may want to check on the progress of the task.  This can be done by using the command <code class="docutils literal notranslate"><span class="pre">sstat</span> <span class="pre">--format=AveCPU,AvePages,AveRSS,AveVMSize,JobID</span> <span class="pre">-j</span> <span class="pre">&lt;JobID&gt;</span></code>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830 ~]$ sstat --format=AveCPU,AvePages,AveRSS,AveVMSize,JobID -j 405
     AveCPU   AvePages     AveRSS  AveVMSize        JobID
@@ -835,7 +843,7 @@ JobId=405 JobName=test
    StartTime=2018-05-31T16:06:29 EndTime=2018-05-31T16:06:39 Deadline=N/A
    PreemptTime=None SuspendTime=None SecsPreSuspend=0
    LastSchedEval=2018-05-31T16:06:29
-   Partition=normal AllocNode:Sid=testGanymedeSysName:449124
+   Partition=normal AllocNode:Sid=europa:449124
    ReqNodeList=(null) ExcNodeList=(null)
    NodeList=compute-7-2-21
    BatchHost=compute-7-2-21
@@ -865,10 +873,10 @@ Submitted batch job 380
 <p>If there are no issues, there will be a clean output in the terminal and the job will disappear from the queue.</p>
 </div>
 <div class="section" id="debugging-mpi-with-slurm-and-gdb">
-<h3><a class="toc-backref" href="#id45">5.4 Debugging MPI with Slurm and gdb</a><a class="headerlink" href="#debugging-mpi-with-slurm-and-gdb" title="Permalink to this headline">¶</a></h3>
-<p>When the user is running a MPI task, it is important to debug properly.  Because the amount of data that can be dumped is greater than the quota for the home directory, special care must be taken in order for the user to sucessfully fix code.  The user needs to first ssh into GanymedeTest using the following command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>jwhite-swift@hpc-rca:~$ ssh -X jxw150830@ganymede.utdallas.edu
-jxw150830@ganymede.utdallas.edu&#39;s password:
+<h3><a class="toc-backref" href="#id46">5.4 Debugging MPI with Slurm and gdb</a><a class="headerlink" href="#debugging-mpi-with-slurm-and-gdb" title="Permalink to this headline">¶</a></h3>
+<p>When the user is running a MPI task, it is important to debug properly.  Because the amount of data that can be dumped is greater than the quota for the home directory, special care must be taken in order for the user to sucessfully fix code.  The user needs to first ssh into Europa using the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>jwhite-swift@hpc-rca:~$ ssh -X jxw150830@europa.utdallas.edu
+jxw150830@europa.utdallas.edu&#39;s password:
 Last login: Tue Jun  5 10:26:09 2018 from 10.21.4.24
 Disk quotas for user jxw150830:
 ====================    ============    ================        ============
@@ -879,8 +887,8 @@ Disk                    Usage           Soft Limit              Hard Limit
 [jxw150830 ~]$
 </pre></div>
 </div>
-<p>Note that the command is <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">-X</span> <span class="pre">&lt;NetID&gt;&#64;ganymede.utdallas.edu</span></code>.  The <code class="docutils literal notranslate"><span class="pre">-X</span></code> allows the user to pass visual windows back through, which will become important later.</p>
-<p>Once logged into GanymedeTest, the user must first get a reservation on a <strong>debug</strong> compute node.</p>
+<p>Note that the command is <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">-X</span> <span class="pre">&lt;NetID&gt;&#64;europa.utdallas.edu</span></code>.  The <code class="docutils literal notranslate"><span class="pre">-X</span></code> allows the user to pass visual windows back through, which will become important later.</p>
+<p>Once logged into Europa, the user must first get a reservation on a <strong>debug</strong> compute node.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830 ~]$ salloc -p debug -N1 -n4 --time=00:30:00
 salloc: Granted job allocation 620
 Disk quotas for user jxw150830:
@@ -899,37 +907,37 @@ Disk                    Usage           Soft Limit              Hard Limit
              620     debug     bash jxw15083  R       4:55      1 
 </pre></div>
 </div>
-<p>Then the user will ssh into that node and turn on X forwarding, just as the user did when accessing the GanymedeTest node to begin with.</p>
+<p>Then the user will ssh into that node and turn on X forwarding, just as the user did when accessing the Europa node to begin with.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830 ~]$ ssh -X 
 Warning: Permanently added &#39;,10.182.224.70&#39; (ECDSA) to the list of known hosts.
-[jxw150830@c ~]$
+[jxw150830@ ~]$
 </pre></div>
 </div>
 <p>Now that the user is on the debug node, the user needs to run the following command: <code class="docutils literal notranslate"><span class="pre">mpirun</span> <span class="pre">-np</span> <span class="pre">4</span> <span class="pre">xterm</span> <span class="pre">-e</span> <span class="pre">gdb</span> <span class="pre">&lt;my_mpi_application&gt;</span></code></p>
 <img alt="./assets/5.4.png" src="./assets/5.4.png" />
 <p>This will then produce 4 screens (or the number specified by <code class="docutils literal notranslate"><span class="pre">np</span></code>) that allow the user to debug each of the instances that are running using MPI, without having to core dump extremely large files</p>
-<p>In order for this to work, the user needs to be running some form of an X server locally. If the user is on a linux machine, this functionality will be out of the box. If you are on a Mac, you’ll need XQuartz. If you are on a windows machine, you should use MobaXterm.  These programs are discribed in Section 1 - Connecting to GanymedeTest.</p>
+<p>In order for this to work, the user needs to be running some form of an X server locally. If the user is on a linux machine, this functionality will be out of the box. If you are on a Mac, you’ll need XQuartz. If you are on a windows machine, you should use MobaXterm.  These programs are discribed in Section 1 - Connecting to Europa.</p>
 </div>
 <div class="section" id="running-interactive-jobs">
-<h3><a class="toc-backref" href="#id46">5.5 - Running Interactive Jobs</a><a class="headerlink" href="#running-interactive-jobs" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id47">5.5 - Running Interactive Jobs</a><a class="headerlink" href="#running-interactive-jobs" title="Permalink to this headline">¶</a></h3>
 <p>Interactive Jobs can be run by the user on the individual compute nodes.  This is done by running a slurm command that places the user onto a compute node or nodes.  This then allows a user to run commands on the compute nodes.</p>
 <div class="section" id="running-one-time-instance-jobs">
-<h4><a class="toc-backref" href="#id47">5.5.1 - Running One-Time Instance Jobs</a><a class="headerlink" href="#running-one-time-instance-jobs" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id48">5.5.1 - Running One-Time Instance Jobs</a><a class="headerlink" href="#running-one-time-instance-jobs" title="Permalink to this headline">¶</a></h4>
 <p>If the user is interested in only running for the instance in the compute node (i.e. logged off when the session is finished, then the user should use <code class="docutils literal notranslate"><span class="pre">srun</span></code>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830 ~]$ srun -n1 -N1 --pty /bin/bash
-[computeNodeUserNameTest ~]$
+[jxw150830 ~]$
 </pre></div>
 </div>
 <p>The user is now logged into the compute node.  Notice that the <code class="docutils literal notranslate"><span class="pre">-n1</span></code> denotes 1 task (or CPU) and the <code class="docutils literal notranslate"><span class="pre">-N1</span></code> denotes 1 node is being used.  The rest of the command sets up the machine to be interacted with. If the node is currently in use, the user will be placed in a queue and the command will hang until the user is granted access.  Once the user has finished using the resources, the user needs to type <code class="docutils literal notranslate"><span class="pre">exit</span></code> to exit the compute node.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[computeNodeUserNameTest ~]$ exit
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[[jxw150830] ~]$ exit
 exit
 [jxw150830 ~]$
 </pre></div>
 </div>
-<p>Once executed, the session is closed and the user moves back to the GanymedeTest node.</p>
+<p>Once executed, the session is closed and the user moves back to the Europa node.</p>
 </div>
 <div class="section" id="running-persistent-jobs">
-<h4><a class="toc-backref" href="#id48">5.5.2 - Running Persistent Jobs</a><a class="headerlink" href="#running-persistent-jobs" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id49">5.5.2 - Running Persistent Jobs</a><a class="headerlink" href="#running-persistent-jobs" title="Permalink to this headline">¶</a></h4>
 <p>If the user is interested in running a task that can needs to be logged in and out of multiple times, the user should allocate some time on a node or nodes using <code class="docutils literal notranslate"><span class="pre">salloc</span></code>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830 ~]$ salloc -n1 -N1 -t 1:00:00
 salloc: Granted job allocation 607
@@ -964,7 +972,7 @@ Connection to compute-6-9-35 closed.
 </div>
 </div>
 <div class="section" id="logging-into-a-particular-node">
-<h4><a class="toc-backref" href="#id49">5.5.3 - Logging into a Particular Node</a><a class="headerlink" href="#logging-into-a-particular-node" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id50">5.5.3 - Logging into a Particular Node</a><a class="headerlink" href="#logging-into-a-particular-node" title="Permalink to this headline">¶</a></h4>
 <p>There are times when it is advantageous for the user to work on a particular node.  This may be for a particular scipt or some other program that is loaded on a particular set of nodes, or to use the particular node because of hardware.  To do this, the user must us the command <code class="docutils literal notranslate"><span class="pre">salloc</span> <span class="pre">-w</span> <span class="pre">&lt;computenode&gt;</span></code>.  If the node is free, the user will encounter the following output:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830 ~]$ salloc -w compute-7-6-4
 salloc: Granted job allocation 611
@@ -989,8 +997,8 @@ salloc: job 608 queued and waiting for resources
 </div>
 </div>
 <div class="section" id="viewing-results">
-<h3><a class="toc-backref" href="#id50">5.6 - Viewing Results</a><a class="headerlink" href="#viewing-results" title="Permalink to this headline">¶</a></h3>
-<p>Once the job is done, the user will receive an email from <a class="reference external" href="mailto:slurm&#37;&#52;&#48;ganymede&#46;utdallas&#46;edu">slurm<span>&#64;</span>ganymede<span>&#46;</span>utdallas<span>&#46;</span>edu</a> alerting the user that the job has been completed. Any interaction between the user and the nodes that the user were logged into will be be closed and the user will be returned to the home folder.  The file will be in that directory.  If there are any errors that occur, those will be captured in the output file that is created by the system.  This is especially useful when running on the debugging nodes.</p>
+<h3><a class="toc-backref" href="#id51">5.6 - Viewing Results</a><a class="headerlink" href="#viewing-results" title="Permalink to this headline">¶</a></h3>
+<p>Once the job is done, the user will receive an email from <a class="reference external" href="mailto:slurm&#37;&#52;&#48;europa&#46;utdallas&#46;edu">slurm<span>&#64;</span>europa<span>&#46;</span>utdallas<span>&#46;</span>edu</a> alerting the user that the job has been completed. Any interaction between the user and the nodes that the user were logged into will be be closed and the user will be returned to the home folder.  The file will be in that directory.  If there are any errors that occur, those will be captured in the output file that is created by the system.  This is especially useful when running on the debugging nodes.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830 ~]$ ls
 html  job.405.out  job.mpi  job.serial  sampletask.sh  scratch
 [jxw150830 ~]$ cat job.405.out
@@ -1000,26 +1008,26 @@ this is serial code
 </div>
 </div>
 <div class="section" id="application-specific-instructions">
-<h2><a class="toc-backref" href="#id51">6 - Application Specific Instructions</a><a class="headerlink" href="#application-specific-instructions" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id52">6 - Application Specific Instructions</a><a class="headerlink" href="#application-specific-instructions" title="Permalink to this headline">¶</a></h2>
 <p>There are certain programs that require users to run them by a specific method.  These can be added with modules as with other programs on the stack.</p>
 <div class="section" id="matlab">
-<h3><a class="toc-backref" href="#id52">6.1 - Matlab</a><a class="headerlink" href="#matlab" title="Permalink to this headline">¶</a></h3>
-<p>GanymedeTest currently has r2018a installed, and in addition to the site liscense there are 32 liscenses for distributed Matlab.  Matlab jobs can be run in 3 different ways: serial, parallel and distributed compute.  Each of these job types can either be batch or interactive.  The following sections will describe what this means to the user.</p>
+<h3><a class="toc-backref" href="#id53">6.1 - Matlab</a><a class="headerlink" href="#matlab" title="Permalink to this headline">¶</a></h3>
+<p>Europa currently has r2018a installed, and in addition to the site liscense there are 32 liscenses for distributed Matlab.  Matlab jobs can be run in 3 different ways: serial, parallel and distributed compute.  Each of these job types can either be batch or interactive.  The following sections will describe what this means to the user.</p>
 <div class="section" id="job-types">
-<h4><a class="toc-backref" href="#id53">6.1.1 - Job Types</a><a class="headerlink" href="#job-types" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id54">6.1.1 - Job Types</a><a class="headerlink" href="#job-types" title="Permalink to this headline">¶</a></h4>
 <p>There are 3 different job types: Serial, Parallel Computing Toolkit, and Distibuted Compute Server.</p>
 <div class="section" id="serial-jobs">
-<h5><a class="toc-backref" href="#id54">6.1.1.1 - Serial Jobs</a><a class="headerlink" href="#serial-jobs" title="Permalink to this headline">¶</a></h5>
+<h5><a class="toc-backref" href="#id55">6.1.1.1 - Serial Jobs</a><a class="headerlink" href="#serial-jobs" title="Permalink to this headline">¶</a></h5>
 <p>Serial jobs are defined as jobs where one dataset exists in memory.  This can either be accessed by one processor or by multiple processors.  Serial jobs are created when a user runs standard Matlab scripts.</p>
 <p>For an example of a serial job, the user can look in the directory <code class="docutils literal notranslate"><span class="pre">/opt/ohpc/pub/examples/matlab/serial/</span></code> and open the readme file.</p>
 </div>
 <div class="section" id="parallel-computing-toolkit-pct-jobs">
-<h5><a class="toc-backref" href="#id55">6.1.1.2 - Parallel Computing Toolkit (PCT) Jobs</a><a class="headerlink" href="#parallel-computing-toolkit-pct-jobs" title="Permalink to this headline">¶</a></h5>
-<p>Parallel Computing Toolkit jobs are jobs that use openmp to call parallel processes using MPI.  These jobs follow directives that are established in the Matlab Parallel Computing Toolkit with full information available at <a class="reference external" href="https://www.mathworks.com/products/parallel-computing.html">https://www.mathworks.com/products/parallel-computing.html</a> . The user has the availabity to run an instance of Matlab with each of the cores reserved in the current node.  GanymedeTest is equiped with 12,000 keys to ensure that many users can do parallel computing at once.</p>
+<h5><a class="toc-backref" href="#id56">6.1.1.2 - Parallel Computing Toolkit (PCT) Jobs</a><a class="headerlink" href="#parallel-computing-toolkit-pct-jobs" title="Permalink to this headline">¶</a></h5>
+<p>Parallel Computing Toolkit jobs are jobs that use openmp to call parallel processes using MPI.  These jobs follow directives that are established in the Matlab Parallel Computing Toolkit with full information available at <a class="reference external" href="https://www.mathworks.com/products/parallel-computing.html">https://www.mathworks.com/products/parallel-computing.html</a> . The user has the availabity to run an instance of Matlab with each of the cores reserved in the current node.  Europa is equiped with 12,000 keys to ensure that many users can do parallel computing at once.</p>
 <p>For an example of a serial job, the user can look in the directory <code class="docutils literal notranslate"><span class="pre">/opt/ohpc/pub/examples/matlab/parallel/</span></code> and open the readme file.</p>
 </div>
 <div class="section" id="distributed-compute-server-dcs-jobs">
-<h5><a class="toc-backref" href="#id56">6.1.1.3 - Distributed Compute Server (DCS) Jobs</a><a class="headerlink" href="#distributed-compute-server-dcs-jobs" title="Permalink to this headline">¶</a></h5>
+<h5><a class="toc-backref" href="#id57">6.1.1.3 - Distributed Compute Server (DCS) Jobs</a><a class="headerlink" href="#distributed-compute-server-dcs-jobs" title="Permalink to this headline">¶</a></h5>
 <p>Distributed Compute Server jobs are very similar to PCT jobs, but these jobs leverage systems within Matlab to use multiple nodes to work on jobs instead of multiple instances as in PCT.  The user must use internal commands to Matlab to enable this, however Matlab automatically pulls the corret liscense type for the command run by the user.  The University currently owns 32 liscenses.  The default number that are run is 12, however the user can change the number of units run using the following code in their code:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">myCluster</span>  <span class="o">=</span> <span class="n">parcluster</span><span class="p">();</span>
 <span class="n">poolobj</span> <span class="o">=</span> <span class="n">parpool</span><span class="p">(</span><span class="n">myCluster</span><span class="p">,</span><span class="mi">32</span><span class="p">);</span>
@@ -1028,21 +1036,21 @@ this is serial code
 </div>
 </div>
 <div class="section" id="matlab-job-modes">
-<h4><a class="toc-backref" href="#id57">6.1.2 - Matlab Job Modes</a><a class="headerlink" href="#matlab-job-modes" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id58">6.1.2 - Matlab Job Modes</a><a class="headerlink" href="#matlab-job-modes" title="Permalink to this headline">¶</a></h4>
 <p>Like all Slurm jobs, Matlab can either be run in the background with <code class="docutils literal notranslate"><span class="pre">sbatch</span></code> or interactively with <code class="docutils literal notranslate"><span class="pre">srun</span></code>.  The user does, however, need to do some specific actions for matlab to work.</p>
 <div class="section" id="batch-jobs">
-<h5><a class="toc-backref" href="#id58">6.1.2.1 - Batch Jobs</a><a class="headerlink" href="#batch-jobs" title="Permalink to this headline">¶</a></h5>
+<h5><a class="toc-backref" href="#id59">6.1.2.1 - Batch Jobs</a><a class="headerlink" href="#batch-jobs" title="Permalink to this headline">¶</a></h5>
 <p>Using Slurm, an effecient way to run Matlab allows to user to set up a number of batches to run at the same time across multiple cores.  This means that if the user has the same program to run with multiple data sets, it is possible to batch the same program with multiple data sets.  This allows the system to run the multiple sets in tandem, yielding faster results.</p>
 <p>To do this, the submission script needs to be stuctured like the one in Section 5.2.1 with the program section being replaced by <code class="docutils literal notranslate"><span class="pre">matlab</span> <span class="pre">-nodisplay</span> <span class="pre">-nosplash</span> <span class="pre">&lt;user</span> <span class="pre">function&gt;.m</span> <span class="pre">&lt;&lt;</span> <span class="pre">&lt;input&gt;</span></code></p>
 </div>
 <div class="section" id="interactive-matlab">
-<h5><a class="toc-backref" href="#id59">6.1.2.2 - Interactive Matlab</a><a class="headerlink" href="#interactive-matlab" title="Permalink to this headline">¶</a></h5>
+<h5><a class="toc-backref" href="#id60">6.1.2.2 - Interactive Matlab</a><a class="headerlink" href="#interactive-matlab" title="Permalink to this headline">¶</a></h5>
 <p>Matlab can be run from an interactive terminal on a single compute node.  This is useful for users who want to tweak inputs as they go, or want to feed in live data.  See section 5.4 for how to log into a node.  Once logged in, the user needs to load the Matlab module.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[computeNodeUserNameTest ~]$ module load matlab
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830 ~]$ module load matlab
 </pre></div>
 </div>
 <p>Once the user has added the module, executing `` `` will start matlab interactively.  This normally takes a few moments.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[computeNodeUserNameTest ~]$ matlab
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830 ~]$ matlab
 MATLAB is selecting SOFTWARE OPENGL rendering.
 
                           &lt; M A T L A B (R) &gt;
@@ -1060,7 +1068,7 @@ For product information, visit www.mathworks.com.
 </div>
 <p>Once the Matlab terminal is loaded, the user can execute Matlab functions a usual.  When finished, the user should exit from the Matlab terminal and the compute node.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;&gt; exit
-[computeNodeUserNameTest ~]$ exit
+[jxw150830 ~]$ exit
 exit
 [jxw150830 ~]$
 </pre></div>
@@ -1070,9 +1078,9 @@ exit
 </div>
 </div>
 <div class="section" id="appendices">
-<h2><a class="toc-backref" href="#id60">Appendices</a><a class="headerlink" href="#appendices" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id61">Appendices</a><a class="headerlink" href="#appendices" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="appendix-a-linux-commands">
-<h3><a class="toc-backref" href="#id61">Appendix A - Linux Commands</a><a class="headerlink" href="#appendix-a-linux-commands" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id62">Appendix A - Linux Commands</a><a class="headerlink" href="#appendix-a-linux-commands" title="Permalink to this headline">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 37%" />
@@ -1130,7 +1138,7 @@ exit
 </table>
 </div>
 <div class="section" id="appendix-b-slurm-commands">
-<h3><a class="toc-backref" href="#id62">Appendix B - Slurm Commands</a><a class="headerlink" href="#appendix-b-slurm-commands" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id63">Appendix B - Slurm Commands</a><a class="headerlink" href="#appendix-b-slurm-commands" title="Permalink to this headline">¶</a></h3>
 <p>Man pages exist for all Slurm daemons, commands, and API functions. The command option –help also provides a brief summary of options. Note that the command options are all case sensitive.</p>
 <dl class="simple">
 <dt><strong>sacct</strong></dt><dd><p>sacct is used to report job or job step accounting information about active or completed jobs.</p>
@@ -1184,8 +1192,9 @@ exit
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">UTDallas HPC Cluster Users Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#acceptable-user-guidelines">Acceptable User Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#connecting-to-systemname">1 - Connecting to GanymedeTest</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#connecting-to-systemname">1 - Connecting to Europa</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#microsoft-windows">1.1 - Microsoft Windows</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#putty">1.1.1 - PuTTY:</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bitvise">1.1.2 - Bitvise:</a></li>
@@ -1197,7 +1206,7 @@ exit
 <li class="toctree-l3"><a class="reference internal" href="#mailing-list">1.4 - Mailing List</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#moving-around-systemname">2 - Moving around GanymedeTest</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#moving-around-systemname">2 - Moving around Europa</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#linux-commands">2.1 - Linux Commands</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#moving-around">2.1.1 - Moving Around</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#making-files-and-directories">2.1.2 - Making Files and Directories</a></li>
@@ -1207,20 +1216,20 @@ exit
 <li class="toctree-l4"><a class="reference internal" href="#automating-commands">2.1.6 - Automating Commands</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#systemname-specific-instructions-and-programs">2.2 - GanymedeTest Specific Instructions and Programs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#systemname-specific-instructions-and-programs">2.2 - Europa Specific Instructions and Programs</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#environmental-variables">2.2.1 - Environmental Variables</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#custom-programs">2.2.2 - Custom Programs</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#systemname-space-constraints">3 - GanymedeTest Space Constraints</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#systemname-space-constraints">3 - Europa Space Constraints</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#types-of-space">3.1 - Types of Space</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#space-policies">3.2 - Space Policies</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#checking-available-space">3.3 - Checking Available Space</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#systemname-compilers-and-modules">4 - GanymedeTest Compilers and Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#systemname-compilers-and-modules">4 - Europa Compilers and Modules</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#modules">4.1 - Modules</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#displaying-loaded-modules">4.1.1 - Displaying Loaded Modules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#listing-available-modules">4.1.2 - Listing Available Modules</a></li>
@@ -1235,7 +1244,7 @@ exit
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#running-jobs-on-systemname">5 - Running Jobs on GanymedeTest</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#running-jobs-on-systemname">5 - Running Jobs on Europa</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#preparing-to-queue-a-task">5.1 - Preparing to Queue a Task</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#queuing-a-task">5.2 - Queuing a Task</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#serial-task">5.2.1 - Serial Task</a></li>
@@ -1274,7 +1283,7 @@ exit
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="index.html" title="previous chapter">Welcome to GanymedeDocs’s documentation!</a></li>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to Europa’s documentation!</a></li>
   </ul></li>
 </ul>
 </div>

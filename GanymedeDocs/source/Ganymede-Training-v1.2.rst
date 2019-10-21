@@ -1,5 +1,11 @@
 .. Changelog
    -----------------------------------------------------------------------
+.. 1.3 - Template
+	-RST forked. Used to be Ganymede documentation, now used for generating all kinds of system docs
+.. 1.2.2 - Add AUG
+	-Add Acceptable User Guidelines section
+	-Add AUG pdf
+	-Add Acceptable User Guidelines hyperlink to pdf
 .. 1.2.1 - Compiled with Sphinx
    -Spell correction
    -Added css files to _static in sphinx
@@ -69,20 +75,20 @@
    - Removed references to 'dead' items
 .. 0.1
    - Original version
-
-.. these are the predefined values
+   
+   .. these are the predefined values
    -------------------------------
 .. hpc system params
    
 .. systemName should just replace mentions of the system's name not including things like domain
 .. or user names in code blocks that are upper case of course
-.. |systemName| replace:: GanymedeTest
+.. |systemName| replace:: Europa
 
 .. systemNameLower should just replace mentions of the system's name that are lower case, not including
 .. things like domain or user names in code blocks
-.. |systemNameLower| replace:: ganymedeTest
+.. |systemNameLower| replace:: europa
 .. 
-.. |hostName| replace:: @ganymedeTest.edu
+.. |hostName| replace:: @europa.utdallas.edu
 
 .. |nodecpunum| replace:: 4008
 .. |nodememnum| replace:: 14 TB
@@ -96,9 +102,9 @@
 .. |defmpi| replace:: **mvapich2**
 
 .. admin params
-.. |adminemail| replace:: ganymedeadmins@utdallas.edu
-.. |mailinglistaddr| replace:: ganymedeusers@lists.utdallas.edu
-.. |slurmemail| replace:: slurm@ganymede.utdallas.edu
+.. |adminemail| replace:: europaadmins@utdallas.edu
+.. |mailinglistaddr| replace:: europausers@lists.utdallas.edu
+.. |slurmemail| replace:: slurm@europa.utdallas.edu
 .. |debugnodenum| replace:: 2
 
 .. space limits
@@ -110,15 +116,20 @@
 .. |scratchrectime| replace:: N/A
 
 
+
 UTDallas HPC Cluster Users Guide
 ================================
 
 .. contents:: Table of Contents
 
+Acceptable User Guidelines
+//////////////////////////
+OIT CI Research Computing (OIT-CIRC) resources are deployed, configured, and operated to serve a large, diverse user community. It is important that all users are aware of and abide by OIT-CIRC Usage Policies. Failure to do so may result in suspension or cancellation of the project and associated allocation and closure of all associated logins. Illegal transgressions will be addressed through University of Texas at Dallas (UT-D) and/or legal authorities. See the :download:`Acceptable User Guidelines <./AUG.pdf>` for more information.
+
 Introduction
 /////////////
 
-**What is [CBuppersysname]:**
+**What is CBuppersysname:**
 
   |systemName| is a |nodecpunum| core cluster with |nodememnum| of memory based on Centos |centVer| / OpenHPC. It has a 10 Gigabit ethernet network and a QDR (40 Gbps) InfiniBand interconnect configured in a fat-tree topology. It has two distributed file systems, one for the home directories over the 10 Gigabit Ethernet network available via NFS and one for the work file system that is a 525 TB high-performance parallel file system (GPFS) accessible over the InfiniBand network. The GPFS file system uses Data Direct Networks (DDN) directly attached to InfiniBand storage for the back end hardware. Compute nodes are all dual processor with many core systems with a variety of Intel architectures including Sandy Bridge, Haswell and Broadwell. Additionally, several nodes in the system have Nvidia Quadro GPUs based on the Nvidia Kepler architecture.
 
@@ -151,7 +162,7 @@ PuTTY for the Microsoft Windows environment can be installed by going to www.put
 
 .. image:: ./assets/1.1.1-1.png
 
-Once running PuTTY, in the Host Name section type **[CBsysname].utdallas.edu**.  Go down to the saved sessions section, name the server with a meaningful name (in this case |systemName|) and press save.  By doing this, time can be saved in the future by clicking your particular saved session and pressing load.  Once loaded into the host name, click on the open button. 
+Once running PuTTY, in the Host Name section type **CBsysname.utdallas.edu**.  Go down to the saved sessions section, name the server with a meaningful name (in this case |systemName|) and press save.  By doing this, time can be saved in the future by clicking your particular saved session and pressing load.  Once loaded into the host name, click on the open button. 
 
 .. image:: ./assets/1.1.1-2.jpg
 
@@ -161,7 +172,7 @@ A Putty Security Alert window will open for the first time prompting you for a Y
 
 1.1.2 - Bitvise:
 -----------------
-Bitvise can be installed by going to https://www.bitvise.com/index and pressing the download tab across the top banner.  Press the first option, **Download Bitvise SSH Client (Tunnelier)** the press **Bitvise SSH Client Installer** and follow the instructions for to install the software. Similar to PuTTY, the Host Name section type **[CBsysname].utdallas.edu**.  Go down to the "Save profile as" button, name the file with a meaningful name (in this case |systemNameLower|.tlp) and press save.  By doing this, time can be saved in the future by clicking "Load profile".  Once loaded into the host name, click on the Login button.
+Bitvise can be installed by going to https://www.bitvise.com/index and pressing the download tab across the top banner.  Press the first option, **Download Bitvise SSH Client (Tunnelier)** the press **Bitvise SSH Client Installer** and follow the instructions for to install the software. Similar to PuTTY, the Host Name section type **CBsysname.utdallas.edu**.  Go down to the "Save profile as" button, name the file with a meaningful name (in this case |systemNameLower|.tlp) and press save.  By doing this, time can be saved in the future by clicking "Load profile".  Once loaded into the host name, click on the Login button.
 
 .. image:: ./assets/1.1.2.png
 
@@ -169,7 +180,7 @@ Bitvise can be installed by going to https://www.bitvise.com/index and pressing 
 -------------------
 MobaXterm can be installed from http://mobaxterm.mobatek.net/download.html. The program can be demo-ed from site http://mobaxterm.mobatek.net/demo.html. 
 
-To login, type ``ssh <NetID>@[CBsysname].utdallas.edu``. Once logged in, all of the available Linux files and directory information will be displayed on the left white pane. Within the MobaXterm interface, one can securely copy files between Linux and Windows desktops.  To open a file, right click on it and choosing option "open with default text editor". Changes can then be made to a file and the changes can then be saved. 
+To login, type ``ssh <NetID>@CBsysname.utdallas.edu``. Once logged in, all of the available Linux files and directory information will be displayed on the left white pane. Within the MobaXterm interface, one can securely copy files between Linux and Windows desktops.  To open a file, right click on it and choosing option "open with default text editor". Changes can then be made to a file and the changes can then be saved. 
 
 .. image:: ./assets/1.1.3.png
 
@@ -179,7 +190,7 @@ For MAC users MobaXterm is not available.  Install XQuartz from https://www.xqua
 
 1.3 - For Linux Users
 **********************
-For Linux users, the ssh command is built into the operating system.  To connect to the |systemName| server, open the terminal agent and type: ``ssh <NET-ID>@[CBsysname].utdallas.edu.``
+For Linux users, the ssh command is built into the operating system.  To connect to the |systemName| server, open the terminal agent and type: ``ssh <NET-ID>@CBsysname.utdallas.edu.``
 
 1.4 - Mailing List
 *********************
@@ -329,17 +340,17 @@ Moving directories is a very similar process to the moving of files. ::
 
 To move files to or from the |systemName| server, the use of secure copying is used, ``scp``.  The method below will detail how to move a file from the |systemName| server to the user's computer via the command line, but the process would be similar for data moving the other direction. ::
 
-  {pubssh:~} scp ./gany.sh jxw150830@ganymede.utdallas.edu:/home/jxw150830/
-  jxw150830@ganymede.utdallas.edu's password:
-  gany.sh                                                    100%   51     0.1KB/s   00:00
+  {pubssh:~} scp ./CB4sys.sh CBnetid@CBsysname.utdallas.edu:/home/jxw150830/
+  CBnetid@CBsysname.utdallas.edu's password:
+  CB4sys.sh                                                    100%   51     0.1KB/s   00:00
   {pubssh:~}
 
 The above example is moving information from a user's home folder on the server to the |systemName| home area.  Note that this process could go backwards as well.
 
 Another tool that is useful for keeping items up to date through remote synchronization is ``rsync``.  The ``rsync`` command works to keep items up to date across multiple devices by updating information that has changed.  This method of keeping files up to date is more time efficient for large data sets where only minor changes are made; that is, *the changes, instead of the data set*, will be moved. ::
 
-  {pubssh:~} rsync -avtr ./dataset/ jxw150830@ganymede.utdallas.edu:/home/jxw150830/
-  jxw150830@ganymede.utdallas.edu's password:
+  {pubssh:~} rsync -avtr ./dataset/ jxw150830@CBsysname.utdallas.edu:/home/jxw150830/
+  jxw150830@CBsysname.utdallas.edu's password:
   sending incremental file list
   ./
   data1.dat
@@ -352,8 +363,8 @@ Another tool that is useful for keeping items up to date through remote synchron
 
 In the above example, each item is moved to |systemName|.  If the user does not want to see all of the files transferred, the user can remove ``-v``.  Similarly, the ``-r`` is the recursive command which will go down the folder structure to extract everything.  The ``-at`` should remain for file continuity.  If the user were to run the same command again, notice that a small amount of data was sent to check for updates, but the full files were not resent. ::
 
-  {pubssh:~} rsync -avtr ./dataset/ jxw150830@ganymede.utdallas.edu:/home/jxw150830/
-  jxw150830@ganymede.utdallas.edu's password:
+  {pubssh:~} rsync -avtr ./dataset/ jxw150830@CBsysname.utdallas.edu:/home/jxw150830/
+  jxw150830@CBsysname.utdallas.edu's password:
   sending incremental file list
 
   sent 83 bytes  received 12 bytes  12.67 bytes/sec
@@ -434,8 +445,8 @@ To get the input during runtime, the user can read in the value of variables. Th
 
   {pubssh:~/home/Documents} bash namelive.sh
   What is your name? :
-  [CBsysname]
-  Hello [CBsysname]
+  CBsysname
+  Hello CBsysname
 
 ::
 
@@ -454,7 +465,7 @@ In |systemName|, there are specific environmental varables that are designed to 
 --------------------- -------------------------------------
 ``$HOME``             ``/home/$USER``
 --------------------- -------------------------------------
-``$SCRATCH``          ``/petastore/[CBsysname]/scratch/$USER``
+``$SCRATCH``          ``/petastore/CBsysname/scratch/$USER``
 ===================== =====================================
 
 These environmental variables are save the user time in typing locations.  Additionally, these can be used by the user in any shell script or command that is input. 
@@ -464,12 +475,12 @@ These environmental variables are save the user time in typing locations.  Addit
 
 To save time, a command has been created to directly change the user's directory to the Scratch directory.  This command to change to scratch is ``cds``. ::
 
-  [[CBnetid]@[CBsysname] ~]$ pwd
+  [CBnetid@CBsysname ~]$ pwd
   /home/jxw150830
-  [[CBnetid]@[CBsysname] ~]$ cds
-  [[CBnetid]@[CBsysname]jxw150830]$ pwd
-  /petastore/ganymede/scratch/jxw150830
-  [[CBnetid]@[CBsysname]jxw150830]$ 
+  [CBnetid@CBsysname ~]$ cds
+  [CBnetid@CBsysname CBnetid]$ pwd
+  /petastore/CBsysname/scratch/CBnetid
+  [CBnetid@CBsysnamejxw150830]$ 
 
 
 
@@ -483,7 +494,7 @@ One of the important considerations in High Performance Computing is the amount 
 3.1 - Types of Space
 ********************
 
-There are currently 2 types of space available to the user, home space and scratch space. Home space is located in the ``/home/$USER`` folder and the scratch folder is located in the ``/petastore/[CBsysname]/scratch/$USER`` folder. For convenience, the scratch folder is symbolically linked inside the user's home folder in ``/home/$USER/scratch`` The following table compares the attributes of the two available spaces.
+There are currently 2 types of space available to the user, home space and scratch space. Home space is located in the ``/home/$USER`` folder and the scratch folder is located in the ``/petastore/CBsysname/scratch/$USER`` folder. For convenience, the scratch folder is symbolically linked inside the user's home folder in ``/home/$USER/scratch`` The following table compares the attributes of the two available spaces.
 
 +------------+-------------------+-----------------------+
 | Attributes |     Home Space    |     Scratch Space     |
@@ -511,7 +522,7 @@ In addition to the attributes listed above, there are space considerations that 
 | Days to Comply   | |homerectime| | |scratchrectime| |
 +------------------+---------------+------------------+
 
-.. [*] The scratch space is located in ``/petastore/[CBsysname]/scratch/$USER`` but does not count against the storage in the home space, even with the symbolic link.
+.. [*] The scratch space is located in ``/petastore/CBsysname/scratch/$USER`` but does not count against the storage in the home space, even with the symbolic link.
 
 .. [*] While the petabyte storage device is not metered, the scratch space should be cleaned up when a project is finished to ensure that there is enough room for others interested in using the space.
 
@@ -521,7 +532,7 @@ In addition to the attributes listed above, there are space considerations that 
 
 The user should be aware of the amount of free space that is remaining, in order to ensure that the user does not run out of space for data during a run of a program or module.  In order to check the amount of space, the user needs to check the ``quota``. ::
 
-  [[CBnetid]@[CBsysname]~]$ quota -s
+  [CBnetid@CBsysname~]$ quota -s
   Disk quotas for user jxw150830 (uid 532471):
        Filesystem   space   quota   limit   grace   files   quota   limit   grace
   /dev/mapper/volgroup0-lvolexport
@@ -529,7 +540,7 @@ The user should be aware of the amount of free space that is remaining, in order
 
 In the case above, the entire 20 GB is available to be used.  After running a couple of processes, the ``/home`` space is filled above the quota. ::
 
-  [[CBnetid]@[CBsysname]~]$ quota -s
+  [CBnetid@CBsysname~]$ quota -s
   Disk quotas for user jxw150830 (uid 532471):
        Filesystem   space   quota   limit   grace   files   quota   limit   grace
   /dev/mapper/volgroup0-lvolexport
@@ -552,7 +563,7 @@ Modules allow the user to set up an environment in the way that best fits their 
 
 The first step a user should follow is to display the modules that are currently loaded by their account.  This is done using the ``module list`` command. ::
 
-  [[CBnetid]@[CBsysname]~]$ module list
+  [CBnetid@CBsysname~]$ module list
 
   Currently Loaded Modules:
     1) autotools   2) prun/1.2   3) intel/18.0.2.199   4) mvapich2/2.2   5) ohpc
@@ -564,7 +575,7 @@ Notice that each of the modules is shown along with the version has been compile
 
 The user can list the modules that have been loaded into their account, but with the different dependencies that are available for each of these modules. ::
 
-  [[CBnetid]@[CBsysname]~]$ module avail
+  [CBnetid@CBsysname~]$ module avail
 
   ------------------------------------------------ /opt/ohpc/pub/moduledeps/intel-mvapich2 ------------------------------------------------
    adios/1.13.0    mfem/3.3.2              netcdf/4.5.0     ptscotch/6.0.4      scalasca/2.3.1    superlu_dist/5.3.0
@@ -592,7 +603,7 @@ The user can list the modules that have been loaded into their account, but with
 
 A number of modules exist that are not initially loaded into the user's account.  The first step in finding a module that the user wants is to search for it using the ``spider`` command. To list all available packages, type ``module spider``.  To search more specifically, type ``module spider <name of software package>``. ::
 
-  [[CBnetid]@[CBsysname]~]$ module spider py2
+  [CBnetid@CBsysname~]$ module spider py2
 
   -----------------------------------------------------------------------------------
     py2-mpi4py:
@@ -607,8 +618,8 @@ A number of modules exist that are not initially loaded into the user's account.
 
 Now that the correct version and name has been found, the next step is to load the desired module or modules to the user's account, using ``module load <modulename>``. ::
 
-  [[CBnetid]@[CBsysname]~]$ module load py2-mpi4py
-  [[CBnetid]@[CBsysname]~]$ module list
+  [CBnetid@CBsysname~]$ module load py2-mpi4py
+  [CBnetid@CBsysname~]$ module list
 
   Currently Loaded Modules:
     1) autotools   2) prun/1.2   3) intel/18.0.2.199   4) mvapich2/2.2   5) ohpc   6) py2-mpi4py/3.0.0
@@ -620,8 +631,8 @@ Now the desired module has been added to the environment.
 
 When the user no longer needs a module, the module can be removed, or unloaded, by using the command ``module unload <modulename>``. ::
 
-  [[CBnetid]@[CBsysname] ~]$ module unload py2-mpi4py/3.0.0
-  [[CBnetid]@[CBsysname]~]$ module list
+  [CBnetid@CBsysname ~]$ module unload py2-mpi4py/3.0.0
+  [CBnetid@CBsysname~]$ module list
 
   Currently Loaded Modules:
     1) autotools   2) prun/1.2   3) intel/18.0.2.199   4) mvapich2/2.2   5) ohpc
@@ -656,7 +667,7 @@ Upon noticing a compiler or MPI stack that is needed, the user is encouraged to 
 
 The current loaded compiler or MPI stack can be changed, or swapped, as needed to meet the programmers needs.  The command to this is ``module swap <current compiler> <new compiler>``. ::
 
-  [[CBnetid]@[CBsysname] ~]$ module swap intel/18.0.2.199 gnu7/7.3.0
+  [CBnetid@CBsysname ~]$ module swap intel/18.0.2.199 gnu7/7.3.0
 
   Due to MODULEPATH changes, the following have been reloaded:
     1) mvapich2/2.2
@@ -665,18 +676,18 @@ Now the intel compiler is unloaded in the environment and the GNU7 compiler has 
 
 The user is also able to swap the loaded mpi stack without changing the current compiler.  The command to do this is the same as above, with the diffence being the mpi stacks as the passed inputs ``module swap <current mpistack> <new mpistack>``. ::
 
-  [[CBnetid]@[CBsysname] [CBnetid]$ module list
+  [CBnetid@CBsysname CBnetid$ module list
 
   Currently Loaded Modules:
     1) autotools   2) prun/1.2   3) intel/18.0.2.199   4) mvapich2/2.2   5) ohpc
   
-  [[CBnetid]@[CBsysname] [CBnetid]]$ module swap mvapich2/2.2 impi
-  [[CBnetid]@[CBsysname] [CBnetid]]$ module list
+  [CBnetid@CBsysname CBnetid]$ module swap mvapich2/2.2 impi
+  [CBnetid@CBsysname CBnetid]$ module list
 
   Currently Loaded Modules:
     1) autotools   2) prun/1.2   3) intel/18.0.2.199   4) ohpc   5) impi/2018.2.199
 
-  [[CBnetid]@[CBsysname] [CBnetid]]$ 
+  [CBnetid@CBsysname CBnetid]$ 
 
 
 5 - Running Jobs on |systemName|
@@ -691,7 +702,7 @@ The user is also able to swap the loaded mpi stack without changing the current 
 
 Before the user can queues a task, the user should check and see the status of cluster.  This is done by running the command ``sinfo``. By doing this, the user can see what resources are available. ::
 
-  [[CBnetid]@[CBsysname] ~]$ sinfo
+  [CBnetid@CBsysname ~]$ sinfo
   PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
   debug        up    2:00:00      2   idle compute-6-9-[0-1]
   normal*      up 4-00:00:00      4  down* compute-7-2-[14,16],compute-7-6-[23,25]
@@ -702,17 +713,17 @@ In the example above, there are 96 nodes in the cluster.  The different states d
 
 It is worth noting there are currently |debugnodenum| debug nodes that allow the user to compile software and to test out the code that is to be run on the main worker nodes.  This means that the user can queue a process knowing that it will run instead of waiting for the queue to run their process only to find it does not work. **Debugging/ Prototying should never be done on the normal nodes**.  The following is an example of a test script that the user user should following in debugging. ::
 
-  [jxp180019@ganymede Linux]$ cat chessjob.sh
+  [CBnetid@CBsysname Linux]$ cat chessjob.sh
   #!/bin/bash
   #SBATCH --ntasks=1
   #SBATCH --time=00:01:00
-  #SBATCH --mail-user=jxw150830@utdallas.edu
+  #SBATCH --mail-user=CBnetid@utdallas.edu
   #SBATCH --mail-type=ALL
   #SBATCH -p debug 
 
-  cd /home/jxp180019/scratch/stockfish-9-linux/Linux
+  cd /home/CBnetid/scratch/stockfish-9-linux/Linux
   ./chessrun
- [jxp180019@ganymede Linux]$
+ [jxp180019@CBsysname Linux]$
 
 Line 1 is the required bash script setup. Line 2 sets of the number of cores, which should be 1 since all users can only access |debugnodenum| debug nodes.  The next line is the time to run, which is a minute.  The amount of time should be long enough for to ensure that the program works, but no longer.  In this case, a minute was enough to know that no errors had occured.
 
@@ -726,7 +737,7 @@ Now that you have done the preoperative tasks, it is time to queue a task.  To q
 
 The following is a simple serial task template for the operating script. ::
 
-  [[CBnetid] ~]$ cat job.serial
+  [CBnetid ~]$ cat job.serial
   #!/bin/bash
 
   #SBATCH -J test               # Job name
@@ -747,7 +758,7 @@ In the example above the user submitted a job named ``job.serial``. It will send
 
 Parallel tasks use mpi technology to run multiple tasks at a time.  The script to submit an MPI script is similar to the serial, but there are some differences. ::
 
-  [[CBnetid] ~]$ cat job.mpi
+  [CBnetid ~]$ cat job.mpi
   #!/bin/bash
 
   #SBATCH -J test               # Job name
@@ -763,12 +774,12 @@ Parallel tasks use mpi technology to run multiple tasks at a time.  The script t
 
 Once the user has set up the file, the user can submit the job to the Slurm batch that will apply to the system using ``sbatch``. ::
 
-  [[CBnetid] ~]$ sbatch job.serial
+  [CBnetid ~]$ sbatch job.serial
   Submitted batch job 405
 
 This informs the user of the job number.  The user will also receive an email from |slurmemail| informing that the job has started.  If the user ever forgets the job number, or has logged into |systemName| to determine if and which jobs are running, the user can type the command ``squeue -u $USER``.  This will show all current running tasks to the user, with the first number being the Job ID. ::
 
-  [[CBnetid] ~]$ squeue -u $USER
+  [CBnetid ~]$ squeue -u $USER
     JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
       405    normal     test jxw15083  R       0:01      1 compute-7-2-21
 
@@ -782,14 +793,14 @@ If the user runs ``squeue`` without the additional command, the queue total queu
 
 Once the task is running, the user may want to check on the progress of the task.  This can be done by using the command ``sstat --format=AveCPU,AvePages,AveRSS,AveVMSize,JobID -j <JobID>``. ::
 
-  [[CBnetid] ~]$ sstat --format=AveCPU,AvePages,AveRSS,AveVMSize,JobID -j 405
+  [CBnetid ~]$ sstat --format=AveCPU,AvePages,AveRSS,AveVMSize,JobID -j 405
       AveCPU   AvePages     AveRSS  AveVMSize        JobID
   ---------- ---------- ---------- ---------- ------------
    00:00.000          0       362K      4372K 405.0
 
 For those interested in very detailed analysis, running the command ``scontrol show job --d <JobID>`` with the job number will give the user a listing that is very specific about how the job is being executed. ::
 
-  [[CBnetid] ~]$ scontrol show job --d 405
+  [CBnetid ~]$ scontrol show job --d 405
   JobId=405 JobName=test
      UserId=jxw150830(532471) GroupId=oithpc(1100) MCS_label=N/A
      Priority=4294901737 Nice=0 Account=(null) QOS=(null)
@@ -801,7 +812,7 @@ For those interested in very detailed analysis, running the command ``scontrol s
      StartTime=2018-05-31T16:06:29 EndTime=2018-05-31T16:06:39 Deadline=N/A
      PreemptTime=None SuspendTime=None SecsPreSuspend=0
      LastSchedEval=2018-05-31T16:06:29
-     Partition=normal AllocNode:Sid=[CBsysname]:449124
+     Partition=normal AllocNode:Sid=CBsysname:449124
      ReqNodeList=(null) ExcNodeList=(null)
      NodeList=compute-7-2-21
      BatchHost=compute-7-2-21
@@ -822,10 +833,10 @@ For those interested in very detailed analysis, running the command ``scontrol s
 
 If at any time the user wants to cancel a job, the user should execute ``scancel <JobID>``. ::
 
-  [[CBnetid] ~]$ sbatch sampletask.sh
+  [CBnetid ~]$ sbatch sampletask.sh
   Submitted batch job 380
-  [[CBnetid] ~]$ scancel 380
-  [[CBnetid] ~]$
+  [CBnetid ~]$ scancel 380
+  [CBnetid ~]$
 
 If there are no issues, there will be a clean output in the terminal and the job will disappear from the queue.
 
@@ -834,8 +845,8 @@ If there are no issues, there will be a clean output in the terminal and the job
 
 When the user is running a MPI task, it is important to debug properly.  Because the amount of data that can be dumped is greater than the quota for the home directory, special care must be taken in order for the user to sucessfully fix code.  The user needs to first ssh into |systemName| using the following command: ::
 
-  jwhite-swift@hpc-rca:~$ ssh -X jxw150830@ganymede.utdallas.edu
-  jxw150830@ganymede.utdallas.edu's password: 
+  jwhite-swift@hpc-rca:~$ ssh -X jxw150830@CBsysname.utdallas.edu
+  jxw150830@CBsysname.utdallas.edu's password: 
   Last login: Tue Jun  5 10:26:09 2018 from 10.21.4.24
   Disk quotas for user jxw150830:
   ====================    ============    ================        ============
@@ -843,13 +854,13 @@ When the user is running a MPI task, it is important to debug properly.  Because
   ====================    ============    ================        ============
   /home/jxw150830         8248K           20000M                  30000M
   ====================    ============    ================        ============
-  [[CBnetid] ~]$ 
+  [CBnetid ~]$ 
 
-Note that the command is ``ssh -X <NetID>@ganymede.utdallas.edu``.  The ``-X`` allows the user to pass visual windows back through, which will become important later.
+Note that the command is ``ssh -X <NetID>@CBsysname.utdallas.edu``.  The ``-X`` allows the user to pass visual windows back through, which will become important later.
 
 Once logged into |systemName|, the user must first get a reservation on a **debug** compute node. ::
 
-  [[CBnetid] ~]$ salloc -p debug -N1 -n4 --time=00:30:00
+  [CBnetid ~]$ salloc -p debug -N1 -n4 --time=00:30:00
   salloc: Granted job allocation 620
   Disk quotas for user jxw150830:
   ====================    ============    ================        ============
@@ -857,21 +868,21 @@ Once logged into |systemName|, the user must first get a reservation on a **debu
   ====================    ============    ================        ============
   /home/jxw150830         8248K           20000M                  30000M
   ====================    ============    ================        ============
-  [[CBnetid] ~]$ 
+  [CBnetid ~]$ 
 
 This command asks for 1 node and 4 cores on the node in the debug partition for 30 minutes.  The number of cores can be adjusted as required.
 
 To find out the current user's node, the user then inputs ``showq –u``. ::
 
-  [[CBnetid] ~]$ squeue -u $USER
+  [CBnetid ~]$ squeue -u $USER
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-               620     debug     bash jxw15083  R       4:55      1 [CNChapter5.4]
+               620     debug     bash jxw15083  R       4:55      1 CNChapter5.4
 
 Then the user will ssh into that node and turn on X forwarding, just as the user did when accessing the |systemName| node to begin with. ::
 
-  [[CBnetid] ~]$ ssh -X [CNChapter5.4]
-  Warning: Permanently added '[CNChapter5.4],10.182.224.70' (ECDSA) to the list of known hosts.
-  [jxw150830@c[CNChapter5.4] ~]$ 
+  [CBnetid ~]$ ssh -X CNChapter5.4
+  Warning: Permanently added 'CNChapter5.4,10.182.224.70' (ECDSA) to the list of known hosts.
+  [jxw150830@CNChapter5.4 ~]$ 
 
 Now that the user is on the debug node, the user needs to run the following command: ``mpirun -np 4 xterm -e gdb <my_mpi_application>``
 
@@ -891,14 +902,14 @@ Interactive Jobs can be run by the user on the individual compute nodes.  This i
 
 If the user is interested in only running for the instance in the compute node (i.e. logged off when the session is finished, then the user should use ``srun``. ::
 
-  [[CBnetid] ~]$ srun -n1 -N1 --pty /bin/bash
-  [[CBuserCompute] ~]$ 
+  [CBnetid ~]$ srun -n1 -N1 --pty /bin/bash
+  [CBuserCompute ~]$ 
 
 The user is now logged into the compute node.  Notice that the ``-n1`` denotes 1 task (or CPU) and the ``-N1`` denotes 1 node is being used.  The rest of the command sets up the machine to be interacted with. If the node is currently in use, the user will be placed in a queue and the command will hang until the user is granted access.  Once the user has finished using the resources, the user needs to type ``exit`` to exit the compute node. ::
 
   [[CBuserCompute] ~]$ exit
   exit
-  [[CBnetid] ~]$ 
+  [CBnetid ~]$ 
 
 Once executed, the session is closed and the user moves back to the |systemName| node.  
 
@@ -907,7 +918,7 @@ Once executed, the session is closed and the user moves back to the |systemName|
 
 If the user is interested in running a task that can needs to be logged in and out of multiple times, the user should allocate some time on a node or nodes using ``salloc``. ::
 
-  [[CBnetid] ~]$ salloc -n1 -N1 -t 1:00:00 
+  [CBnetid ~]$ salloc -n1 -N1 -t 1:00:00 
   salloc: Granted job allocation 607
   Disk quotas for user jxw150830:
   ====================    ============    ================        ============
@@ -915,27 +926,27 @@ If the user is interested in running a task that can needs to be logged in and o
   ====================    ============    ================        ============
   /home/jxw150830         7420K           20000M                  30000M
   ====================    ============    ================        ============
-  [[CBnetid] ~]$ 
+  [CBnetid ~]$ 
 
 The user in this example allocated ``-n1`` for 1 processor and ``-N1`` for 1 node.  The ``-t 1:00:00`` sets the allocation to 1 hour.  Now that the user has allocated the node, the user needs to find the compute node number by ``running squeue``. ::
 
-  [[CBnetid] ~]$ squeue -u $USER
+  [CBnetid ~]$ squeue -u $USER
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-               607    normal     bash jxw15083  R       3:46      1 [CNChapter5.5.5]
+               607    normal     bash jxw15083  R       3:46      1 CNChapter5.5.5
 
 Now that the compute node number is known, the user can ssh into the node to work. Note: users can only ssh into nodes that have been allocated for them. ::
 
-  [[CBnetid] ~]$ ssh [CNChapter5.5.5]
-  Warning: Permanently added '[CNChapter5.5.5],10.182.224.72' (ECDSA) to the list of known hosts.
-  [jxw150830@[CNChapter5.5.5] ~]$ 
+  [CBnetid ~]$ ssh CNChapter5.5.5
+  Warning: Permanently added 'CNChapter5.5.5,10.182.224.72' (ECDSA) to the list of known hosts.
+  [jxw150830@CNChapter5.5.5 ~]$ 
 
 Now that the user is in the node, the user is free to come and go to do work for the duration of the allocation. ::
 
-  [jxw150830@[CNChapter5.5.5] ~]$ exit    
+  [jxw150830@CNChapter5.5.5 ~]$ exit    
   logout
-  Connection to [CNChapter5.5.5] closed.
-  [[CBnetid] ~]$ ssh [CNChapter5.5.5]
-  [jxw150830@[CNChapter5.5.5] ~]$ 
+  Connection to CNChapter5.5.5 closed.
+  [CBnetid ~]$ ssh CNChapter5.5.5
+  [jxw150830@CNChapter5.5.5 ~]$ 
 
 
 5.5.3 - Logging into a Particular Node
@@ -943,21 +954,21 @@ Now that the user is in the node, the user is free to come and go to do work for
 
 There are times when it is advantageous for the user to work on a particular node.  This may be for a particular scipt or some other program that is loaded on a particular set of nodes, or to use the particular node because of hardware.  To do this, the user must us the command ``salloc -w <computenode>``.  If the node is free, the user will encounter the following output: ::
 
-  [[CBnetid] ~]$ salloc -w [CNChapter5.5.3]
+  [CBnetid ~]$ salloc -w CNChapter5.5.3
   salloc: Granted job allocation 611
-  Disk quotas for user [CBnetid]:
+  Disk quotas for user CBnetid:
   ====================    ============    ================        ============
   Disk                    Usage           Soft Limit              Hard Limit
   ====================    ============    ================        ============
   /home/jxw150830         7424K           20000M                  30000M
   ====================    ============    ================        ============
-  [[CBnetid] ~]$ ssh [CNChapter5.5.3]
-  Warning: Permanently added '[CNChapter5.5.3],10.182.224.204' (ECDSA) to the list of known hosts.
-  [[CBnetid]@[CNChapter5.5.3] ~]$ 
+  [CBnetid ~]$ ssh CNChapter5.5.3
+  Warning: Permanently added 'CNChapter5.5.3,10.182.224.204' (ECDSA) to the list of known hosts.
+  [CBnetid@CNChapter5.5.3 ~]$ 
 
 and if the node is in use, the user will see: ::
 
-  [[CBnetid] ~]$ salloc -w compute-6-9-3
+  [CBnetid ~]$ salloc -w compute-6-9-3
   salloc: Pending job allocation 608
   salloc: job 608 queued and waiting for resources
 
@@ -968,9 +979,9 @@ The user will then have to wait until the node becomes available.
 
 Once the job is done, the user will receive an email from |slurmemail| alerting the user that the job has been completed. Any interaction between the user and the nodes that the user were logged into will be be closed and the user will be returned to the home folder.  The file will be in that directory.  If there are any errors that occur, those will be captured in the output file that is created by the system.  This is especially useful when running on the debugging nodes.  ::
 
-  [[CBnetid] ~]$ ls
+  [CBnetid ~]$ ls
   html  job.405.out  job.mpi  job.serial  sampletask.sh  scratch
-  [[CBnetid] ~]$ cat job.405.out
+  [CBnetid ~]$ cat job.405.out
   this is serial code
 
 
@@ -1030,11 +1041,11 @@ To do this, the submission script needs to be stuctured like the one in Section 
 
 Matlab can be run from an interactive terminal on a single compute node.  This is useful for users who want to tweak inputs as they go, or want to feed in live data.  See section 5.4 for how to log into a node.  Once logged in, the user needs to load the Matlab module. ::
 
-  [[CBuserCompute] ~]$ module load matlab
+  [CBuserCompute ~]$ module load matlab
 
 Once the user has added the module, executing `` `` will start matlab interactively.  This normally takes a few moments. ::
 
-  [[CBuserCompute] ~]$ matlab
+  [CBuserCompute ~]$ matlab
   MATLAB is selecting SOFTWARE OPENGL rendering.
  
                             < M A T L A B (R) >
@@ -1052,9 +1063,9 @@ Once the user has added the module, executing `` `` will start matlab interactiv
 Once the Matlab terminal is loaded, the user can execute Matlab functions a usual.  When finished, the user should exit from the Matlab terminal and the compute node. ::
 
   >> exit
-  [[CBuserCompute] ~]$ exit
+  [CBuserCompute ~]$ exit
   exit
-  [[CBnetid] ~]$ 
+  [CBnetid ~]$ 
 
 .. 6.2 - Ansys
 .. ***********

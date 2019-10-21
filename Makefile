@@ -8,9 +8,11 @@
 # Here you can set the substitutions that sphinx won"t do these include system specific words within special formatting like codeblocks
 
 CBnetId="jxw150830"
-CBsysName="testGanymedeSysName"
-CBuserCompute="computeNodeUserNameTest"
-SPuppersysName="GanymedeTest"
+CBsysName="europa"
+CBuserCompute="jxw150830"
+SPuppersysName="Europa"
+CBfourLetSysName="euro"
+
 
 # Replaceable compute nodes
 CNChaper54="compute-6-9-0"
@@ -20,11 +22,28 @@ CNChapter553="compute-7-6-4"
 
 
 
-# Moving to the GanymedeDocs-master subdirectory to call sphinx-build
+# Moving to the GanymedeDocs-master subdirectory to change the toctree title then run sphinx-build
 cd GanymedeDocs
+
+# Moving torward index .rst to change toctree title
+cd source
+
+# Changing the CBuppersysname var to it's value then go out generate the sphinx-build then change it back to the var
+sed -i "s/SPuppersysname/$(echo $SPuppersysName)/g" index.rst
+
+cd ..
 
 # Running the sphinx-build command to build the html into the /build directory one level up
 sphinx-build -b html ./source ./build
+
+# Moving back to index.rst to change it back to var
+cd source
+
+# Changing SPuppersysname's value in the title back to the variable
+sed -i "s/$(echo $SPuppersysName)/SPuppersysname/g" index.rst
+
+# Moving back to build's parent directory
+cd ..
 
 # Removing alabaster.css
 cd build
@@ -33,17 +52,19 @@ rm alabaster.css
 
 # Going back to where the main html is stored and replacing the variables (now in build)
 cd ..
-sed -i "s/\[CBnetid\]/$(echo $CBnetId)/g" Ganymede-Training-v1.2.html
-sed -i "s/\[CBsysname\]/$(echo $CBsysName)/g" Ganymede-Training-v1.2.html
+sed -i "s/CBnetid/$(echo $CBnetId)/g" Ganymede-Training-v1.2.html
+sed -i "s/CBsysname/$(echo $CBsysName)/g" Ganymede-Training-v1.2.html
 # The one below  catches weird cases where html puts spans between he bracket and the variable name
 sed -i "s/CBsysname/$(echo $CBsysName)/g" Ganymede-Training-v1.2.html		
-sed -i "s/\[CBuserCompute\]/$(echo $CBuserCompute)/g" Ganymede-Training-v1.2.html
-sed -i "s/\[CBuppersysname\]/$(echo $SPuppersysName)/g" Ganymede-Training-v1.2.html
-sed -i "s/\[CNChapter5.4\]/$(echo $CNChapter54)/g" Ganymede-Training-v1.2.html
-sed -i "s/\[CNChapter5.5.1\]/$(echo $CNChapter551)/g" Ganymede-Training-v1.2.html
-sed -i "s/\[CNChapter5.5.5\]/$(echo $CNChapter551)/g" Ganymede-Training-v1.2.html
-sed -i "s/\[CNChapter5.5.2\]/$(echo $CNChapter552)/g" Ganymede-Training-v1.2.html
-sed -i "s/\[CNChapter5.5.3\]/$(echo $CNChapter553)/g" Ganymede-Training-v1.2.html
+sed -i "s/CB4sys/$(echo $CBfourLetSysName)/g" Ganymede-Training-v1.2.html
+sed -i "s/CBuserCompute/$(echo $CBuserCompute)/g" Ganymede-Training-v1.2.html
+sed -i "s/CBuppersysname/$(echo $SPuppersysName)/g" Ganymede-Training-v1.2.html
+sed -i "s/CNChapter5.4/$(echo $CNChapter54)/g" Ganymede-Training-v1.2.html
+sed -i "s/CNChapter5.5.1/$(echo $CNChapter551)/g" Ganymede-Training-v1.2.html
+sed -i "s/CNChapter5.5.5/$(echo $CNChapter551)/g" Ganymede-Training-v1.2.html
+sed -i "s/CNChapter5.5.2/$(echo $CNChapter552)/g" Ganymede-Training-v1.2.html
+sed -i "s/CNChapter5.5.3/$(echo $CNChapter553)/g" Ganymede-Training-v1.2.html
+
 
 
 
