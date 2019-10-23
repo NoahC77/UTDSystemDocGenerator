@@ -117,7 +117,7 @@
 
 
 
-UTDallas HPC Cluster Users Guide
+UT Dallas HPC Cluster Users Guide
 ================================
 
 .. contents:: Table of Contents

@@ -1,6 +1,9 @@
 /* Sphinx themes
 -------------------------------------------------- */
 
+a {
+	color: #407863
+}
 body {
   background-color: #edf0f2;
   margin: 0;
@@ -42,15 +45,25 @@ h4:hover > a.headerlink,
 h5:hover > a.headerlink,
 h6:hover > a.headerlink,
 dt:hover > a.headerlink {
-  visibility: visible;
+  color: #f78f48;
 }
 
-h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
-  color: #5C7C98;
+h1 > a, h2 > a, h5 > a, h6 > a {
+  border-radius: 6px;
+  border: 5px;
+  color: #f78f48;	
+  background-color: #407863
+}
+
+h4 > a, h3 > a {
+  radius: 25px;
+  color: #407863;
+  background-color: #FFFFFF;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: black;
+  border-radius: 6px;
+  color: #f78f48;
   font-weight: normal;
   padding: 0;
   font-family: "Source Serif Pro", "serif";
@@ -65,29 +78,38 @@ h1 {
   font-size: 38px;
   padding: 10px 10px 10px 45px;
   margin: 20px 0 35px -45px;
-  background-color: aliceblue;
+  background-color: #407863;
   width: calc(100% + 90px);
   border-bottom: 1px solid #D8E4EF;
 }
 
 h2 {
+  border-radius: 6px;
   font-size: 34px;
   padding: .2em 0;
   border-bottom: 1px solid #ddd;
+  background-color: #407863;
+  
 }
 
 h3 {
+  margin-radius 8px;
   margin-top: 35px;
   font-size: 28px;
+  color: #407863;
+  background-color: #FFFFFF;
+  
 }
 
 h4 {
+  margin-radius 6px;
   margin-top: 30px;
   font-size: 24px;
 }
 
 h5 {
-  margin-top: 25px;
+  border-radius: 12px;
+  border-top: 25px;
   font-size: 20px;
 }
 
@@ -169,7 +191,7 @@ blockquote {
   border-width: .1em 0 .1em 0;
   border-color: #e5eef2;
   border-style: solid;
-  background-color: #f3f8f9;
+  background-color: #fff0e6;
   color: #000;
   margin: 20px 0;
   padding: 15px 20px;
@@ -295,7 +317,7 @@ div.sphinxsidebar input {
   padding: 0 0 6px 0;
   font-weight: bold;
   text-transform: uppercase;
-  color: #606060;
+  color: #f78f48;
 }
 
 .sidebar-block .bd {
