@@ -4,15 +4,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
+  
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
     <title>UTDallas HPC Cluster Users Guide &#8212; UTDallas HPC Cluster Users Guide 1.2 documentation</title>
-    <link rel="stylesheet" href="_static/utd.css" type="text/css" />
+    <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/_static/alabaster.css" />
-    <link rel="stylesheet" type="text/css" href="_static/_static/basic.css" />
-    <link rel="stylesheet" type="text/css" href="_static/_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="_static/_static/nature.css" />
-    <link rel="stylesheet" type="text/css" href="_static/_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/_static/utd.css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
@@ -21,21 +24,171 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="Welcome to Europa’s documentation!" href="index.html" />
+  
    
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
   </head><body>
-  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Europa’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">UTDallas HPC Cluster Users Guide 1.2 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="container-wrapper">
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar">
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Contents</h2>
+    <div class="sidebar-localtoc">
+      <ul>
+<li><a class="reference internal" href="#">UTDallas HPC Cluster Users Guide</a><ul>
+<li><a class="reference internal" href="#acceptable-user-guidelines">Acceptable User Guidelines</a></li>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#connecting-to-systemname">1 - Connecting to Europa</a><ul>
+<li><a class="reference internal" href="#microsoft-windows">1.1 - Microsoft Windows</a><ul>
+<li><a class="reference internal" href="#putty">1.1.1 - PuTTY:</a></li>
+<li><a class="reference internal" href="#bitvise">1.1.2 - Bitvise:</a></li>
+<li><a class="reference internal" href="#mobaxterm">1.1.3 - MobaXTerm:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#for-mac-users">1.2 - For Mac Users</a></li>
+<li><a class="reference internal" href="#for-linux-users">1.3 - For Linux Users</a></li>
+<li><a class="reference internal" href="#mailing-list">1.4 - Mailing List</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#moving-around-systemname">2 - Moving around Europa</a><ul>
+<li><a class="reference internal" href="#linux-commands">2.1 - Linux Commands</a><ul>
+<li><a class="reference internal" href="#moving-around">2.1.1 - Moving Around</a></li>
+<li><a class="reference internal" href="#making-files-and-directories">2.1.2 - Making Files and Directories</a></li>
+<li><a class="reference internal" href="#moving-files-and-directories">2.1.3 - Moving Files and Directories</a></li>
+<li><a class="reference internal" href="#removing-files-and-directories">2.1.4 - Removing Files and Directories</a></li>
+<li><a class="reference internal" href="#viewing-and-editing-files">2.1.5 - Viewing and Editing Files</a></li>
+<li><a class="reference internal" href="#automating-commands">2.1.6 - Automating Commands</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#systemname-specific-instructions-and-programs">2.2 - Europa Specific Instructions and Programs</a><ul>
+<li><a class="reference internal" href="#environmental-variables">2.2.1 - Environmental Variables</a></li>
+<li><a class="reference internal" href="#custom-programs">2.2.2 - Custom Programs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#systemname-space-constraints">3 - Europa Space Constraints</a><ul>
+<li><a class="reference internal" href="#types-of-space">3.1 - Types of Space</a></li>
+<li><a class="reference internal" href="#space-policies">3.2 - Space Policies</a></li>
+<li><a class="reference internal" href="#checking-available-space">3.3 - Checking Available Space</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#systemname-compilers-and-modules">4 - Europa Compilers and Modules</a><ul>
+<li><a class="reference internal" href="#modules">4.1 - Modules</a><ul>
+<li><a class="reference internal" href="#displaying-loaded-modules">4.1.1 - Displaying Loaded Modules</a></li>
+<li><a class="reference internal" href="#listing-available-modules">4.1.2 - Listing Available Modules</a></li>
+<li><a class="reference internal" href="#adding-modules-to-a-user-s-account">4.1.3 - Adding Modules to a User’s Account</a></li>
+<li><a class="reference internal" href="#removing-modules-from-your-account">4.1.4 - Removing Modules From Your Account</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#compilers">4.2 - Compilers</a><ul>
+<li><a class="reference internal" href="#list-available-compilers-and-mpi-stacks">4.2.1 - List Available Compilers and MPI Stacks</a></li>
+<li><a class="reference internal" href="#changing-currently-loaded-compilers-or-mpi-stacks">4.2.2 - Changing Currently Loaded Compilers or MPI Stacks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#running-jobs-on-systemname">5 - Running Jobs on Europa</a><ul>
+<li><a class="reference internal" href="#preparing-to-queue-a-task">5.1 - Preparing to Queue a Task</a></li>
+<li><a class="reference internal" href="#queuing-a-task">5.2 - Queuing a Task</a><ul>
+<li><a class="reference internal" href="#serial-task">5.2.1 - Serial Task</a></li>
+<li><a class="reference internal" href="#parallel-tasks">5.2.2 - Parallel Tasks</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#checking-on-a-running-task">5.3 - Checking on a Running Task</a></li>
+<li><a class="reference internal" href="#debugging-mpi-with-slurm-and-gdb">5.4 Debugging MPI with Slurm and gdb</a></li>
+<li><a class="reference internal" href="#running-interactive-jobs">5.5 - Running Interactive Jobs</a><ul>
+<li><a class="reference internal" href="#running-one-time-instance-jobs">5.5.1 - Running One-Time Instance Jobs</a></li>
+<li><a class="reference internal" href="#running-persistent-jobs">5.5.2 - Running Persistent Jobs</a></li>
+<li><a class="reference internal" href="#logging-into-a-particular-node">5.5.3 - Logging into a Particular Node</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#viewing-results">5.6 - Viewing Results</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#application-specific-instructions">6 - Application Specific Instructions</a><ul>
+<li><a class="reference internal" href="#matlab">6.1 - Matlab</a><ul>
+<li><a class="reference internal" href="#job-types">6.1.1 - Job Types</a><ul>
+<li><a class="reference internal" href="#serial-jobs">6.1.1.1 - Serial Jobs</a></li>
+<li><a class="reference internal" href="#parallel-computing-toolkit-pct-jobs">6.1.1.2 - Parallel Computing Toolkit (PCT) Jobs</a></li>
+<li><a class="reference internal" href="#distributed-compute-server-dcs-jobs">6.1.1.3 - Distributed Compute Server (DCS) Jobs</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#matlab-job-modes">6.1.2 - Matlab Job Modes</a><ul>
+<li><a class="reference internal" href="#batch-jobs">6.1.2.1 - Batch Jobs</a></li>
+<li><a class="reference internal" href="#interactive-matlab">6.1.2.2 - Interactive Matlab</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#appendices">Appendices</a><ul>
+<li><a class="reference internal" href="#appendix-a-linux-commands">Appendix A - Linux Commands</a></li>
+<li><a class="reference internal" href="#appendix-b-slurm-commands">Appendix B - Slurm Commands</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+</div>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Welcome to Europa’s documentation!</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/Ganymede-Training-v1.2.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+        <div id="right-column">
           
-
-          <div class="body" role="main">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="index.html">Docs</a></li>
+              
+              <li>UTDallas HPC Cluster Users Guide</li>
+            </ol>
+          </div>
+          
+          <div class="document clearer body">
             
   <div class="section" id="utdallas-hpc-cluster-users-guide">
 <h1><a class="toc-backref" href="#id5">UTDallas HPC Cluster Users Guide</a><a class="headerlink" href="#utdallas-hpc-cluster-users-guide" title="Permalink to this headline">¶</a></h1>
@@ -1174,155 +1327,39 @@ exit
 
 
           </div>
-          
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="index.html">UTDallas HPC Cluster Users Guide</a></h1>
-
-
-
-
-
-
-
-
-<h3>Navigation</h3>
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">UTDallas HPC Cluster Users Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#acceptable-user-guidelines">Acceptable User Guidelines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#connecting-to-systemname">1 - Connecting to Europa</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#microsoft-windows">1.1 - Microsoft Windows</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#putty">1.1.1 - PuTTY:</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#bitvise">1.1.2 - Bitvise:</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#mobaxterm">1.1.3 - MobaXTerm:</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#for-mac-users">1.2 - For Mac Users</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#for-linux-users">1.3 - For Linux Users</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#mailing-list">1.4 - Mailing List</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#moving-around-systemname">2 - Moving around Europa</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#linux-commands">2.1 - Linux Commands</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#moving-around">2.1.1 - Moving Around</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#making-files-and-directories">2.1.2 - Making Files and Directories</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#moving-files-and-directories">2.1.3 - Moving Files and Directories</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#removing-files-and-directories">2.1.4 - Removing Files and Directories</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#viewing-and-editing-files">2.1.5 - Viewing and Editing Files</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#automating-commands">2.1.6 - Automating Commands</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#systemname-specific-instructions-and-programs">2.2 - Europa Specific Instructions and Programs</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#environmental-variables">2.2.1 - Environmental Variables</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#custom-programs">2.2.2 - Custom Programs</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#systemname-space-constraints">3 - Europa Space Constraints</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#types-of-space">3.1 - Types of Space</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#space-policies">3.2 - Space Policies</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#checking-available-space">3.3 - Checking Available Space</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#systemname-compilers-and-modules">4 - Europa Compilers and Modules</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#modules">4.1 - Modules</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#displaying-loaded-modules">4.1.1 - Displaying Loaded Modules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#listing-available-modules">4.1.2 - Listing Available Modules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#adding-modules-to-a-user-s-account">4.1.3 - Adding Modules to a User’s Account</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#removing-modules-from-your-account">4.1.4 - Removing Modules From Your Account</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#compilers">4.2 - Compilers</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#list-available-compilers-and-mpi-stacks">4.2.1 - List Available Compilers and MPI Stacks</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#changing-currently-loaded-compilers-or-mpi-stacks">4.2.2 - Changing Currently Loaded Compilers or MPI Stacks</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#running-jobs-on-systemname">5 - Running Jobs on Europa</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#preparing-to-queue-a-task">5.1 - Preparing to Queue a Task</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#queuing-a-task">5.2 - Queuing a Task</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#serial-task">5.2.1 - Serial Task</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#parallel-tasks">5.2.2 - Parallel Tasks</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#checking-on-a-running-task">5.3 - Checking on a Running Task</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#debugging-mpi-with-slurm-and-gdb">5.4 Debugging MPI with Slurm and gdb</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#running-interactive-jobs">5.5 - Running Interactive Jobs</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#running-one-time-instance-jobs">5.5.1 - Running One-Time Instance Jobs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#running-persistent-jobs">5.5.2 - Running Persistent Jobs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#logging-into-a-particular-node">5.5.3 - Logging into a Particular Node</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#viewing-results">5.6 - Viewing Results</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#application-specific-instructions">6 - Application Specific Instructions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#matlab">6.1 - Matlab</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#job-types">6.1.1 - Job Types</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#matlab-job-modes">6.1.2 - Matlab Job Modes</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#appendices">Appendices</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#appendix-a-linux-commands">Appendix A - Linux Commands</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#appendix-b-slurm-commands">Appendix B - Slurm Commands</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="index.html" title="previous chapter">Welcome to Europa’s documentation!</a></li>
-  </ul></li>
-</ul>
-</div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-
-
-
-
-
-
-
-
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &copy;2019, Noah Castetter.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
-      
-      |
-      <a href="_sources/Ganymede-Training-v1.2.rst.txt"
-          rel="nofollow">Page source</a>
-    </div>
-
+            
+  <div class="footer-relations">
     
-
+      <div class="pull-left">
+        <a class="btn btn-default" href="index.html" title="previous chapter (use the left arrow)">Welcome to Europa’s documentation!</a>
+      </div>
     
+    </div>
+    <div class="clearer"></div>
+  
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Europa’s documentation!"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">UTDallas HPC Cluster Users Guide 1.2 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+<script type="text/javascript">
+  $("#mobile-toggle a").click(function () {
+    $("#left-column").toggle();
+  });
+</script>
+<script type="text/javascript" src="_static/js/bootstrap.js"></script>
+  <div class="footer">
+    &copy; Copyright 2019, Noah Castetter. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
   </body>
 </html>

@@ -31,6 +31,7 @@ release = '1.2'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+        'guzzle_sphinx_theme'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -49,6 +50,9 @@ exclude_patterns = []
 
 
 # -- Options for HTML output -------------------------------------------------
+import guzzle_sphinx_theme
+html_theme = 'guzzle_sphinx_theme'
+html_theme_path = ['./themes/.']
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
@@ -60,20 +64,23 @@ exclude_patterns = []
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-html_css_files = [
-		'_static/alabaster.css',
-		'_static/basic.css',
-		'_static/custom.css',
-		'_static/nature.css',
-		'_static/pygments.css',
-		'_static/utd.css',
-]
+# html_css_files = [
+# 	'_static/alabaster.css',
+#		'_static/basic.css',
+#		'_static/custom.css',
+#		'_static/nature.css',
+# '_static/pygments.css',
+# '_static/utd.css',
+# ]
 
-html_style = 'utd.css'
+
+extensions.append("guzzle_sphinx_theme")
 
 html_theme_options = {
     
-        'navigation_depth': 4,
-        'collapse_navigation': False
+        'navigation_depth': 2,
+        'collapse_navigation': False,
+        'sticky_navigation': False,
+        "project_nav_name": "Ganymede Docs",
 
 }
