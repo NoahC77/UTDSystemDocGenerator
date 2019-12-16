@@ -1,5 +1,7 @@
 .. Changelog
    -----------------------------------------------------------------------
+   
+.. 1.4 - Made top level sections into their own pages including this one
 .. 1.3 - Template
 	-RST forked. Used to be Ganymede documentation, now used for generating all kinds of system docs
 .. 1.2.2 - Add AUG
@@ -114,28 +116,3 @@
 .. |scratchquota| replace:: None
 .. |scratchmax| replace:: None
 .. |scratchrectime| replace:: N/A
-
-
-
-UTDallas HPC Cluster Users Guide
-================================
-
-.. contents:: Table of Contents
-
-Acceptable User Guidelines
-//////////////////////////
-OIT CI Research Computing (OIT-CIRC) resources are deployed, configured, and operated to serve a large, diverse user community. It is important that all users are aware of and abide by OIT-CIRC Usage Policies. Failure to do so may result in suspension or cancellation of the project and associated allocation and closure of all associated logins. Illegal transgressions will be addressed through University of Texas at Dallas (UT-D) and/or legal authorities. See the :download:`Acceptable User Guidelines <./AUG.pdf>` for more information.
-
-Introduction
-/////////////
-
-**What is CBuppersysname:**
-
-  |systemName| is a |nodecpunum| core cluster with |nodememnum| of memory based on Centos |centVer| / OpenHPC. It has a 10 Gigabit ethernet network and a QDR (40 Gbps) InfiniBand interconnect configured in a fat-tree topology. It has two distributed file systems, one for the home directories over the 10 Gigabit Ethernet network available via NFS and one for the work file system that is a 525 TB high-performance parallel file system (GPFS) accessible over the InfiniBand network. The GPFS file system uses Data Direct Networks (DDN) directly attached to InfiniBand storage for the back end hardware. Compute nodes are all dual processor with many core systems with a variety of Intel architectures including Sandy Bridge, Haswell and Broadwell. Additionally, several nodes in the system have Nvidia Quadro GPUs based on the Nvidia Kepler architecture.
-
-**What is SLURM:** 
-
-  Slurm is an open source, fault-tolerant, and highly scalable cluster management and job scheduling system for large Linux clusters. Slurm requires no kernel modifications for its operation and is relatively self-contained. As a cluster workload manager, Slurm has three key functions. First, it allocates exclusive to resources (compute nodes) to users for some duration of time so they can perform work. Second, it provides a framework for starting, executing, and monitoring work (normally a parallel job) on the set of allocated nodes. Finally, it arbitrates contention for resources by managing a queue of pending work.
-
-**What is OpenHPC:**
-  OpenHPC provides a collection of prebuilt software components common in HPC environments, such as provisioning tools, resource managers, I/O libraries, development tools, and a variety of scientific libraries. 
