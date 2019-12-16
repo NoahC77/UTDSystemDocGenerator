@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>2 - Moving around Europa &#8212; UTDallas HPC Cluster Users Guide 1.2 documentation</title>
+    <title>2 - Moving around Ganymede &#8212; UTDallas HPC Cluster Users Guide 1.2 documentation</title>
     <link rel="stylesheet" href="_static/utd.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/_static/alabaster.css" />
@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="_static/_static/nature.css" />
     <link rel="stylesheet" type="text/css" href="_static/_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/_static/utd.css" />
+    <link rel="stylesheet" type="text/css" href="_static/_static/utd2.css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
@@ -20,8 +21,8 @@
     <script type="text/javascript" src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="3 - Europa Space Constraints" href="Ganymede-Space-Constraints.html" />
-    <link rel="prev" title="UTDallas HPC Cluster Users Guide" href="Ganymede-Training-v1.2.html" />
+    <link rel="next" title="3 - Ganymede Space Constraints" href="Ganymede-Space-Constraints.html" />
+    <link rel="prev" title="1 - Connecting to Ganymede" href="Connecting-To-Ganymede.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -39,11 +40,11 @@
           <div class="body" role="main">
             
   <div class="section" id="moving-around-systemname">
-<h1>2 - Moving around Europa<a class="headerlink" href="#moving-around-systemname" title="Permalink to this headline">¶</a></h1>
-<p>Now that the user is logged in, lets navigate around Europa using Linux shell commands:</p>
+<h1>2 - Moving around Ganymede<a class="headerlink" href="#moving-around-systemname" title="Permalink to this headline">¶</a></h1>
+<p>Now that the user is logged in, lets navigate around Ganymede using Linux shell commands:</p>
 <div class="section" id="linux-commands">
 <h2>2.1 - Linux Commands<a class="headerlink" href="#linux-commands" title="Permalink to this headline">¶</a></h2>
-<p>A basic knowledge of Linux commands is required to effectively use the Europa system. If you have basic knowledge of Linux Commands and Shell Scripting, feel free to skip this section. Note that a condensed version of useful Linux Commands can be found in Appendix A.</p>
+<p>A basic knowledge of Linux commands is required to effectively use the Ganymede system. If you have basic knowledge of Linux Commands and Shell Scripting, feel free to skip this section. Note that a condensed version of useful Linux Commands can be found in Appendix A.</p>
 <div class="section" id="moving-around">
 <h3>2.1.1 - Moving Around<a class="headerlink" href="#moving-around" title="Permalink to this headline">¶</a></h3>
 <p>First, it is important to know where one is in the system in order to move around to desired directories (sometimes called folders).  The first function prints the working (current) directory.</p>
@@ -172,14 +173,14 @@
 <span class="o">-</span><span class="n">rw</span><span class="o">-------+</span> <span class="mi">1</span> <span class="n">jxw150830</span> <span class="n">ee</span> <span class="mi">0</span> <span class="n">May</span> <span class="mi">21</span> <span class="mi">11</span><span class="p">:</span><span class="mi">48</span> <span class="n">project</span><span class="o">-</span><span class="n">day3</span><span class="o">.</span><span class="n">prj</span>
 </pre></div>
 </div>
-<p>To move files to or from the Europa server, the use of secure copying is used, <code class="docutils literal notranslate"><span class="pre">scp</span></code>.  The method below will detail how to move a file from the Europa server to the user’s computer via the command line, but the process would be similar for data moving the other direction.</p>
+<p>To move files to or from the Ganymede server, the use of secure copying is used, <code class="docutils literal notranslate"><span class="pre">scp</span></code>.  The method below will detail how to move a file from the Ganymede server to the user’s computer via the command line, but the process would be similar for data moving the other direction.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">pubssh</span><span class="p">:</span><span class="o">~</span><span class="p">}</span> <span class="n">scp</span> <span class="o">./</span><span class="n">CB4sys</span><span class="o">.</span><span class="n">sh</span> <span class="n">CBnetid</span><span class="nd">@CBsysname</span><span class="o">.</span><span class="n">utdallas</span><span class="o">.</span><span class="n">edu</span><span class="p">:</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">jxw150830</span><span class="o">/</span>
 <span class="n">CBnetid</span><span class="nd">@CBsysname</span><span class="o">.</span><span class="n">utdallas</span><span class="o">.</span><span class="n">edu</span><span class="s1">&#39;s password:</span>
 <span class="n">CB4sys</span><span class="o">.</span><span class="n">sh</span>                                                    <span class="mi">100</span><span class="o">%</span>   <span class="mi">51</span>     <span class="mf">0.1</span><span class="n">KB</span><span class="o">/</span><span class="n">s</span>   <span class="mi">00</span><span class="p">:</span><span class="mi">00</span>
 <span class="p">{</span><span class="n">pubssh</span><span class="p">:</span><span class="o">~</span><span class="p">}</span>
 </pre></div>
 </div>
-<p>The above example is moving information from a user’s home folder on the server to the Europa home area.  Note that this process could go backwards as well.</p>
+<p>The above example is moving information from a user’s home folder on the server to the Ganymede home area.  Note that this process could go backwards as well.</p>
 <p>Another tool that is useful for keeping items up to date through remote synchronization is <code class="docutils literal notranslate"><span class="pre">rsync</span></code>.  The <code class="docutils literal notranslate"><span class="pre">rsync</span></code> command works to keep items up to date across multiple devices by updating information that has changed.  This method of keeping files up to date is more time efficient for large data sets where only minor changes are made; that is, <em>the changes, instead of the data set</em>, will be moved.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">pubssh</span><span class="p">:</span><span class="o">~</span><span class="p">}</span> <span class="n">rsync</span> <span class="o">-</span><span class="n">avtr</span> <span class="o">./</span><span class="n">dataset</span><span class="o">/</span> <span class="n">jxw150830</span><span class="nd">@CBsysname</span><span class="o">.</span><span class="n">utdallas</span><span class="o">.</span><span class="n">edu</span><span class="p">:</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">jxw150830</span><span class="o">/</span>
 <span class="n">jxw150830</span><span class="nd">@CBsysname</span><span class="o">.</span><span class="n">utdallas</span><span class="o">.</span><span class="n">edu</span><span class="s1">&#39;s password:</span>
@@ -194,7 +195,7 @@
 <span class="p">{</span><span class="n">pubssh</span><span class="p">:</span><span class="o">~</span><span class="p">}</span>
 </pre></div>
 </div>
-<p>In the above example, each item is moved to Europa.  If the user does not want to see all of the files transferred, the user can remove <code class="docutils literal notranslate"><span class="pre">-v</span></code>.  Similarly, the <code class="docutils literal notranslate"><span class="pre">-r</span></code> is the recursive command which will go down the folder structure to extract everything.  The <code class="docutils literal notranslate"><span class="pre">-at</span></code> should remain for file continuity.  If the user were to run the same command again, notice that a small amount of data was sent to check for updates, but the full files were not resent.</p>
+<p>In the above example, each item is moved to Ganymede.  If the user does not want to see all of the files transferred, the user can remove <code class="docutils literal notranslate"><span class="pre">-v</span></code>.  Similarly, the <code class="docutils literal notranslate"><span class="pre">-r</span></code> is the recursive command which will go down the folder structure to extract everything.  The <code class="docutils literal notranslate"><span class="pre">-at</span></code> should remain for file continuity.  If the user were to run the same command again, notice that a small amount of data was sent to check for updates, but the full files were not resent.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">pubssh</span><span class="p">:</span><span class="o">~</span><span class="p">}</span> <span class="n">rsync</span> <span class="o">-</span><span class="n">avtr</span> <span class="o">./</span><span class="n">dataset</span><span class="o">/</span> <span class="n">jxw150830</span><span class="nd">@CBsysname</span><span class="o">.</span><span class="n">utdallas</span><span class="o">.</span><span class="n">edu</span><span class="p">:</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">jxw150830</span><span class="o">/</span>
 <span class="n">jxw150830</span><span class="nd">@CBsysname</span><span class="o">.</span><span class="n">utdallas</span><span class="o">.</span><span class="n">edu</span><span class="s1">&#39;s password:</span>
 <span class="n">sending</span> <span class="n">incremental</span> <span class="n">file</span> <span class="nb">list</span>
@@ -280,10 +281,10 @@ Hello CBsysname
 </div>
 </div>
 <div class="section" id="systemname-specific-instructions-and-programs">
-<h2>2.2 - Europa Specific Instructions and Programs<a class="headerlink" href="#systemname-specific-instructions-and-programs" title="Permalink to this headline">¶</a></h2>
+<h2>2.2 - Ganymede Specific Instructions and Programs<a class="headerlink" href="#systemname-specific-instructions-and-programs" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="environmental-variables">
 <h3>2.2.1 - Environmental Variables<a class="headerlink" href="#environmental-variables" title="Permalink to this headline">¶</a></h3>
-<p>In Europa, there are specific environmental varables that are designed to save the user time.  The following table shows the variables with their respective equivalent values.</p>
+<p>In Ganymede, there are specific environmental varables that are designed to save the user time.  The following table shows the variables with their respective equivalent values.</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 36%" />
@@ -343,7 +344,8 @@ Hello CBsysname
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Ganymede-Training-v1.2.html">UTDallas HPC Cluster Users Guide</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">2 - Moving around Europa</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="Connecting-To-Ganymede.html">1 - Connecting to Ganymede</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2 - Moving around Ganymede</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#linux-commands">2.1 - Linux Commands</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#moving-around">2.1.1 - Moving Around</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#making-files-and-directories">2.1.2 - Making Files and Directories</a></li>
@@ -353,25 +355,26 @@ Hello CBsysname
 <li class="toctree-l3"><a class="reference internal" href="#automating-commands">2.1.6 - Automating Commands</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#systemname-specific-instructions-and-programs">2.2 - Europa Specific Instructions and Programs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#systemname-specific-instructions-and-programs">2.2 - Ganymede Specific Instructions and Programs</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#environmental-variables">2.2.1 - Environmental Variables</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#custom-programs">2.2.2 - Custom Programs</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Ganymede-Space-Constraints.html">3 - Europa Space Constraints</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Ganymede-Compilers-And-Modules.html">4 - Europa Compilers and Modules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Running-Jobs-On-Ganymede.html">5 - Running Jobs on Europa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ganymede-Space-Constraints.html">3 - Ganymede Space Constraints</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ganymede-Compilers-And-Modules.html">4 - Ganymede Compilers and Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Running-Jobs-On-Ganymede.html">5 - Running Jobs on Ganymede</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Application-Specific-Instructions.html">6 - Application Specific Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Appendices.html">Appendices</a></li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="Ganymede-Training-v1.2.html" title="previous chapter">UTDallas HPC Cluster Users Guide</a></li>
-      <li>Next: <a href="Ganymede-Space-Constraints.html" title="next chapter">3 - Europa Space Constraints</a></li>
+      <li>Previous: <a href="Connecting-To-Ganymede.html" title="previous chapter">1 - Connecting to Ganymede</a></li>
+      <li>Next: <a href="Ganymede-Space-Constraints.html" title="next chapter">3 - Ganymede Space Constraints</a></li>
   </ul></li>
 </ul>
 </div>

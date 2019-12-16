@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>&lt;no title&gt; &#8212; UTDallas HPC Cluster Users Guide 1.2 documentation</title>
+    <title>Appendices &#8212; UTDallas HPC Cluster Users Guide 1.2 documentation</title>
     <link rel="stylesheet" href="_static/utd.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/_static/alabaster.css" />
@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="_static/_static/nature.css" />
     <link rel="stylesheet" type="text/css" href="_static/_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/_static/utd.css" />
+    <link rel="stylesheet" type="text/css" href="_static/_static/utd2.css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
@@ -37,7 +38,100 @@
 
           <div class="body" role="main">
             
-  
+  <div class="section" id="appendices">
+<h1>Appendices<a class="headerlink" href="#appendices" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="appendix-a-linux-commands">
+<h2>Appendix A - Linux Commands<a class="headerlink" href="#appendix-a-linux-commands" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 37%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Command</p></th>
+<th class="head"><p>Usage</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>pwd</p></td>
+<td><p>print current directory</p></td>
+</tr>
+<tr class="row-odd"><td><p>ls</p></td>
+<td><p>list contents</p></td>
+</tr>
+<tr class="row-even"><td><p>ls -l</p></td>
+<td><p>list longform</p></td>
+</tr>
+<tr class="row-odd"><td><p>cd</p></td>
+<td><p>change to home directory</p></td>
+</tr>
+<tr class="row-even"><td><p>cd [directory path]</p></td>
+<td><p>change to directory</p></td>
+</tr>
+<tr class="row-odd"><td><p>mkdir</p></td>
+<td><p>make a directory</p></td>
+</tr>
+<tr class="row-even"><td><p>touch</p></td>
+<td><p>create a file</p></td>
+</tr>
+<tr class="row-odd"><td><p>mv [source] [destination]</p></td>
+<td><p>move a file or directory</p></td>
+</tr>
+<tr class="row-even"><td><p>rm [file]</p></td>
+<td><p>remove a file or directory</p></td>
+</tr>
+<tr class="row-odd"><td><p>cat [file]</p></td>
+<td><p>view a file (non-editable)</p></td>
+</tr>
+<tr class="row-even"><td><p>scp</p></td>
+<td><p>secure copy</p></td>
+</tr>
+<tr class="row-odd"><td><p>rsync</p></td>
+<td><p>secure copy, only writes data that has changed</p></td>
+</tr>
+<tr class="row-even"><td><p>ssh</p></td>
+<td><p>create secure shell connection to a remote host</p></td>
+</tr>
+<tr class="row-odd"><td><p>ssh -X</p></td>
+<td><p>create ssh connection with X-window forwarding</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="appendix-b-slurm-commands">
+<h2>Appendix B - Slurm Commands<a class="headerlink" href="#appendix-b-slurm-commands" title="Permalink to this headline">¶</a></h2>
+<p>Man pages exist for all Slurm daemons, commands, and API functions. The command option –help also provides a brief summary of options. Note that the command options are all case sensitive.</p>
+<dl class="simple">
+<dt><strong>sacct</strong></dt><dd><p>sacct is used to report job or job step accounting information about active or completed jobs.</p>
+</dd>
+<dt><strong>salloc</strong></dt><dd><p>salloc is used to allocate resources for a job in real time. Typically this is used to allocate resources and spawn a shell. The shell is then used to execute srun commands to launch parallel tasks.</p>
+</dd>
+<dt><strong>sattach</strong></dt><dd><p>sattach is used to attach standard input, output, and error plus signal capabilities to a currently running job or job step. One can attach to and detach from jobs multiple times.</p>
+</dd>
+<dt><strong>sbatch</strong></dt><dd><p>sbatch is used to submit a job script for later execution. The script will typically contain one or more srun commands to launch parallel tasks.</p>
+</dd>
+<dt><strong>sbcast</strong></dt><dd><p>sbcast is used to transfer a file from local disk to local disk on the nodes allocated to a job. This can be used to effectively use diskless compute nodes or provide improved performance relative to a shared file system.</p>
+</dd>
+<dt><strong>scancel</strong></dt><dd><p>scancel is used to cancel a pending or running job or job step. It can also be used to send an arbitrary signal to all processes associated with a running job or job step.</p>
+</dd>
+<dt><strong>scontrol</strong></dt><dd><p>scontrol is the administrative tool used to view and/or modify Slurm state. Note that many scontrol commands can only be executed as user root.</p>
+</dd>
+<dt><strong>sinfo</strong></dt><dd><p>sinfo reports the state of partitions and nodes managed by Slurm. It has a wide variety of filtering, sorting, and formatting options.</p>
+</dd>
+<dt><strong>smap</strong></dt><dd><p>smap reports state information for jobs, partitions, and nodes managed by Slurm, but graphically displays the information to reflect network topology.</p>
+</dd>
+<dt><strong>squeue</strong></dt><dd><p>squeue reports the state of jobs or job steps. It has a wide variety of filtering, sorting, and formatting options. By default, it reports the running jobs in priority order and then the pending jobs in priority order.</p>
+</dd>
+<dt><strong>srun</strong></dt><dd><p>srun is used to submit a job for execution or initiate job steps in real time. srun has a wide variety of options to specify resource requirements, including: minimum and maximum node count, processor count, specific nodes to use or not use, and specific node characteristics (so much memory, disk space, certain required features, etc.). A job can contain multiple job steps executing sequentially or in parallel on independent or shared resources within the job’s node allocation.</p>
+</dd>
+<dt><strong>strigger</strong></dt><dd><p>strigger is used to set, get or view event triggers. Event triggers include things such as nodes going down or jobs approaching their time limit.</p>
+</dd>
+<dt><strong>sview</strong></dt><dd><p>sview is a graphical user interface to get and update state information for jobs, partitions, and nodes managed by Slurm.</p>
+</dd>
+</dl>
+</div>
+</div>
+
 
           </div>
           
@@ -56,13 +150,19 @@
 
 <h3>Navigation</h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Ganymede-Training-v1.2.html">UTDallas HPC Cluster Users Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Moving-Around-Ganymede.html">2 - Moving around Europa</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Ganymede-Space-Constraints.html">3 - Europa Space Constraints</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Ganymede-Compilers-And-Modules.html">4 - Europa Compilers and Modules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Running-Jobs-On-Ganymede.html">5 - Running Jobs on Europa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Connecting-To-Ganymede.html">1 - Connecting to Ganymede</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Moving-Around-Ganymede.html">2 - Moving around Ganymede</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ganymede-Space-Constraints.html">3 - Ganymede Space Constraints</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ganymede-Compilers-And-Modules.html">4 - Ganymede Compilers and Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Running-Jobs-On-Ganymede.html">5 - Running Jobs on Ganymede</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Application-Specific-Instructions.html">6 - Application Specific Instructions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Appendices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#appendix-a-linux-commands">Appendix A - Linux Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#appendix-b-slurm-commands">Appendix B - Slurm Commands</a></li>
+</ul>
+</li>
 </ul>
 
 <div class="relations">

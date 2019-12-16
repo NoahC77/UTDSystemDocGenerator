@@ -67,6 +67,7 @@ html_css_files = [
 		'_static/nature.css',
 		'_static/pygments.css',
 		'_static/utd.css',
+		'_static/utd2.css',
 ]
 
 html_style = 'utd.css'

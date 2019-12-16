@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>1 - Connecting to Europa &#8212; UTDallas HPC Cluster Users Guide 1.2 documentation</title>
+    <title>1 - Connecting to Ganymede &#8212; UTDallas HPC Cluster Users Guide 1.2 documentation</title>
     <link rel="stylesheet" href="_static/utd.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/_static/alabaster.css" />
@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="_static/_static/nature.css" />
     <link rel="stylesheet" type="text/css" href="_static/_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/_static/utd.css" />
+    <link rel="stylesheet" type="text/css" href="_static/_static/utd2.css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
@@ -20,7 +21,7 @@
     <script type="text/javascript" src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="2 - Moving around Europa" href="Moving-Around-Ganymede.html" />
+    <link rel="next" title="2 - Moving around Ganymede" href="Moving-Around-Ganymede.html" />
     <link rel="prev" title="UTDallas HPC Cluster Users Guide" href="Ganymede-Training-v1.2.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -39,11 +40,11 @@
           <div class="body" role="main">
             
   <div class="section" id="connecting-to-systemname">
-<h1>1 - Connecting to Europa<a class="headerlink" href="#connecting-to-systemname" title="Permalink to this headline">¶</a></h1>
-<p>It is important to note that the individual nodes can only be accessed after the user has logged into the Europa node, and have a running job on compute nodes.</p>
+<h1>1 - Connecting to Ganymede<a class="headerlink" href="#connecting-to-systemname" title="Permalink to this headline">¶</a></h1>
+<p>It is important to note that the individual nodes can only be accessed after the user has logged into the Ganymede node, and have a running job on compute nodes.</p>
 <div class="section" id="microsoft-windows">
 <h2>1.1 - Microsoft Windows<a class="headerlink" href="#microsoft-windows" title="Permalink to this headline">¶</a></h2>
-<p>Once the user’s account has been created the user can access Europa using multiple Secure Shell (SSH) terminal software such as:</p>
+<p>Once the user’s account has been created the user can access Ganymede using multiple Secure Shell (SSH) terminal software such as:</p>
 <ul class="simple">
 <li><p>PuTTY</p></li>
 <li><p>Bitwise</p></li>
@@ -54,20 +55,20 @@
 <h3>1.1.1 - PuTTY:<a class="headerlink" href="#putty" title="Permalink to this headline">¶</a></h3>
 <p>PuTTY for the Microsoft Windows environment can be installed by going to www.putty.org. Download and install the latest version of Putty.</p>
 <img alt="./assets/1.1.1-1.png" src="./assets/1.1.1-1.png" />
-<p>Once running PuTTY, in the Host Name section type <strong>CBsysname.utdallas.edu</strong>.  Go down to the saved sessions section, name the server with a meaningful name (in this case Europa) and press save.  By doing this, time can be saved in the future by clicking your particular saved session and pressing load.  Once loaded into the host name, click on the open button.</p>
+<p>Once running PuTTY, in the Host Name section type <strong>ganymede.utdallas.edu</strong>.  Go down to the saved sessions section, name the server with a meaningful name (in this case Ganymede) and press save.  By doing this, time can be saved in the future by clicking your particular saved session and pressing load.  Once loaded into the host name, click on the open button.</p>
 <img alt="./assets/1.1.1-2.jpg" src="./assets/1.1.1-2.jpg" />
 <p>A Putty Security Alert window will open for the first time prompting you for a Yes/No/Cancel answer to the question of saving a new host key. Click the Yes button and now you will be asked for login-id and password. Your login-id is your UTD NetID and your password is the same as your UTD NetID password.</p>
 <img alt="./assets/1.1.1-3.png" src="./assets/1.1.1-3.png" />
 </div>
 <div class="section" id="bitvise">
 <h3>1.1.2 - Bitvise:<a class="headerlink" href="#bitvise" title="Permalink to this headline">¶</a></h3>
-<p>Bitvise can be installed by going to <a class="reference external" href="https://www.bitvise.com/index">https://www.bitvise.com/index</a> and pressing the download tab across the top banner.  Press the first option, <strong>Download Bitvise SSH Client (Tunnelier)</strong> the press <strong>Bitvise SSH Client Installer</strong> and follow the instructions for to install the software. Similar to PuTTY, the Host Name section type <strong>CBsysname.utdallas.edu</strong>.  Go down to the “Save profile as” button, name the file with a meaningful name (in this case europa.tlp) and press save.  By doing this, time can be saved in the future by clicking “Load profile”.  Once loaded into the host name, click on the Login button.</p>
+<p>Bitvise can be installed by going to <a class="reference external" href="https://www.bitvise.com/index">https://www.bitvise.com/index</a> and pressing the download tab across the top banner.  Press the first option, <strong>Download Bitvise SSH Client (Tunnelier)</strong> the press <strong>Bitvise SSH Client Installer</strong> and follow the instructions for to install the software. Similar to PuTTY, the Host Name section type <strong>ganymede.utdallas.edu</strong>.  Go down to the “Save profile as” button, name the file with a meaningful name (in this case ganymede.tlp) and press save.  By doing this, time can be saved in the future by clicking “Load profile”.  Once loaded into the host name, click on the Login button.</p>
 <img alt="./assets/1.1.2.png" src="./assets/1.1.2.png" />
 </div>
 <div class="section" id="mobaxterm">
 <h3>1.1.3 - MobaXTerm:<a class="headerlink" href="#mobaxterm" title="Permalink to this headline">¶</a></h3>
 <p>MobaXterm can be installed from <a class="reference external" href="http://mobaxterm.mobatek.net/download.html">http://mobaxterm.mobatek.net/download.html</a>. The program can be demo-ed from site <a class="reference external" href="http://mobaxterm.mobatek.net/demo.html">http://mobaxterm.mobatek.net/demo.html</a>.</p>
-<p>To login, type <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">&lt;NetID&gt;&#64;CBsysname.utdallas.edu</span></code>. Once logged in, all of the available Linux files and directory information will be displayed on the left white pane. Within the MobaXterm interface, one can securely copy files between Linux and Windows desktops.  To open a file, right click on it and choosing option “open with default text editor”. Changes can then be made to a file and the changes can then be saved.</p>
+<p>To login, type <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">&lt;NetID&gt;&#64;ganymede.utdallas.edu</span></code>. Once logged in, all of the available Linux files and directory information will be displayed on the left white pane. Within the MobaXterm interface, one can securely copy files between Linux and Windows desktops.  To open a file, right click on it and choosing option “open with default text editor”. Changes can then be made to a file and the changes can then be saved.</p>
 <img alt="./assets/1.1.3.png" src="./assets/1.1.3.png" />
 </div>
 </div>
@@ -77,11 +78,11 @@
 </div>
 <div class="section" id="for-linux-users">
 <h2>1.3 - For Linux Users<a class="headerlink" href="#for-linux-users" title="Permalink to this headline">¶</a></h2>
-<p>For Linux users, the ssh command is built into the operating system.  To connect to the Europa server, open the terminal agent and type: <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">&lt;NET-ID&gt;&#64;CBsysname.utdallas.edu.</span></code></p>
+<p>For Linux users, the ssh command is built into the operating system.  To connect to the Ganymede server, open the terminal agent and type: <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">&lt;NET-ID&gt;&#64;ganymede.utdallas.edu.</span></code></p>
 </div>
 <div class="section" id="mailing-list">
 <h2>1.4 - Mailing List<a class="headerlink" href="#mailing-list" title="Permalink to this headline">¶</a></h2>
-<p>Another way for users to connect to Europa is to connect with other users.  The admin team has set up a mailing list that can allow users to interact with each other and find solutions through searchable archives.  Because the admins are members of the group, timely answers and solutions pass through the group.  The users should think of this as an additional form of documentation to reference.  This list can be accessed at <a class="reference external" href="mailto:europausers&#37;&#52;&#48;lists&#46;utdallas&#46;edu">europausers<span>&#64;</span>lists<span>&#46;</span>utdallas<span>&#46;</span>edu</a>.</p>
+<p>Another way for users to connect to Ganymede is to connect with other users.  The admin team has set up a mailing list that can allow users to interact with each other and find solutions through searchable archives.  Because the admins are members of the group, timely answers and solutions pass through the group.  The users should think of this as an additional form of documentation to reference.  This list can be accessed at <a class="reference external" href="mailto:ganymedeusers&#37;&#52;&#48;lists&#46;utdallas&#46;edu">ganymedeusers<span>&#64;</span>lists<span>&#46;</span>utdallas<span>&#46;</span>edu</a>.</p>
 </div>
 </div>
 
@@ -105,7 +106,7 @@
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Ganymede-Training-v1.2.html">UTDallas HPC Cluster Users Guide</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">1 - Connecting to Europa</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1 - Connecting to Ganymede</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#microsoft-windows">1.1 - Microsoft Windows</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#putty">1.1.1 - PuTTY:</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#bitvise">1.1.2 - Bitvise:</a></li>
@@ -117,11 +118,12 @@
 <li class="toctree-l2"><a class="reference internal" href="#mailing-list">1.4 - Mailing List</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Moving-Around-Ganymede.html">2 - Moving around Europa</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Ganymede-Space-Constraints.html">3 - Europa Space Constraints</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Ganymede-Compilers-And-Modules.html">4 - Europa Compilers and Modules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Running-Jobs-On-Ganymede.html">5 - Running Jobs on Europa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Moving-Around-Ganymede.html">2 - Moving around Ganymede</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ganymede-Space-Constraints.html">3 - Ganymede Space Constraints</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ganymede-Compilers-And-Modules.html">4 - Ganymede Compilers and Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Running-Jobs-On-Ganymede.html">5 - Running Jobs on Ganymede</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Application-Specific-Instructions.html">6 - Application Specific Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Appendices.html">Appendices</a></li>
 </ul>
 
 <div class="relations">
@@ -129,7 +131,7 @@
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="Ganymede-Training-v1.2.html" title="previous chapter">UTDallas HPC Cluster Users Guide</a></li>
-      <li>Next: <a href="Moving-Around-Ganymede.html" title="next chapter">2 - Moving around Europa</a></li>
+      <li>Next: <a href="Moving-Around-Ganymede.html" title="next chapter">2 - Moving around Ganymede</a></li>
   </ul></li>
 </ul>
 </div>

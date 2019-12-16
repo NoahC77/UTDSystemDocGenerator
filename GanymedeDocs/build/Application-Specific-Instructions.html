@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="_static/_static/nature.css" />
     <link rel="stylesheet" type="text/css" href="_static/_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/_static/utd.css" />
+    <link rel="stylesheet" type="text/css" href="_static/_static/utd2.css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
@@ -20,8 +21,8 @@
     <script type="text/javascript" src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="Appendices.html" />
-    <link rel="prev" title="5 - Running Jobs on Europa" href="Running-Jobs-On-Ganymede.html" />
+    <link rel="next" title="Appendices" href="Appendices.html" />
+    <link rel="prev" title="5 - Running Jobs on Ganymede" href="Running-Jobs-On-Ganymede.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -43,7 +44,7 @@
 <p>There are certain programs that require users to run them by a specific method.  These can be added with modules as with other programs on the stack.</p>
 <div class="section" id="matlab">
 <h2>6.1 - Matlab<a class="headerlink" href="#matlab" title="Permalink to this headline">¶</a></h2>
-<p>Europa currently has r2018a installed, and in addition to the site liscense there are 32 liscenses for distributed Matlab.  Matlab jobs can be run in 3 different ways: serial, parallel and distributed compute.  Each of these job types can either be batch or interactive.  The following sections will describe what this means to the user.</p>
+<p>Ganymede currently has r2018a installed, and in addition to the site liscense there are 32 liscenses for distributed Matlab.  Matlab jobs can be run in 3 different ways: serial, parallel and distributed compute.  Each of these job types can either be batch or interactive.  The following sections will describe what this means to the user.</p>
 <div class="section" id="job-types">
 <h3>6.1.1 - Job Types<a class="headerlink" href="#job-types" title="Permalink to this headline">¶</a></h3>
 <p>There are 3 different job types: Serial, Parallel Computing Toolkit, and Distibuted Compute Server.</p>
@@ -54,7 +55,7 @@
 </div>
 <div class="section" id="parallel-computing-toolkit-pct-jobs">
 <h4>6.1.1.2 - Parallel Computing Toolkit (PCT) Jobs<a class="headerlink" href="#parallel-computing-toolkit-pct-jobs" title="Permalink to this headline">¶</a></h4>
-<p>Parallel Computing Toolkit jobs are jobs that use openmp to call parallel processes using MPI.  These jobs follow directives that are established in the Matlab Parallel Computing Toolkit with full information available at <a class="reference external" href="https://www.mathworks.com/products/parallel-computing.html">https://www.mathworks.com/products/parallel-computing.html</a> . The user has the availabity to run an instance of Matlab with each of the cores reserved in the current node.  Europa is equiped with 12,000 keys to ensure that many users can do parallel computing at once.</p>
+<p>Parallel Computing Toolkit jobs are jobs that use openmp to call parallel processes using MPI.  These jobs follow directives that are established in the Matlab Parallel Computing Toolkit with full information available at <a class="reference external" href="https://www.mathworks.com/products/parallel-computing.html">https://www.mathworks.com/products/parallel-computing.html</a> . The user has the availabity to run an instance of Matlab with each of the cores reserved in the current node.  Ganymede is equiped with 12,000 keys to ensure that many users can do parallel computing at once.</p>
 <p>For an example of a serial job, the user can look in the directory <code class="docutils literal notranslate"><span class="pre">/opt/ohpc/pub/examples/matlab/parallel/</span></code> and open the readme file.</p>
 </div>
 <div class="section" id="distributed-compute-server-dcs-jobs">
@@ -77,11 +78,11 @@
 <div class="section" id="interactive-matlab">
 <h4>6.1.2.2 - Interactive Matlab<a class="headerlink" href="#interactive-matlab" title="Permalink to this headline">¶</a></h4>
 <p>Matlab can be run from an interactive terminal on a single compute node.  This is useful for users who want to tweak inputs as they go, or want to feed in live data.  See section 5.4 for how to log into a node.  Once logged in, the user needs to load the Matlab module.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[CBuserCompute ~]$ module load matlab
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830 ~]$ module load matlab
 </pre></div>
 </div>
 <p>Once the user has added the module, executing `` `` will start matlab interactively.  This normally takes a few moments.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[CBuserCompute ~]$ matlab
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830 ~]$ matlab
 MATLAB is selecting SOFTWARE OPENGL rendering.
 
                           &lt; M A T L A B (R) &gt;
@@ -99,9 +100,9 @@ For product information, visit www.mathworks.com.
 </div>
 <p>Once the Matlab terminal is loaded, the user can execute Matlab functions a usual.  When finished, the user should exit from the Matlab terminal and the compute node.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;&gt; exit
-[CBuserCompute ~]$ exit
+[jxw150830 ~]$ exit
 exit
-[CBnetid ~]$
+[jxw150830 ~]$
 </pre></div>
 </div>
 </div>
@@ -129,10 +130,11 @@ exit
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Ganymede-Training-v1.2.html">UTDallas HPC Cluster Users Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Moving-Around-Ganymede.html">2 - Moving around Europa</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Ganymede-Space-Constraints.html">3 - Europa Space Constraints</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Ganymede-Compilers-And-Modules.html">4 - Europa Compilers and Modules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Running-Jobs-On-Ganymede.html">5 - Running Jobs on Europa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Connecting-To-Ganymede.html">1 - Connecting to Ganymede</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Moving-Around-Ganymede.html">2 - Moving around Ganymede</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ganymede-Space-Constraints.html">3 - Ganymede Space Constraints</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ganymede-Compilers-And-Modules.html">4 - Ganymede Compilers and Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Running-Jobs-On-Ganymede.html">5 - Running Jobs on Ganymede</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">6 - Application Specific Instructions</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#matlab">6.1 - Matlab</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#job-types">6.1.1 - Job Types</a><ul>
@@ -150,14 +152,15 @@ exit
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="Appendices.html">Appendices</a></li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="Running-Jobs-On-Ganymede.html" title="previous chapter">5 - Running Jobs on Europa</a></li>
-      <li>Next: <a href="Appendices.html" title="next chapter">&lt;no title&gt;</a></li>
+      <li>Previous: <a href="Running-Jobs-On-Ganymede.html" title="previous chapter">5 - Running Jobs on Ganymede</a></li>
+      <li>Next: <a href="Appendices.html" title="next chapter">Appendices</a></li>
   </ul></li>
 </ul>
 </div>

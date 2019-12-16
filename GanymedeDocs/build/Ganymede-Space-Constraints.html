@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>3 - Europa Space Constraints &#8212; UTDallas HPC Cluster Users Guide 1.2 documentation</title>
+    <title>3 - Ganymede Space Constraints &#8212; UTDallas HPC Cluster Users Guide 1.2 documentation</title>
     <link rel="stylesheet" href="_static/utd.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/_static/alabaster.css" />
@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="_static/_static/nature.css" />
     <link rel="stylesheet" type="text/css" href="_static/_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/_static/utd.css" />
+    <link rel="stylesheet" type="text/css" href="_static/_static/utd2.css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
@@ -20,8 +21,8 @@
     <script type="text/javascript" src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="4 - Europa Compilers and Modules" href="Ganymede-Compilers-And-Modules.html" />
-    <link rel="prev" title="2 - Moving around Europa" href="Moving-Around-Ganymede.html" />
+    <link rel="next" title="4 - Ganymede Compilers and Modules" href="Ganymede-Compilers-And-Modules.html" />
+    <link rel="prev" title="2 - Moving around Ganymede" href="Moving-Around-Ganymede.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -39,11 +40,11 @@
           <div class="body" role="main">
             
   <div class="section" id="systemname-space-constraints">
-<h1>3 - Europa Space Constraints<a class="headerlink" href="#systemname-space-constraints" title="Permalink to this headline">¶</a></h1>
-<p>One of the important considerations in High Performance Computing is the amount of space that is allocated to each user.  The Europa cluster is space allocated to provide the maximum amount of space while still providing desirable attributes to the cluster user.</p>
+<h1>3 - Ganymede Space Constraints<a class="headerlink" href="#systemname-space-constraints" title="Permalink to this headline">¶</a></h1>
+<p>One of the important considerations in High Performance Computing is the amount of space that is allocated to each user.  The Ganymede cluster is space allocated to provide the maximum amount of space while still providing desirable attributes to the cluster user.</p>
 <div class="section" id="types-of-space">
 <h2>3.1 - Types of Space<a class="headerlink" href="#types-of-space" title="Permalink to this headline">¶</a></h2>
-<p>There are currently 2 types of space available to the user, home space and scratch space. Home space is located in the <code class="docutils literal notranslate"><span class="pre">/home/$USER</span></code> folder and the scratch folder is located in the <code class="docutils literal notranslate"><span class="pre">/petastore/CBsysname/scratch/$USER</span></code> folder. For convenience, the scratch folder is symbolically linked inside the user’s home folder in <code class="docutils literal notranslate"><span class="pre">/home/$USER/scratch</span></code> The following table compares the attributes of the two available spaces.</p>
+<p>There are currently 2 types of space available to the user, home space and scratch space. Home space is located in the <code class="docutils literal notranslate"><span class="pre">/home/$USER</span></code> folder and the scratch folder is located in the <code class="docutils literal notranslate"><span class="pre">/petastore/ganymede/scratch/$USER</span></code> folder. For convenience, the scratch folder is symbolically linked inside the user’s home folder in <code class="docutils literal notranslate"><span class="pre">/home/$USER/scratch</span></code> The following table compares the attributes of the two available spaces.</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 22%" />
@@ -105,7 +106,7 @@ or trying ideas</p></td>
 </table>
 <dl class="footnote brackets">
 <dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">*</a></span></dt>
-<dd><p>The scratch space is located in <code class="docutils literal notranslate"><span class="pre">/petastore/CBsysname/scratch/$USER</span></code> but does not count against the storage in the home space, even with the symbolic link.</p>
+<dd><p>The scratch space is located in <code class="docutils literal notranslate"><span class="pre">/petastore/ganymede/scratch/$USER</span></code> but does not count against the storage in the home space, even with the symbolic link.</p>
 </dd>
 <dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id2">†</a></span></dt>
 <dd><p>While the petabyte storage device is not metered, the scratch space should be cleaned up when a project is finished to ensure that there is enough room for others interested in using the space.</p>
@@ -115,7 +116,7 @@ or trying ideas</p></td>
 <div class="section" id="checking-available-space">
 <h2>3.3 - Checking Available Space<a class="headerlink" href="#checking-available-space" title="Permalink to this headline">¶</a></h2>
 <p>The user should be aware of the amount of free space that is remaining, in order to ensure that the user does not run out of space for data during a run of a program or module.  In order to check the amount of space, the user needs to check the <code class="docutils literal notranslate"><span class="pre">quota</span></code>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[CBnetid@CBsysname~]$ quota -s
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830@ganymede~]$ quota -s
 Disk quotas for user jxw150830 (uid 532471):
      Filesystem   space   quota   limit   grace   files   quota   limit   grace
 /dev/mapper/volgroup0-lvolexport
@@ -123,7 +124,7 @@ Disk quotas for user jxw150830 (uid 532471):
 </pre></div>
 </div>
 <p>In the case above, the entire 20 GB is available to be used.  After running a couple of processes, the <code class="docutils literal notranslate"><span class="pre">/home</span></code> space is filled above the quota.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[CBnetid@CBsysname~]$ quota -s
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830@ganymede~]$ quota -s
 Disk quotas for user jxw150830 (uid 532471):
      Filesystem   space   quota   limit   grace   files   quota   limit   grace
 /dev/mapper/volgroup0-lvolexport
@@ -154,24 +155,26 @@ Disk quotas for user jxw150830 (uid 532471):
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Ganymede-Training-v1.2.html">UTDallas HPC Cluster Users Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Moving-Around-Ganymede.html">2 - Moving around Europa</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">3 - Europa Space Constraints</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="Connecting-To-Ganymede.html">1 - Connecting to Ganymede</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Moving-Around-Ganymede.html">2 - Moving around Ganymede</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3 - Ganymede Space Constraints</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#types-of-space">3.1 - Types of Space</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#space-policies">3.2 - Space Policies</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#checking-available-space">3.3 - Checking Available Space</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Ganymede-Compilers-And-Modules.html">4 - Europa Compilers and Modules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Running-Jobs-On-Ganymede.html">5 - Running Jobs on Europa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ganymede-Compilers-And-Modules.html">4 - Ganymede Compilers and Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Running-Jobs-On-Ganymede.html">5 - Running Jobs on Ganymede</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Application-Specific-Instructions.html">6 - Application Specific Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Appendices.html">Appendices</a></li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="Moving-Around-Ganymede.html" title="previous chapter">2 - Moving around Europa</a></li>
-      <li>Next: <a href="Ganymede-Compilers-And-Modules.html" title="next chapter">4 - Europa Compilers and Modules</a></li>
+      <li>Previous: <a href="Moving-Around-Ganymede.html" title="previous chapter">2 - Moving around Ganymede</a></li>
+      <li>Next: <a href="Ganymede-Compilers-And-Modules.html" title="next chapter">4 - Ganymede Compilers and Modules</a></li>
   </ul></li>
 </ul>
 </div>

@@ -78,19 +78,19 @@
 .. 0.1
    - Original version
    
-   .. these are the predefined values
+  .. these are the predefined values
    -------------------------------
 .. hpc system params
    
 .. systemName should just replace mentions of the system's name not including things like domain
 .. or user names in code blocks that are upper case of course
-.. |systemName| replace:: Europa
+.. |systemName| replace:: Ganymede
 
 .. systemNameLower should just replace mentions of the system's name that are lower case, not including
 .. things like domain or user names in code blocks
-.. |systemNameLower| replace:: europa
+.. |systemNameLower| replace:: ganymede
 .. 
-.. |hostName| replace:: @europa.utdallas.edu
+.. |hostName| replace:: @ganymede.utdallas.edu
 
 .. |nodecpunum| replace:: 4008
 .. |nodememnum| replace:: 14 TB
@@ -104,9 +104,9 @@
 .. |defmpi| replace:: **mvapich2**
 
 .. admin params
-.. |adminemail| replace:: europaadmins@utdallas.edu
-.. |mailinglistaddr| replace:: europausers@lists.utdallas.edu
-.. |slurmemail| replace:: slurm@europa.utdallas.edu
+.. |adminemail| replace:: ganymedeadmins@utdallas.edu
+.. |mailinglistaddr| replace:: ganymedeusers@lists.utdallas.edu
+.. |slurmemail| replace:: slurm@ganymede.utdallas.edu
 .. |debugnodenum| replace:: 2
 
 .. space limits

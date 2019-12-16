@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>5 - Running Jobs on Europa &#8212; UTDallas HPC Cluster Users Guide 1.2 documentation</title>
+    <title>5 - Running Jobs on Ganymede &#8212; UTDallas HPC Cluster Users Guide 1.2 documentation</title>
     <link rel="stylesheet" href="_static/utd.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/_static/alabaster.css" />
@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="_static/_static/nature.css" />
     <link rel="stylesheet" type="text/css" href="_static/_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/_static/utd.css" />
+    <link rel="stylesheet" type="text/css" href="_static/_static/utd2.css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
@@ -21,7 +22,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="6 - Application Specific Instructions" href="Application-Specific-Instructions.html" />
-    <link rel="prev" title="4 - Europa Compilers and Modules" href="Ganymede-Compilers-And-Modules.html" />
+    <link rel="prev" title="4 - Ganymede Compilers and Modules" href="Ganymede-Compilers-And-Modules.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -39,7 +40,7 @@
           <div class="body" role="main">
             
   <div class="section" id="running-jobs-on-systemname">
-<h1>5 - Running Jobs on Europa<a class="headerlink" href="#running-jobs-on-systemname" title="Permalink to this headline">¶</a></h1>
+<h1>5 - Running Jobs on Ganymede<a class="headerlink" href="#running-jobs-on-systemname" title="Permalink to this headline">¶</a></h1>
 <p><strong>What is Slurm</strong></p>
 <blockquote>
 <div><p>Slurm is an open source, fault-tolerant, and highly scalable cluster management and job scheduling system for large and small Linux clusters. Slurm requires no kernel modifications for it’s operation and is relatively self-contained. Slurm has a centralized manager to monitor resources and work. There may also be a backup manager to assume those responsibilities in the event of failure.</p>
@@ -117,7 +118,7 @@ prun ./a.out
 Submitted batch job 405
 </pre></div>
 </div>
-<p>This informs the user of the job number.  The user will also receive an email from <a class="reference external" href="mailto:slurm&#37;&#52;&#48;europa&#46;utdallas&#46;edu">slurm<span>&#64;</span>europa<span>&#46;</span>utdallas<span>&#46;</span>edu</a> informing that the job has started.  If the user ever forgets the job number, or has logged into Europa to determine if and which jobs are running, the user can type the command <code class="docutils literal notranslate"><span class="pre">squeue</span> <span class="pre">-u</span> <span class="pre">$USER</span></code>.  This will show all current running tasks to the user, with the first number being the Job ID.</p>
+<p>This informs the user of the job number.  The user will also receive an email from <a class="reference external" href="mailto:slurm&#37;&#52;&#48;ganymede&#46;utdallas&#46;edu">slurm<span>&#64;</span>ganymede<span>&#46;</span>utdallas<span>&#46;</span>edu</a> informing that the job has started.  If the user ever forgets the job number, or has logged into Ganymede to determine if and which jobs are running, the user can type the command <code class="docutils literal notranslate"><span class="pre">squeue</span> <span class="pre">-u</span> <span class="pre">$USER</span></code>.  This will show all current running tasks to the user, with the first number being the Job ID.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[CBnetid ~]$ squeue -u $USER
   JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
     405    normal     test jxw15083  R       0:01      1 compute-7-2-21
@@ -179,7 +180,7 @@ Submitted batch job 380
 </div>
 <div class="section" id="debugging-mpi-with-slurm-and-gdb">
 <h2>5.4 Debugging MPI with Slurm and gdb<a class="headerlink" href="#debugging-mpi-with-slurm-and-gdb" title="Permalink to this headline">¶</a></h2>
-<p>When the user is running a MPI task, it is important to debug properly.  Because the amount of data that can be dumped is greater than the quota for the home directory, special care must be taken in order for the user to sucessfully fix code.  The user needs to first ssh into Europa using the following command:</p>
+<p>When the user is running a MPI task, it is important to debug properly.  Because the amount of data that can be dumped is greater than the quota for the home directory, special care must be taken in order for the user to sucessfully fix code.  The user needs to first ssh into Ganymede using the following command:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>jwhite-swift@hpc-rca:~$ ssh -X jxw150830@CBsysname.utdallas.edu
 jxw150830@CBsysname.utdallas.edu&#39;s password:
 Last login: Tue Jun  5 10:26:09 2018 from 10.21.4.24
@@ -193,7 +194,7 @@ Disk                    Usage           Soft Limit              Hard Limit
 </pre></div>
 </div>
 <p>Note that the command is <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">-X</span> <span class="pre">&lt;NetID&gt;&#64;CBsysname.utdallas.edu</span></code>.  The <code class="docutils literal notranslate"><span class="pre">-X</span></code> allows the user to pass visual windows back through, which will become important later.</p>
-<p>Once logged into Europa, the user must first get a reservation on a <strong>debug</strong> compute node.</p>
+<p>Once logged into Ganymede, the user must first get a reservation on a <strong>debug</strong> compute node.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[CBnetid ~]$ salloc -p debug -N1 -n4 --time=00:30:00
 salloc: Granted job allocation 620
 Disk quotas for user jxw150830:
@@ -212,7 +213,7 @@ Disk                    Usage           Soft Limit              Hard Limit
              620     debug     bash jxw15083  R       4:55      1 CNChapter5.4
 </pre></div>
 </div>
-<p>Then the user will ssh into that node and turn on X forwarding, just as the user did when accessing the Europa node to begin with.</p>
+<p>Then the user will ssh into that node and turn on X forwarding, just as the user did when accessing the Ganymede node to begin with.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[CBnetid ~]$ ssh -X CNChapter5.4
 Warning: Permanently added &#39;CNChapter5.4,10.182.224.70&#39; (ECDSA) to the list of known hosts.
 [jxw150830@CNChapter5.4 ~]$
@@ -221,7 +222,7 @@ Warning: Permanently added &#39;CNChapter5.4,10.182.224.70&#39; (ECDSA) to the l
 <p>Now that the user is on the debug node, the user needs to run the following command: <code class="docutils literal notranslate"><span class="pre">mpirun</span> <span class="pre">-np</span> <span class="pre">4</span> <span class="pre">xterm</span> <span class="pre">-e</span> <span class="pre">gdb</span> <span class="pre">&lt;my_mpi_application&gt;</span></code></p>
 <img alt="./assets/5.4.png" src="./assets/5.4.png" />
 <p>This will then produce 4 screens (or the number specified by <code class="docutils literal notranslate"><span class="pre">np</span></code>) that allow the user to debug each of the instances that are running using MPI, without having to core dump extremely large files</p>
-<p>In order for this to work, the user needs to be running some form of an X server locally. If the user is on a linux machine, this functionality will be out of the box. If you are on a Mac, you’ll need XQuartz. If you are on a windows machine, you should use MobaXterm.  These programs are discribed in Section 1 - Connecting to Europa.</p>
+<p>In order for this to work, the user needs to be running some form of an X server locally. If the user is on a linux machine, this functionality will be out of the box. If you are on a Mac, you’ll need XQuartz. If you are on a windows machine, you should use MobaXterm.  These programs are discribed in Section 1 - Connecting to Ganymede.</p>
 </div>
 <div class="section" id="running-interactive-jobs">
 <h2>5.5 - Running Interactive Jobs<a class="headerlink" href="#running-interactive-jobs" title="Permalink to this headline">¶</a></h2>
@@ -239,7 +240,7 @@ exit
 [CBnetid ~]$
 </pre></div>
 </div>
-<p>Once executed, the session is closed and the user moves back to the Europa node.</p>
+<p>Once executed, the session is closed and the user moves back to the Ganymede node.</p>
 </div>
 <div class="section" id="running-persistent-jobs">
 <h3>5.5.2 - Running Persistent Jobs<a class="headerlink" href="#running-persistent-jobs" title="Permalink to this headline">¶</a></h3>
@@ -303,7 +304,7 @@ salloc: job 608 queued and waiting for resources
 </div>
 <div class="section" id="viewing-results">
 <h2>5.6 - Viewing Results<a class="headerlink" href="#viewing-results" title="Permalink to this headline">¶</a></h2>
-<p>Once the job is done, the user will receive an email from <a class="reference external" href="mailto:slurm&#37;&#52;&#48;europa&#46;utdallas&#46;edu">slurm<span>&#64;</span>europa<span>&#46;</span>utdallas<span>&#46;</span>edu</a> alerting the user that the job has been completed. Any interaction between the user and the nodes that the user were logged into will be be closed and the user will be returned to the home folder.  The file will be in that directory.  If there are any errors that occur, those will be captured in the output file that is created by the system.  This is especially useful when running on the debugging nodes.</p>
+<p>Once the job is done, the user will receive an email from <a class="reference external" href="mailto:slurm&#37;&#52;&#48;ganymede&#46;utdallas&#46;edu">slurm<span>&#64;</span>ganymede<span>&#46;</span>utdallas<span>&#46;</span>edu</a> alerting the user that the job has been completed. Any interaction between the user and the nodes that the user were logged into will be be closed and the user will be returned to the home folder.  The file will be in that directory.  If there are any errors that occur, those will be captured in the output file that is created by the system.  This is especially useful when running on the debugging nodes.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[CBnetid ~]$ ls
 html  job.405.out  job.mpi  job.serial  sampletask.sh  scratch
 [CBnetid ~]$ cat job.405.out
@@ -333,11 +334,11 @@ this is serial code
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Ganymede-Training-v1.2.html">UTDallas HPC Cluster Users Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Connecting-To-Ganymede.html">1 - Connecting to Europa</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Moving-Around-Ganymede.html">2 - Moving around Europa</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Ganymede-Space-Constraints.html">3 - Europa Space Constraints</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Ganymede-Compilers-And-Modules.html">4 - Europa Compilers and Modules</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">5 - Running Jobs on Europa</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="Connecting-To-Ganymede.html">1 - Connecting to Ganymede</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Moving-Around-Ganymede.html">2 - Moving around Ganymede</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ganymede-Space-Constraints.html">3 - Ganymede Space Constraints</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ganymede-Compilers-And-Modules.html">4 - Ganymede Compilers and Modules</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5 - Running Jobs on Ganymede</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#preparing-to-queue-a-task">5.1 - Preparing to Queue a Task</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#queuing-a-task">5.2 - Queuing a Task</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#serial-task">5.2.1 - Serial Task</a></li>
@@ -356,13 +357,14 @@ this is serial code
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Application-Specific-Instructions.html">6 - Application Specific Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Appendices.html">Appendices</a></li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="Ganymede-Compilers-And-Modules.html" title="previous chapter">4 - Europa Compilers and Modules</a></li>
+      <li>Previous: <a href="Ganymede-Compilers-And-Modules.html" title="previous chapter">4 - Ganymede Compilers and Modules</a></li>
       <li>Next: <a href="Application-Specific-Instructions.html" title="next chapter">6 - Application Specific Instructions</a></li>
   </ul></li>
 </ul>
