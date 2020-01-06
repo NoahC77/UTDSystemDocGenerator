@@ -118,7 +118,7 @@
 .. |scratchrectime| replace:: N/A
 
 1 - Connecting to |systemName|
-//////////////////////////
+//////////////////////////////////////////////////
 
 It is important to note that the individual nodes can only be accessed after the user has logged into the |systemName| node, and have a running job on compute nodes.
 
