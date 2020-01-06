@@ -56,11 +56,11 @@ exclude_patterns = []
 #
 # html_theme = 'utd.css'
 
-import guzzle_sphinx_theme
-html_theme = 'guzzle_sphinx_theme'
+import sphinx_rtd_theme
+html_theme = 'sphinx_rtd_theme'
 html_theme_path = ['./themes/.']
 
-extensions.append("guzzle_sphinx_theme")
+extensions.append("sphinx_rtd_theme")
 
 html_theme_options = {
     
