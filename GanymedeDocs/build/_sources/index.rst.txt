@@ -19,10 +19,6 @@ Welcome to Ganymede's documentation!
    Application-Specific-Instructions
    Appendices
 
-   ...
-
-
-
 Indices and tables
 ==================
 

@@ -45,13 +45,9 @@ sed -i "s/$(echo $SPuppersysName)/SPuppersysname/g" index.rst
 # Moving back to build's parent directory
 cd ..
 
-# Removing alabaster.css
-cd build
-cd _static
-rm alabaster.css
-
 # Going back to where the main html is stored and replacing the variables (now in build)
-cd ..
+cd build
+echo 'Performing HTML replacements...'
 sed -i "s/CBnetid/$(echo $CBnetId)/g" Ganymede-Training-v1.2.html Appendices.html Application-Specific-Instructions.html Connecting-To-Ganymede.html Ganymede-Compilers-And-Modules.html Ganymede-Space-Constraints.html Moving-Around-Ganymede.html 
 sed -i "s/CBsysname/$(echo $CBsysName)/g" Ganymede-Training-v1.2.html Appendices.html Application-Specific-Instructions.html Connecting-To-Ganymede.html Ganymede-Compilers-And-Modules.html Ganymede-Space-Constraints.html Moving-Around-Ganymede.html
 # The one below  catches weird cases where html puts spans between he bracket and the variable name
@@ -64,7 +60,7 @@ sed -i "s/CNChapter5.5.1/$(echo $CNChapter551)/g" Ganymede-Training-v1.2.html Ap
 sed -i "s/CNChapter5.5.5/$(echo $CNChapter551)/g" Ganymede-Training-v1.2.html Appendices.html Application-Specific-Instructions.html Connecting-To-Ganymede.html Ganymede-Compilers-And-Modules.html Ganymede-Space-Constraints.html Moving-Around-Ganymede.html
 sed -i "s/CNChapter5.5.2/$(echo $CNChapter552)/g" Ganymede-Training-v1.2.html Appendices.html Application-Specific-Instructions.html Connecting-To-Ganymede.html Ganymede-Compilers-And-Modules.html Ganymede-Space-Constraints.html Moving-Around-Ganymede.html
 sed -i "s/CNChapter5.5.3/$(echo $CNChapter553)/g" Ganymede-Training-v1.2.html Appendices.html Application-Specific-Instructions.html Connecting-To-Ganymede.html Ganymede-Compilers-And-Modules.html Ganymede-Space-Constraints.html Moving-Around-Ganymede.html
-echo 'Replacements finished.'
+echo 'HTML replacements finished.'
 
 
 
