@@ -1,0 +1,380 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3 - Europa Space Constraints &mdash; UTDallas HPC Cluster Users Guide 1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="4 - Europa Compilers and Modules" href="Europa-Compilers-And-Modules.html" />
+    <link rel="prev" title="2 - Moving around Europa" href="Moving-Around-Europa.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> UTDallas HPC Cluster Users Guide
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Europa-Training-v1.2.html">UTDallas HPC Cluster Users Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Europa-Training-v1.2.html#acceptable-user-guidelines">Acceptable User Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Europa-Training-v1.2.html#introduction">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Connecting-To-Europa.html">1 - Connecting to Europa</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Connecting-To-Europa.html#microsoft-windows">1.1 - Microsoft Windows</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Connecting-To-Europa.html#putty">1.1.1 - PuTTY:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Connecting-To-Europa.html#bitvise">1.1.2 - Bitvise:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Connecting-To-Europa.html#mobaxterm">1.1.3 - MobaXTerm:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Connecting-To-Europa.html#for-mac-users">1.2 - For Mac Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Connecting-To-Europa.html#for-linux-users">1.3 - For Linux Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Connecting-To-Europa.html#mailing-list">1.4 - Mailing List</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Moving-Around-Europa.html">2 - Moving around Europa</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Moving-Around-Europa.html#linux-commands">2.1 - Linux Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Moving-Around-Europa.html#moving-around">2.1.1 - Moving Around</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Moving-Around-Europa.html#making-files-and-directories">2.1.2 - Making Files and Directories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Moving-Around-Europa.html#moving-files-and-directories">2.1.3 - Moving Files and Directories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Moving-Around-Europa.html#removing-files-and-directories">2.1.4 - Removing Files and Directories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Moving-Around-Europa.html#viewing-and-editing-files">2.1.5 - Viewing and Editing Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Moving-Around-Europa.html#automating-commands">2.1.6 - Automating Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Moving-Around-Europa.html#systemname-specific-instructions-and-programs">2.2 - Europa Specific Instructions and Programs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Moving-Around-Europa.html#environmental-variables">2.2.1 - Environmental Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Moving-Around-Europa.html#custom-programs">2.2.2 - Custom Programs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3 - Europa Space Constraints</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#types-of-space">3.1 - Types of Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#space-policies">3.2 - Space Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#checking-available-space">3.3 - Checking Available Space</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Europa-Compilers-And-Modules.html">4 - Europa Compilers and Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Europa-Compilers-And-Modules.html#modules">4.1 - Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Europa-Compilers-And-Modules.html#displaying-loaded-modules">4.1.1 - Displaying Loaded Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Europa-Compilers-And-Modules.html#listing-available-modules">4.1.2 - Listing Available Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Europa-Compilers-And-Modules.html#adding-modules-to-a-user-s-account">4.1.3 - Adding Modules to a User’s Account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Europa-Compilers-And-Modules.html#removing-modules-from-your-account">4.1.4 - Removing Modules From Your Account</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Europa-Compilers-And-Modules.html#compilers">4.2 - Compilers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Europa-Compilers-And-Modules.html#list-available-compilers-and-mpi-stacks">4.2.1 - List Available Compilers and MPI Stacks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Europa-Compilers-And-Modules.html#changing-currently-loaded-compilers-or-mpi-stacks">4.2.2 - Changing Currently Loaded Compilers or MPI Stacks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Running-Jobs-On-Europa.html">5 - Running Jobs on Europa</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Running-Jobs-On-Europa.html#preparing-to-queue-a-task">5.1 - Preparing to Queue a Task</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Running-Jobs-On-Europa.html#queuing-a-task">5.2 - Queuing a Task</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Running-Jobs-On-Europa.html#serial-task">5.2.1 - Serial Task</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Running-Jobs-On-Europa.html#parallel-tasks">5.2.2 - Parallel Tasks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Running-Jobs-On-Europa.html#checking-on-a-running-task">5.3 - Checking on a Running Task</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Running-Jobs-On-Europa.html#debugging-mpi-with-slurm-and-gdb">5.4 - Debugging MPI with Slurm and gdb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Running-Jobs-On-Europa.html#running-interactive-jobs">5.5 - Running Interactive Jobs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Running-Jobs-On-Europa.html#running-one-time-instance-jobs">5.5.1 - Running One-Time Instance Jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Running-Jobs-On-Europa.html#running-persistent-jobs">5.5.2 - Running Persistent Jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Running-Jobs-On-Europa.html#logging-into-a-particular-node">5.5.3 - Logging into a Particular Node</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Running-Jobs-On-Europa.html#viewing-results">5.6 - Viewing Results</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Europa-Application-Specific-Instructions.html">6 - Application Specific Instructions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Europa-Application-Specific-Instructions.html#matlab">6.1 - Matlab</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Europa-Application-Specific-Instructions.html#job-types">6.1.1 - Job Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Europa-Application-Specific-Instructions.html#matlab-job-modes">6.1.2 - Matlab Job Modes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Europa-Appendices.html">Appendices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Europa-Appendices.html#appendix-a-linux-commands">Appendix A - Linux Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Europa-Appendices.html#appendix-b-slurm-commands">Appendix B - Slurm Commands</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">UTDallas HPC Cluster Users Guide</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>3 - Europa Space Constraints</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Europa-Space-Constraints.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="systemname-space-constraints">
+<h1>3 - Europa Space Constraints<a class="headerlink" href="#systemname-space-constraints" title="Permalink to this headline">¶</a></h1>
+<p>One of the important considerations in High Performance Computing is the amount of space that is allocated to each user.  The Europa cluster is space allocated to provide the maximum amount of space while still providing desirable attributes to the cluster user.</p>
+<div class="section" id="types-of-space">
+<h2>3.1 - Types of Space<a class="headerlink" href="#types-of-space" title="Permalink to this headline">¶</a></h2>
+<p>There are currently 2 types of space available to the user, home space and scratch space. Home space is located in the <code class="docutils literal notranslate"><span class="pre">/home/$USER</span></code> folder and the scratch folder is located in the <code class="docutils literal notranslate"><span class="pre">/petastore/europa/scratch/$USER</span></code> folder. For convenience, the scratch folder is symbolically linked inside the user’s home folder in <code class="docutils literal notranslate"><span class="pre">/home/$USER/scratch</span></code> The following table compares the attributes of the two available spaces.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 35%" />
+<col style="width: 43%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Attributes</p></th>
+<th class="head"><p>Home Space</p></th>
+<th class="head"><p>Scratch Space</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Purpose of
+the Space</p></td>
+<td><p>To house scripts,
+source code and
+output data.</p></td>
+<td><p>To have a large area
+for working with data
+or trying ideas</p></td>
+</tr>
+<tr class="row-odd"><td><p>Backed Up</p></td>
+<td><p>Yes</p></td>
+<td><p>No</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="space-policies">
+<h2>3.2 - Space Policies<a class="headerlink" href="#space-policies" title="Permalink to this headline">¶</a></h2>
+<p>In addition to the attributes listed above, there are space considerations that need to be addressed due to limited storage.  Each of the users must stay within a certain quota. Should the quota be exceeded, the user will be warned by the following statement : <code class="docutils literal notranslate"><span class="pre">dm-0:</span> <span class="pre">warning,</span> <span class="pre">user</span> <span class="pre">block</span> <span class="pre">quota</span> <span class="pre">exceeded.</span></code>  The user will not loose data, but instead is given a short period of time to comply to the block quota.  If the user runs a process that exceeds the Hard Limit, then the process will be stopped and the user will get the following error : <code class="docutils literal notranslate"><span class="pre">dm-0:</span> <span class="pre">write</span> <span class="pre">failed,</span> <span class="pre">user</span> <span class="pre">block</span> <span class="pre">limit</span> <span class="pre">reached.</span></code>  The following table compares the different space limitations that exist on the particular</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 29%" />
+<col style="width: 35%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Attributes</p></th>
+<th class="head"><p>Home Space</p></th>
+<th class="head"><p>Scratch Space</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Hard Limit</p></td>
+<td><p>20 GB</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p>Soft Limit</p></td>
+<td><p>30 GB <a class="footnote-reference brackets" href="#id3" id="id1">*</a></p></td>
+<td><p>None <a class="footnote-reference brackets" href="#id4" id="id2">†</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Days to Comply</p></td>
+<td><p>7 Days</p></td>
+<td><p>SRscratchrectime</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="footnote brackets">
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">*</a></span></dt>
+<dd><p>The scratch space is located in <code class="docutils literal notranslate"><span class="pre">/petastore/europa/scratch/$USER</span></code> but does not count against the storage in the home space, even with the symbolic link.</p>
+</dd>
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id2">†</a></span></dt>
+<dd><p>While the petabyte storage device is not metered, the scratch space should be cleaned up when a project is finished to ensure that there is enough room for others interested in using the space.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="checking-available-space">
+<h2>3.3 - Checking Available Space<a class="headerlink" href="#checking-available-space" title="Permalink to this headline">¶</a></h2>
+<p>The user should be aware of the amount of free space that is remaining, in order to ensure that the user does not run out of space for data during a run of a program or module.  In order to check the amount of space, the user needs to check the <code class="docutils literal notranslate"><span class="pre">quota</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830@europa~]$ quota -s
+Disk quotas for user jxw150830 (uid 532471):
+     Filesystem   space   quota   limit   grace   files   quota   limit   grace
+/dev/mapper/volgroup0-lvolexport
+                    44K  20000M  30000M              11       0       0
+</pre></div>
+</div>
+<p>In the case above, the entire 20 GB is available to be used.  After running a couple of processes, the <code class="docutils literal notranslate"><span class="pre">/home</span></code> space is filled above the quota.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[jxw150830@europa~]$ quota -s
+Disk quotas for user jxw150830 (uid 532471):
+     Filesystem   space   quota   limit   grace   files   quota   limit   grace
+/dev/mapper/volgroup0-lvolexport
+                 22529M* 20000M  30000M   6days      13       0       0
+</pre></div>
+</div>
+<p>Note that the number of days in the grace period will slowly go down until the user is out of compliance completely.  At this point, if the amount of time runs out, the user will no longer be able to write new data until they move below the 20 GB threshold.  If at any point the user goes above 30 GB, the user will immediately loose the ability to write until the <code class="docutils literal notranslate"><span class="pre">/home</span></code> directory is brought back into compliance.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Europa-Compilers-And-Modules.html" class="btn btn-neutral float-right" title="4 - Europa Compilers and Modules" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Moving-Around-Europa.html" class="btn btn-neutral float-left" title="2 - Moving around Europa" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Noah Castetter
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

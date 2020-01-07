@@ -1,0 +1,331 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1 - Connecting to Io &mdash; UTDallas HPC Cluster Users Guide 1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2 - Moving around Io" href="Moving-Around-Io.html" />
+    <link rel="prev" title="UTDallas HPC Cluster Users Guide" href="Io-Training-v1.2.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> UTDallas HPC Cluster Users Guide
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Io-Training-v1.2.html">UTDallas HPC Cluster Users Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Io-Training-v1.2.html#acceptable-user-guidelines">Acceptable User Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Io-Training-v1.2.html#introduction">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1 - Connecting to Io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#microsoft-windows">1.1 - Microsoft Windows</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#putty">1.1.1 - PuTTY:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bitvise">1.1.2 - Bitvise:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mobaxterm">1.1.3 - MobaXTerm:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#for-mac-users">1.2 - For Mac Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#for-linux-users">1.3 - For Linux Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mailing-list">1.4 - Mailing List</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Moving-Around-Io.html">2 - Moving around Io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Moving-Around-Io.html#linux-commands">2.1 - Linux Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Moving-Around-Io.html#moving-around">2.1.1 - Moving Around</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Moving-Around-Io.html#making-files-and-directories">2.1.2 - Making Files and Directories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Moving-Around-Io.html#moving-files-and-directories">2.1.3 - Moving Files and Directories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Moving-Around-Io.html#removing-files-and-directories">2.1.4 - Removing Files and Directories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Moving-Around-Io.html#viewing-and-editing-files">2.1.5 - Viewing and Editing Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Moving-Around-Io.html#automating-commands">2.1.6 - Automating Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Moving-Around-Io.html#systemname-specific-instructions-and-programs">2.2 - Io Specific Instructions and Programs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Moving-Around-Io.html#environmental-variables">2.2.1 - Environmental Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Moving-Around-Io.html#custom-programs">2.2.2 - Custom Programs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Io-Space-Constraints.html">3 - Io Space Constraints</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Io-Space-Constraints.html#types-of-space">3.1 - Types of Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Io-Space-Constraints.html#space-policies">3.2 - Space Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Io-Space-Constraints.html#checking-available-space">3.3 - Checking Available Space</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Io-Compilers-And-Modules.html">4 - Io Compilers and Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Io-Compilers-And-Modules.html#modules">4.1 - Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Io-Compilers-And-Modules.html#displaying-loaded-modules">4.1.1 - Displaying Loaded Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Io-Compilers-And-Modules.html#listing-available-modules">4.1.2 - Listing Available Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Io-Compilers-And-Modules.html#adding-modules-to-a-user-s-account">4.1.3 - Adding Modules to a User’s Account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Io-Compilers-And-Modules.html#removing-modules-from-your-account">4.1.4 - Removing Modules From Your Account</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Io-Compilers-And-Modules.html#compilers">4.2 - Compilers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Io-Compilers-And-Modules.html#list-available-compilers-and-mpi-stacks">4.2.1 - List Available Compilers and MPI Stacks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Io-Compilers-And-Modules.html#changing-currently-loaded-compilers-or-mpi-stacks">4.2.2 - Changing Currently Loaded Compilers or MPI Stacks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Running-Jobs-On-Io.html">5 - Running Jobs on Io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Running-Jobs-On-Io.html#preparing-to-queue-a-task">5.1 - Preparing to Queue a Task</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Running-Jobs-On-Io.html#queuing-a-task">5.2 - Queuing a Task</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Running-Jobs-On-Io.html#serial-task">5.2.1 - Serial Task</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Running-Jobs-On-Io.html#parallel-tasks">5.2.2 - Parallel Tasks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Running-Jobs-On-Io.html#checking-on-a-running-task">5.3 - Checking on a Running Task</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Running-Jobs-On-Io.html#debugging-mpi-with-slurm-and-gdb">5.4 - Debugging MPI with Slurm and gdb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Running-Jobs-On-Io.html#running-interactive-jobs">5.5 - Running Interactive Jobs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Running-Jobs-On-Io.html#running-one-time-instance-jobs">5.5.1 - Running One-Time Instance Jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Running-Jobs-On-Io.html#running-persistent-jobs">5.5.2 - Running Persistent Jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Running-Jobs-On-Io.html#logging-into-a-particular-node">5.5.3 - Logging into a Particular Node</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Running-Jobs-On-Io.html#viewing-results">5.6 - Viewing Results</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Io-Application-Specific-Instructions.html">6 - Application Specific Instructions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Io-Application-Specific-Instructions.html#matlab">6.1 - Matlab</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Io-Application-Specific-Instructions.html#job-types">6.1.1 - Job Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Io-Application-Specific-Instructions.html#matlab-job-modes">6.1.2 - Matlab Job Modes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Io-Appendices.html">Appendices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Io-Appendices.html#appendix-a-linux-commands">Appendix A - Linux Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Io-Appendices.html#appendix-b-slurm-commands">Appendix B - Slurm Commands</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">UTDallas HPC Cluster Users Guide</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>1 - Connecting to Io</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Connecting-To-Io.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="connecting-to-systemname">
+<h1>1 - Connecting to Io<a class="headerlink" href="#connecting-to-systemname" title="Permalink to this headline">¶</a></h1>
+<p>It is important to note that the individual nodes can only be accessed after the user has logged into the Io node, and have a running job on compute nodes.</p>
+<div class="section" id="microsoft-windows">
+<h2>1.1 - Microsoft Windows<a class="headerlink" href="#microsoft-windows" title="Permalink to this headline">¶</a></h2>
+<p>Once the user’s account has been created the user can access Io using multiple Secure Shell (SSH) terminal software such as:</p>
+<ul class="simple">
+<li><p>PuTTY</p></li>
+<li><p>Bitwise</p></li>
+<li><p>MobaXterm</p></li>
+</ul>
+<p>This guide is written from the prospective that the user is connected to the UT Dallas network.  If the user is working outside of the UT Dallas network, follow the VPN guide at <a class="reference external" href="https://www.utdallas.edu/oit/vpn/">https://www.utdallas.edu/oit/vpn/</a> or to connect via the command line the SSH guide at <a class="reference external" href="https://www.utdallas.edu/oit/howto/create-an-ssh-connection/">https://www.utdallas.edu/oit/howto/create-an-ssh-connection/</a>  to connect to the campus securely.</p>
+<div class="section" id="putty">
+<h3>1.1.1 - PuTTY:<a class="headerlink" href="#putty" title="Permalink to this headline">¶</a></h3>
+<p>PuTTY for the Microsoft Windows environment can be installed by going to www.putty.org. Download and install the latest version of Putty.</p>
+<img alt="_images/1.1.1-1.png" src="_images/1.1.1-1.png" />
+<p>Once running PuTTY, in the Host Name section type <strong>io.utdallas.edu</strong>.  Go down to the saved sessions section, name the server with a meaningful name (in this case Io) and press save.  By doing this, time can be saved in the future by clicking your particular saved session and pressing load.  Once loaded into the host name, click on the open button.</p>
+<img alt="_images/1.1.1-2.jpg" src="_images/1.1.1-2.jpg" />
+<p>A Putty Security Alert window will open for the first time prompting you for a Yes/No/Cancel answer to the question of saving a new host key. Click the Yes button and now you will be asked for login-id and password. Your login-id is your UTD NetID and your password is the same as your UTD NetID password.</p>
+<img alt="_images/1.1.1-3.png" src="_images/1.1.1-3.png" />
+</div>
+<div class="section" id="bitvise">
+<h3>1.1.2 - Bitvise:<a class="headerlink" href="#bitvise" title="Permalink to this headline">¶</a></h3>
+<p>Bitvise can be installed by going to <a class="reference external" href="https://www.bitvise.com/index">https://www.bitvise.com/index</a> and pressing the download tab across the top banner.  Press the first option, <strong>Download Bitvise SSH Client (Tunnelier)</strong> the press <strong>Bitvise SSH Client Installer</strong> and follow the instructions for to install the software. Similar to PuTTY, the Host Name section type <strong>io.utdallas.edu</strong>.  Go down to the “Save profile as” button, name the file with a meaningful name (in this case io.tlp) and press save.  By doing this, time can be saved in the future by clicking “Load profile”.  Once loaded into the host name, click on the Login button.</p>
+<img alt="_images/1.1.2.png" src="_images/1.1.2.png" />
+</div>
+<div class="section" id="mobaxterm">
+<h3>1.1.3 - MobaXTerm:<a class="headerlink" href="#mobaxterm" title="Permalink to this headline">¶</a></h3>
+<p>MobaXterm can be installed from <a class="reference external" href="http://mobaxterm.mobatek.net/download.html">http://mobaxterm.mobatek.net/download.html</a>. The program can be demo-ed from site <a class="reference external" href="http://mobaxterm.mobatek.net/demo.html">http://mobaxterm.mobatek.net/demo.html</a>.</p>
+<p>To login, type <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">&lt;NetID&gt;&#64;io.utdallas.edu</span></code>. Once logged in, all of the available Linux files and directory information will be displayed on the left white pane. Within the MobaXterm interface, one can securely copy files between Linux and Windows desktops.  To open a file, right click on it and choosing option “open with default text editor”. Changes can then be made to a file and the changes can then be saved.</p>
+<img alt="_images/1.1.3.png" src="_images/1.1.3.png" />
+</div>
+</div>
+<div class="section" id="for-mac-users">
+<h2>1.2 - For Mac Users<a class="headerlink" href="#for-mac-users" title="Permalink to this headline">¶</a></h2>
+<p>For MAC users MobaXterm is not available.  Install XQuartz from <a class="reference external" href="https://www.xquartz.org">https://www.xquartz.org</a>. Additionally, the user could use terminal application as an SSH terminal client.</p>
+</div>
+<div class="section" id="for-linux-users">
+<h2>1.3 - For Linux Users<a class="headerlink" href="#for-linux-users" title="Permalink to this headline">¶</a></h2>
+<p>For Linux users, the ssh command is built into the operating system.  To connect to the Io server, open the terminal agent and type: <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">&lt;NET-ID&gt;&#64;io.utdallas.edu.</span></code></p>
+</div>
+<div class="section" id="mailing-list">
+<h2>1.4 - Mailing List<a class="headerlink" href="#mailing-list" title="Permalink to this headline">¶</a></h2>
+<p>Another way for users to connect to Io is to connect with other users.  The admin team has set up a mailing list that can allow users to interact with each other and find solutions through searchable archives.  Because the admins are members of the group, timely answers and solutions pass through the group.  The users should think of this as an additional form of documentation to reference.  This list can be accessed at <a class="reference external" href="mailto:iousers&#37;&#52;&#48;lists&#46;utdallas&#46;edu">iousers<span>&#64;</span>lists<span>&#46;</span>utdallas<span>&#46;</span>edu</a>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Moving-Around-Io.html" class="btn btn-neutral float-right" title="2 - Moving around Io" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Io-Training-v1.2.html" class="btn btn-neutral float-left" title="UTDallas HPC Cluster Users Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Noah Castetter
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
