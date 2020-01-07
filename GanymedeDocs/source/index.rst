@@ -3,21 +3,21 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to SPuppersysname's documentation!
-========================================
+Welcome to SPuppersysName's documentation!
+==========================================
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 1
    :caption: Contents:
 
-   SPuppersysname-Training-v1.2
-   Connecting-To-SPuppersysname
-   Moving-Around-SPuppersysname
-   SPuppersysname-Space-Constraints
-   SPuppersysname-Compilers-And-Modules
-   Running-Jobs-On-SPuppersysname
-   Application-Specific-Instructions
-   Appendices
+   SPuppersysName-Training-v1.2
+   Connecting-To-SPuppersysName
+   Moving-Around-SPuppersysName
+   SPuppersysName-Space-Constraints
+   SPuppersysName-Compilers-And-Modules
+   Running-Jobs-On-SPuppersysName
+   SPuppersysName-Application-Specific-Instructions
+   SPuppersysName-Appendices
 
 Indices and tables
 ==================

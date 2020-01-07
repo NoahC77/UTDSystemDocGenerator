@@ -1,0 +1,375 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Appendices &mdash; UTDallas HPC Cluster Users Guide 1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="6 - Application Specific Instructions" href="Io-Application-Specific-Instructions.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> UTDallas HPC Cluster Users Guide
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Io-Training-v1.2.html">UTDallas HPC Cluster Users Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Io-Training-v1.2.html#acceptable-user-guidelines">Acceptable User Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Io-Training-v1.2.html#introduction">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Connecting-To-Io.html">1 - Connecting to Io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Connecting-To-Io.html#microsoft-windows">1.1 - Microsoft Windows</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Connecting-To-Io.html#putty">1.1.1 - PuTTY:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Connecting-To-Io.html#bitvise">1.1.2 - Bitvise:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Connecting-To-Io.html#mobaxterm">1.1.3 - MobaXTerm:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Connecting-To-Io.html#for-mac-users">1.2 - For Mac Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Connecting-To-Io.html#for-linux-users">1.3 - For Linux Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Connecting-To-Io.html#mailing-list">1.4 - Mailing List</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Moving-Around-Io.html">2 - Moving around Io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Moving-Around-Io.html#linux-commands">2.1 - Linux Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Moving-Around-Io.html#moving-around">2.1.1 - Moving Around</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Moving-Around-Io.html#making-files-and-directories">2.1.2 - Making Files and Directories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Moving-Around-Io.html#moving-files-and-directories">2.1.3 - Moving Files and Directories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Moving-Around-Io.html#removing-files-and-directories">2.1.4 - Removing Files and Directories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Moving-Around-Io.html#viewing-and-editing-files">2.1.5 - Viewing and Editing Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Moving-Around-Io.html#automating-commands">2.1.6 - Automating Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Moving-Around-Io.html#systemname-specific-instructions-and-programs">2.2 - Io Specific Instructions and Programs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Moving-Around-Io.html#environmental-variables">2.2.1 - Environmental Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Moving-Around-Io.html#custom-programs">2.2.2 - Custom Programs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Io-Space-Constraints.html">3 - Io Space Constraints</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Io-Space-Constraints.html#types-of-space">3.1 - Types of Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Io-Space-Constraints.html#space-policies">3.2 - Space Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Io-Space-Constraints.html#checking-available-space">3.3 - Checking Available Space</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Io-Compilers-And-Modules.html">4 - Io Compilers and Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Io-Compilers-And-Modules.html#modules">4.1 - Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Io-Compilers-And-Modules.html#displaying-loaded-modules">4.1.1 - Displaying Loaded Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Io-Compilers-And-Modules.html#listing-available-modules">4.1.2 - Listing Available Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Io-Compilers-And-Modules.html#adding-modules-to-a-user-s-account">4.1.3 - Adding Modules to a User’s Account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Io-Compilers-And-Modules.html#removing-modules-from-your-account">4.1.4 - Removing Modules From Your Account</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Io-Compilers-And-Modules.html#compilers">4.2 - Compilers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Io-Compilers-And-Modules.html#list-available-compilers-and-mpi-stacks">4.2.1 - List Available Compilers and MPI Stacks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Io-Compilers-And-Modules.html#changing-currently-loaded-compilers-or-mpi-stacks">4.2.2 - Changing Currently Loaded Compilers or MPI Stacks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Running-Jobs-On-Io.html">5 - Running Jobs on Io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Running-Jobs-On-Io.html#preparing-to-queue-a-task">5.1 - Preparing to Queue a Task</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Running-Jobs-On-Io.html#queuing-a-task">5.2 - Queuing a Task</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Running-Jobs-On-Io.html#serial-task">5.2.1 - Serial Task</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Running-Jobs-On-Io.html#parallel-tasks">5.2.2 - Parallel Tasks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Running-Jobs-On-Io.html#checking-on-a-running-task">5.3 - Checking on a Running Task</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Running-Jobs-On-Io.html#debugging-mpi-with-slurm-and-gdb">5.4 - Debugging MPI with Slurm and gdb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Running-Jobs-On-Io.html#running-interactive-jobs">5.5 - Running Interactive Jobs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Running-Jobs-On-Io.html#running-one-time-instance-jobs">5.5.1 - Running One-Time Instance Jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Running-Jobs-On-Io.html#running-persistent-jobs">5.5.2 - Running Persistent Jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Running-Jobs-On-Io.html#logging-into-a-particular-node">5.5.3 - Logging into a Particular Node</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Running-Jobs-On-Io.html#viewing-results">5.6 - Viewing Results</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Io-Application-Specific-Instructions.html">6 - Application Specific Instructions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Io-Application-Specific-Instructions.html#matlab">6.1 - Matlab</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Io-Application-Specific-Instructions.html#job-types">6.1.1 - Job Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Io-Application-Specific-Instructions.html#matlab-job-modes">6.1.2 - Matlab Job Modes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Appendices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#appendix-a-linux-commands">Appendix A - Linux Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#appendix-b-slurm-commands">Appendix B - Slurm Commands</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">UTDallas HPC Cluster Users Guide</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Appendices</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Io-Appendices.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="appendices">
+<h1>Appendices<a class="headerlink" href="#appendices" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="appendix-a-linux-commands">
+<h2>Appendix A - Linux Commands<a class="headerlink" href="#appendix-a-linux-commands" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 37%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Command</p></th>
+<th class="head"><p>Usage</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>pwd</p></td>
+<td><p>print current directory</p></td>
+</tr>
+<tr class="row-odd"><td><p>ls</p></td>
+<td><p>list contents</p></td>
+</tr>
+<tr class="row-even"><td><p>ls -l</p></td>
+<td><p>list longform</p></td>
+</tr>
+<tr class="row-odd"><td><p>cd</p></td>
+<td><p>change to home directory</p></td>
+</tr>
+<tr class="row-even"><td><p>cd [directory path]</p></td>
+<td><p>change to directory</p></td>
+</tr>
+<tr class="row-odd"><td><p>mkdir</p></td>
+<td><p>make a directory</p></td>
+</tr>
+<tr class="row-even"><td><p>touch</p></td>
+<td><p>create a file</p></td>
+</tr>
+<tr class="row-odd"><td><p>mv [source] [destination]</p></td>
+<td><p>move a file or directory</p></td>
+</tr>
+<tr class="row-even"><td><p>rm [file]</p></td>
+<td><p>remove a file or directory</p></td>
+</tr>
+<tr class="row-odd"><td><p>cat [file]</p></td>
+<td><p>view a file (non-editable)</p></td>
+</tr>
+<tr class="row-even"><td><p>scp</p></td>
+<td><p>secure copy</p></td>
+</tr>
+<tr class="row-odd"><td><p>rsync</p></td>
+<td><p>secure copy, only writes data that has changed</p></td>
+</tr>
+<tr class="row-even"><td><p>ssh</p></td>
+<td><p>create secure shell connection to a remote host</p></td>
+</tr>
+<tr class="row-odd"><td><p>ssh -X</p></td>
+<td><p>create ssh connection with X-window forwarding</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="appendix-b-slurm-commands">
+<h2>Appendix B - Slurm Commands<a class="headerlink" href="#appendix-b-slurm-commands" title="Permalink to this headline">¶</a></h2>
+<p>Man pages exist for all Slurm daemons, commands, and API functions. The command option –help also provides a brief summary of options. Note that the command options are all case sensitive.</p>
+<dl class="simple">
+<dt><strong>sacct</strong></dt><dd><p>sacct is used to report job or job step accounting information about active or completed jobs.</p>
+</dd>
+<dt><strong>salloc</strong></dt><dd><p>salloc is used to allocate resources for a job in real time. Typically this is used to allocate resources and spawn a shell. The shell is then used to execute srun commands to launch parallel tasks.</p>
+</dd>
+<dt><strong>sattach</strong></dt><dd><p>sattach is used to attach standard input, output, and error plus signal capabilities to a currently running job or job step. One can attach to and detach from jobs multiple times.</p>
+</dd>
+<dt><strong>sbatch</strong></dt><dd><p>sbatch is used to submit a job script for later execution. The script will typically contain one or more srun commands to launch parallel tasks.</p>
+</dd>
+<dt><strong>sbcast</strong></dt><dd><p>sbcast is used to transfer a file from local disk to local disk on the nodes allocated to a job. This can be used to effectively use diskless compute nodes or provide improved performance relative to a shared file system.</p>
+</dd>
+<dt><strong>scancel</strong></dt><dd><p>scancel is used to cancel a pending or running job or job step. It can also be used to send an arbitrary signal to all processes associated with a running job or job step.</p>
+</dd>
+<dt><strong>scontrol</strong></dt><dd><p>scontrol is the administrative tool used to view and/or modify Slurm state. Note that many scontrol commands can only be executed as user root.</p>
+</dd>
+<dt><strong>sinfo</strong></dt><dd><p>sinfo reports the state of partitions and nodes managed by Slurm. It has a wide variety of filtering, sorting, and formatting options.</p>
+</dd>
+<dt><strong>smap</strong></dt><dd><p>smap reports state information for jobs, partitions, and nodes managed by Slurm, but graphically displays the information to reflect network topology.</p>
+</dd>
+<dt><strong>squeue</strong></dt><dd><p>squeue reports the state of jobs or job steps. It has a wide variety of filtering, sorting, and formatting options. By default, it reports the running jobs in priority order and then the pending jobs in priority order.</p>
+</dd>
+<dt><strong>srun</strong></dt><dd><p>srun is used to submit a job for execution or initiate job steps in real time. srun has a wide variety of options to specify resource requirements, including: minimum and maximum node count, processor count, specific nodes to use or not use, and specific node characteristics (so much memory, disk space, certain required features, etc.). A job can contain multiple job steps executing sequentially or in parallel on independent or shared resources within the job’s node allocation.</p>
+</dd>
+<dt><strong>strigger</strong></dt><dd><p>strigger is used to set, get or view event triggers. Event triggers include things such as nodes going down or jobs approaching their time limit.</p>
+</dd>
+<dt><strong>sview</strong></dt><dd><p>sview is a graphical user interface to get and update state information for jobs, partitions, and nodes managed by Slurm.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="Io-Application-Specific-Instructions.html" class="btn btn-neutral float-left" title="6 - Application Specific Instructions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Noah Castetter
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

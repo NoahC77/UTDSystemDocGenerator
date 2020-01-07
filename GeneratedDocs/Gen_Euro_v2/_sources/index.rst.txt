@@ -1,0 +1,27 @@
+.. SPuppersysnameDocs documentation master file, created by
+   sphinx-quickstart on Wed Sep 11 09:12:41 2019.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to Europa's documentation!
+==========================================
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Contents:
+
+   Europa-Training-v1.2
+   Connecting-To-Europa
+   Moving-Around-Europa
+   Europa-Space-Constraints
+   Europa-Compilers-And-Modules
+   Running-Jobs-On-Europa
+   Europa-Application-Specific-Instructions
+   Europa-Appendices
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

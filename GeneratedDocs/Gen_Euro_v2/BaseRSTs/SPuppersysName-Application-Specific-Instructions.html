@@ -1,0 +1,336 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>6 - Application Specific Instructions &mdash; UTDallas HPC Cluster Users Guide 1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> UTDallas HPC Cluster Users Guide
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../IO-Training-v1.2.html">UTDallas HPC Cluster Users Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../IO-Training-v1.2.html#acceptable-user-guidelines">Acceptable User Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../IO-Training-v1.2.html#introduction">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Connecting-To-IO.html">1 - Connecting to Io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Connecting-To-IO.html#microsoft-windows">1.1 - Microsoft Windows</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Connecting-To-IO.html#putty">1.1.1 - PuTTY:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Connecting-To-IO.html#bitvise">1.1.2 - Bitvise:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Connecting-To-IO.html#mobaxterm">1.1.3 - MobaXTerm:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Connecting-To-IO.html#for-mac-users">1.2 - For Mac Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Connecting-To-IO.html#for-linux-users">1.3 - For Linux Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Connecting-To-IO.html#mailing-list">1.4 - Mailing List</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Moving-Around-IO.html">2 - Moving around Io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Moving-Around-IO.html#linux-commands">2.1 - Linux Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Moving-Around-IO.html#moving-around">2.1.1 - Moving Around</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Moving-Around-IO.html#making-files-and-directories">2.1.2 - Making Files and Directories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Moving-Around-IO.html#moving-files-and-directories">2.1.3 - Moving Files and Directories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Moving-Around-IO.html#removing-files-and-directories">2.1.4 - Removing Files and Directories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Moving-Around-IO.html#viewing-and-editing-files">2.1.5 - Viewing and Editing Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Moving-Around-IO.html#automating-commands">2.1.6 - Automating Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Moving-Around-IO.html#systemname-specific-instructions-and-programs">2.2 - Io Specific Instructions and Programs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Moving-Around-IO.html#environmental-variables">2.2.1 - Environmental Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Moving-Around-IO.html#custom-programs">2.2.2 - Custom Programs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../IO-Space-Constraints.html">3 - Io Space Constraints</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../IO-Space-Constraints.html#types-of-space">3.1 - Types of Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../IO-Space-Constraints.html#space-policies">3.2 - Space Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../IO-Space-Constraints.html#checking-available-space">3.3 - Checking Available Space</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../IO-Compilers-And-Modules.html">4 - Io Compilers and Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../IO-Compilers-And-Modules.html#modules">4.1 - Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../IO-Compilers-And-Modules.html#displaying-loaded-modules">4.1.1 - Displaying Loaded Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../IO-Compilers-And-Modules.html#listing-available-modules">4.1.2 - Listing Available Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../IO-Compilers-And-Modules.html#adding-modules-to-a-user-s-account">4.1.3 - Adding Modules to a User’s Account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../IO-Compilers-And-Modules.html#removing-modules-from-your-account">4.1.4 - Removing Modules From Your Account</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../IO-Compilers-And-Modules.html#compilers">4.2 - Compilers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../IO-Compilers-And-Modules.html#list-available-compilers-and-mpi-stacks">4.2.1 - List Available Compilers and MPI Stacks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../IO-Compilers-And-Modules.html#changing-currently-loaded-compilers-or-mpi-stacks">4.2.2 - Changing Currently Loaded Compilers or MPI Stacks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Running-Jobs-On-IO.html">5 - Running Jobs on Io</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Running-Jobs-On-IO.html#preparing-to-queue-a-task">5.1 - Preparing to Queue a Task</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Running-Jobs-On-IO.html#queuing-a-task">5.2 - Queuing a Task</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Running-Jobs-On-IO.html#serial-task">5.2.1 - Serial Task</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Running-Jobs-On-IO.html#parallel-tasks">5.2.2 - Parallel Tasks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Running-Jobs-On-IO.html#checking-on-a-running-task">5.3 - Checking on a Running Task</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Running-Jobs-On-IO.html#debugging-mpi-with-slurm-and-gdb">5.4 - Debugging MPI with Slurm and gdb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Running-Jobs-On-IO.html#running-interactive-jobs">5.5 - Running Interactive Jobs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Running-Jobs-On-IO.html#running-one-time-instance-jobs">5.5.1 - Running One-Time Instance Jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Running-Jobs-On-IO.html#running-persistent-jobs">5.5.2 - Running Persistent Jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Running-Jobs-On-IO.html#logging-into-a-particular-node">5.5.3 - Logging into a Particular Node</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Running-Jobs-On-IO.html#viewing-results">5.6 - Viewing Results</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../IO-Appendicies.html">Appendices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../IO-Appendicies.html#appendix-a-linux-commands">Appendix A - Linux Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../IO-Appendicies.html#appendix-b-slurm-commands">Appendix B - Slurm Commands</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">UTDallas HPC Cluster Users Guide</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>6 - Application Specific Instructions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/BaseRSTs/SPuppersysName-Application-Specific-Instructions.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="application-specific-instructions">
+<h1>6 - Application Specific Instructions<a class="headerlink" href="#application-specific-instructions" title="Permalink to this headline">¶</a></h1>
+<p>There are certain programs that require users to run them by a specific method.  These can be added with modules as with other programs on the stack.</p>
+<div class="section" id="matlab">
+<h2>6.1 - Matlab<a class="headerlink" href="#matlab" title="Permalink to this headline">¶</a></h2>
+<p>SRuppersysName currently has SRmatlabver installed, and in addition to the site liscense there are SRmatlabdist liscenses for distributed Matlab.  Matlab jobs can be run in 3 different ways: serial, parallel and distributed compute.  Each of these job types can either be batch or interactive.  The following sections will describe what this means to the user.</p>
+<div class="section" id="job-types">
+<h3>6.1.1 - Job Types<a class="headerlink" href="#job-types" title="Permalink to this headline">¶</a></h3>
+<p>There are 3 different job types: Serial, Parallel Computing Toolkit, and Distibuted Compute Server.</p>
+<div class="section" id="serial-jobs">
+<h4>6.1.1.1 - Serial Jobs<a class="headerlink" href="#serial-jobs" title="Permalink to this headline">¶</a></h4>
+<p>Serial jobs are defined as jobs where one dataset exists in memory.  This can either be accessed by one processor or by multiple processors.  Serial jobs are created when a user runs standard Matlab scripts.</p>
+<p>For an example of a serial job, the user can look in the directory <code class="docutils literal notranslate"><span class="pre">/opt/ohpc/pub/examples/matlab/serial/</span></code> and open the readme file.</p>
+</div>
+<div class="section" id="parallel-computing-toolkit-pct-jobs">
+<h4>6.1.1.2 - Parallel Computing Toolkit (PCT) Jobs<a class="headerlink" href="#parallel-computing-toolkit-pct-jobs" title="Permalink to this headline">¶</a></h4>
+<p>Parallel Computing Toolkit jobs are jobs that use openmp to call parallel processes using MPI.  These jobs follow directives that are established in the Matlab Parallel Computing Toolkit with full information available at <a class="reference external" href="https://www.mathworks.com/products/parallel-computing.html">https://www.mathworks.com/products/parallel-computing.html</a> . The user has the availabity to run an instance of Matlab with each of the cores reserved in the current node.  SRuppersysName is equiped with SRmatlabsitenum keys to ensure that many users can do parallel computing at once.</p>
+<p>For an example of a serial job, the user can look in the directory <code class="docutils literal notranslate"><span class="pre">/opt/ohpc/pub/examples/matlab/parallel/</span></code> and open the readme file.</p>
+</div>
+<div class="section" id="distributed-compute-server-dcs-jobs">
+<h4>6.1.1.3 - Distributed Compute Server (DCS) Jobs<a class="headerlink" href="#distributed-compute-server-dcs-jobs" title="Permalink to this headline">¶</a></h4>
+<p>Distributed Compute Server jobs are very similar to PCT jobs, but these jobs leverage systems within Matlab to use multiple nodes to work on jobs instead of multiple instances as in PCT.  The user must use internal commands to Matlab to enable this, however Matlab automatically pulls the corret liscense type for the command run by the user.  The University currently owns SRmatlabdist liscenses.  The default number that are run is 12, however the user can change the number of units run using the following code in their code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">myCluster</span>  <span class="o">=</span> <span class="n">parcluster</span><span class="p">();</span>
+<span class="n">poolobj</span> <span class="o">=</span> <span class="n">parpool</span><span class="p">(</span><span class="n">myCluster</span><span class="p">,</span><span class="mi">32</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="matlab-job-modes">
+<h3>6.1.2 - Matlab Job Modes<a class="headerlink" href="#matlab-job-modes" title="Permalink to this headline">¶</a></h3>
+<p>Like all Slurm jobs, Matlab can either be run in the background with <code class="docutils literal notranslate"><span class="pre">sbatch</span></code> or interactively with <code class="docutils literal notranslate"><span class="pre">srun</span></code>.  The user does, however, need to do some specific actions for matlab to work.</p>
+<div class="section" id="batch-jobs">
+<h4>6.1.2.1 - Batch Jobs<a class="headerlink" href="#batch-jobs" title="Permalink to this headline">¶</a></h4>
+<p>Using Slurm, an effecient way to run Matlab allows to user to set up a number of batches to run at the same time across multiple cores.  This means that if the user has the same program to run with multiple data sets, it is possible to batch the same program with multiple data sets.  This allows the system to run the multiple sets in tandem, yielding faster results.</p>
+<p>To do this, the submission script needs to be stuctured like the one in Section 5.2.1 with the program section being replaced by <code class="docutils literal notranslate"><span class="pre">matlab</span> <span class="pre">-nodisplay</span> <span class="pre">-nosplash</span> <span class="pre">&lt;user</span> <span class="pre">function&gt;.m</span> <span class="pre">&lt;&lt;</span> <span class="pre">&lt;input&gt;</span></code></p>
+</div>
+<div class="section" id="interactive-matlab">
+<h4>6.1.2.2 - Interactive Matlab<a class="headerlink" href="#interactive-matlab" title="Permalink to this headline">¶</a></h4>
+<p>Matlab can be run from an interactive terminal on a single compute node.  This is useful for users who want to tweak inputs as they go, or want to feed in live data.  See section 5.4 for how to log into a node.  Once logged in, the user needs to load the Matlab module.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[CBuserCompute ~]$ module load matlab
+</pre></div>
+</div>
+<p>Once the user has added the module, executing `` `` will start matlab interactively.  This normally takes a few moments.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[CBuserCompute ~]$ matlab
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                          &lt; M A T L A B (R) &gt;
+                Copyright 1984-2018 The MathWorks, Inc.
+                 R2018a (9.4.0.813654) 64-bit (glnxa64)
+                           February 23, 2018
+
+
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+
+&gt;&gt; %%-- 06/04/18 01:33:51 PM --%%
+&gt;&gt;
+</pre></div>
+</div>
+<p>Once the Matlab terminal is loaded, the user can execute Matlab functions a usual.  When finished, the user should exit from the Matlab terminal and the compute node.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;&gt; exit
+[CBuserCompute ~]$ exit
+exit
+[CBnetid ~]$
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Noah Castetter
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
