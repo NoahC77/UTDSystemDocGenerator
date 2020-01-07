@@ -113,7 +113,7 @@
 .. |homerectime| replace:: 7 Days
 .. |scratchquota| replace:: None
 .. |scratchmax| replace:: None
-.. |scratchrectime| replace:: SRscratchrectime
+.. |scratchrectime| replace:: ($SRscratchrectime)
 
 
 

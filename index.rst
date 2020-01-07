@@ -3,21 +3,18 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Ganymede's documentation!
+Welcome to SPuppersysName's documentation!
 ==========================================
 
 .. toctree::
    :maxdepth: 1
    :caption: Contents:
 
-   Ganymede-Training-v1.2
-   Connecting-To-Ganymede
-   Moving-Around-Ganymede
-   Ganymede-Space-Constraints
-   Ganymede-Compilers-And-Modules
-   Running-Jobs-On-Ganymede
-   Ganymede-Application-Specific-Instructions
-   Ganymede-Appendices
+   pp
+   poopy
+   one
+   two
+   blah
 
 Indices and tables
 ==================

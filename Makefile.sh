@@ -61,6 +61,7 @@ cd source
 sed -i "s/SPuppersysName/$(echo $SPuppersysName)/g" index.rst
 
 # Changing the names of the rst files to the value of SPuppersysName and making a copy of them
+echo 'Copying BaseRSTs...'
 cp ../BaseRSTs/Connecting-To-SPuppersysName.rst Connecting-To-$(echo $SPuppersysName).rst
 cp ../BaseRSTs/Moving-Around-SPuppersysName.rst Moving-Around-$(echo $SPuppersysName).rst
 cp ../BaseRSTs/Running-Jobs-On-SpuppersysName.rst Running-Jobs-On-$(echo $SPuppersysName).rst
@@ -71,6 +72,7 @@ cp ../BaseRSTs/Appendices.rst $(echo $SPuppersysName)-Appendices.rst
 cp ../BaseRSTs/SPuppersysName-Application-Specific-Instructions.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
 
 # Setting Sphinx handled substitutions
+echo 'Handling Sphinx Substitutions...'
 sed -i "s/SRuppersysName/$(echo $SRuppersysName)/g" Connecting-To-$(echo $SPuppersysName).rst Moving-Around-$(echo $SPuppersysName).rst Running-Jobs-On-$(echo $SPuppersysName).rst $(echo $SPuppersysName)-Compilers-And-Modules.rst $(echo $SPuppersysName)-Training-v1.2.rst $(echo $SPuppersysName)-Space-Constraints.rst $(echo $SPuppersysName)-Appendices.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
 sed -i "s/SRsysName/$(echo $SRsysName)/g" Connecting-To-$(echo $SPuppersysName).rst Moving-Around-$(echo $SPuppersysName).rst Running-Jobs-On-$(echo $SPuppersysName).rst $(echo $SPuppersysName)-Compilers-And-Modules.rst $(echo $SPuppersysName)-Training-v1.2.rst $(echo $SPuppersysName)-Space-Constraints.rst $(echo $SPuppersysName)-Appendices.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
 sed -i "s/SRhostName/$(echo $SRhostName)/g" Connecting-To-$(echo $SPuppersysName).rst Moving-Around-$(echo $SPuppersysName).rst Running-Jobs-On-$(echo $SPuppersysName).rst $(echo $SPuppersysName)-Compilers-And-Modules.rst $(echo $SPuppersysName)-Training-v1.2.rst $(echo $SPuppersysName)-Space-Constraints.rst $(echo $SPuppersysName)-Appendices.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
@@ -91,14 +93,12 @@ sed -i "s/SRhomemax/$(echo $SRhomemax)/g" Connecting-To-$(echo $SPuppersysName).
 sed -i "s/SRhomerectime/$(echo $SRhomerectime)/g" Connecting-To-$(echo $SPuppersysName).rst Moving-Around-$(echo $SPuppersysName).rst Running-Jobs-On-$(echo $SPuppersysName).rst $(echo $SPuppersysName)-Compilers-And-Modules.rst $(echo $SPuppersysName)-Training-v1.2.rst $(echo $SPuppersysName)-Space-Constraints.rst $(echo $SPuppersysName)-Appendices.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
 sed -i "s/SRscratchquota/$(echo $SRscratchquota)/g" Connecting-To-$(echo $SPuppersysName).rst Moving-Around-$(echo $SPuppersysName).rst Running-Jobs-On-$(echo $SPuppersysName).rst $(echo $SPuppersysName)-Compilers-And-Modules.rst $(echo $SPuppersysName)-Training-v1.2.rst $(echo $SPuppersysName)-Space-Constraints.rst $(echo $SPuppersysName)-Appendices.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
 sed -i "s/SRscratchmax/$(echo $SRscratchmax)/g" Connecting-To-$(echo $SPuppersysName).rst Moving-Around-$(echo $SPuppersysName).rst Running-Jobs-On-$(echo $SPuppersysName).rst $(echo $SPuppersysName)-Compilers-And-Modules.rst $(echo $SPuppersysName)-Training-v1.2.rst $(echo $SPuppersysName)-Space-Constraints.rst $(echo $SPuppersysName)-Appendices.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
-sed -i "s/SRscratchrectime/$(echo $SRscratchrectime)/g" Connecting-To-$(echo $SPuppersysName).rst Moving-Around-$(echo $SPuppersysName).rst Running-Jobs-On-$(echo $SPuppersysName).rst $(echo $SPuppersysName)-Compilers-And-Modules.rst $(echo $SPuppersysName)-Training-v1.2.rst $(echo $SPuppersysName)-Space-Constraints.rst $(echo $SPuppersysName)-Appendices.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
-sed -i "s/SRscratchrectime/$(echo $SRscratchrectime)/g" Connecting-To-$(echo $SPuppersysName).rst Moving-Around-$(echo $SPuppersysName).rst Running-Jobs-On-$(echo $SPuppersysName).rst $(echo $SPuppersysName)-Compilers-And-Modules.rst $(echo $SPuppersysName)-Training-v1.2.rst $(echo $SPuppersysName)-Space-Constraints.rst $(echo $SPuppersysName)-Appendices.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
-
+sed -i 's/SRscratchrectime/($SRscratchrectime)/g' Connecting-To-$(echo $SPuppersysName).rst Moving-Around-$(echo $SPuppersysName).rst Running-Jobs-On-$(echo $SPuppersysName).rst $(echo $SPuppersysName)-Compilers-And-Modules.rst $(echo $SPuppersysName)-Training-v1.2.rst $(echo $SPuppersysName)-Space-Constraints.rst $(echo $SPuppersysName)-Appendices.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
 cd ..
 
 # Before generating the new htmls, the old ones are deleted
 cd build
-rm -i *.html
+rm *.html
 cd ..
 
 # Running the sphinx-build command to build the html into the /build directory one level up
@@ -108,7 +108,8 @@ sphinx-build -b html ./source ./build
 cd source
 
 # Deleting rst copies
-rm -i Connecting-To-$(echo $SPuppersysName).rst Moving-Around-$(echo $SPuppersysName).rst Running-Jobs-On-$(echo $SPuppersysName).rst $(echo $SPuppersysName)-Compilers-And-Modules.rst $(echo $SPuppersysName)-Training-v1.2.rst $(echo $SPuppersysName)-Space-Constraints.rst $(echo $SPuppersysName)-Appendices.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
+echo 'Deleting RST copies...'
+rm Connecting-To-$(echo $SPuppersysName).rst Moving-Around-$(echo $SPuppersysName).rst Running-Jobs-On-$(echo $SPuppersysName).rst $(echo $SPuppersysName)-Compilers-And-Modules.rst $(echo $SPuppersysName)-Training-v1.2.rst $(echo $SPuppersysName)-Space-Constraints.rst $(echo $SPuppersysName)-Appendices.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
 
 # Changing SPuppersysname's value in the title back to the variable
 sed -i "s/$(echo $SPuppersysName)/SPuppersysName/g" index.rst
@@ -131,7 +132,6 @@ sed -i "s/CNChapter5.5.1/$(echo $CNChapter551)/g" $(echo $SPuppersysName)-Traini
 sed -i "s/CNChapter5.5.5/$(echo $CNChapter551)/g" $(echo $SPuppersysName)-Training-v1.2.html $(echo $SPuppersysName)-Appendices.html $(echo $SPuppersysName)-Application-Specific-Instructions.html Connecting-To-$(echo $SPuppersysName).html $(echo $SPuppersysName)-Compilers-And-Modules.html $(echo $SPuppersysName)-Space-Constraints.html Moving-Around-$(echo $SPuppersysName).html Running-Jobs-On-$(echo $SPuppersysName).html
 sed -i "s/CNChapter5.5.2/$(echo $CNChapter552)/g" $(echo $SPuppersysName)-Training-v1.2.html $(echo $SPuppersysName)-Appendices.html $(echo $SPuppersysName)-Application-Specific-Instructions.html Connecting-To-$(echo $SPuppersysName).html $(echo $SPuppersysName)-Compilers-And-Modules.html $(echo $SPuppersysName)-Space-Constraints.html Moving-Around-$(echo $SPuppersysName).html Running-Jobs-On-$(echo $SPuppersysName).html
 sed -i "s/CNChapter5.5.3/$(echo $CNChapter553)/g" $(echo $SPuppersysName)-Training-v1.2.html $(echo $SPuppersysName)-Appendices.html $(echo $SPuppersysName)-Application-Specific-Instructions.html Connecting-To-$(echo $SPuppersysName).html $(echo $SPuppersysName)-Compilers-And-Modules.html $(echo $SPuppersysName)-Space-Constraints.html Moving-Around-$(echo $SPuppersysName).html Running-Jobs-On-$(echo $SPuppersysName).html
-echo 'HTML replacements finished.'
 
 
 
