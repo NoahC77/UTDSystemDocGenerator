@@ -4,6 +4,12 @@
 # to generate the html. While much substituion is done by rst and sphinx in this step, sphinx doesn"t
 # substitute many words in special formatting like bold, italics, and code blocks. To fix this
 # problem, this MakeFile substitutes the words within the special formatted protions of the html.
+stringOfRSTNames=' SPuppersysName-Training-v1.2.rst Connecting-To-SPuppersysName.rst Moving-Around-SPuppersysName.rst SPuppersysName-Compilers-And-Modules.rst Running-Jobs-On-SPuppersysName.rst SPuppersysName-Application-Specific-Instructions.rst SPuppersysName-Space-Constraints.rst Appendices.rst'
+replaceAndCopyBaseRSTStatus=' '
+sphinxSubSetupStatus=' '
+arrayOfDerectives=( SRuppersysName SRsysName SRhostName SRnodecpunum SRnodememnum SRcentVer SRmatlabver SRmatlabsitenum SRmatlabdist SRdefcomp SRdefmpi SRadminemail SRmailinglistaddr SRslurmemail SRdebugnodenum SRhomequota SRhomemax SRhomerectime SRscratchquota SRscratchmax SRscratchrectime )
+arrayOfHTMLDerective=( CBnetid CBsysname CBsysname CB4sys CBuserCompute CBuppersysname 'CBChapter5.4' 'CNChapter5.5.1' 'CNChapter5.5.5' 'CNChapter5.5.2' 'CNChapter5.5.3' )
+
 
 # Sets Sphinx handled replacements
 SRuppersysName="Ganymede"
@@ -49,8 +55,56 @@ CNChapter551="compute-6-9-35"
 CNChapter552="compute-6-9-2"
 CNChapter553="compute-7-6-4"
 
+# A function used to set the substitutions sphinx didn't handle ***WARNING***: THIS FUNCTION 
+# ASSUMES IT IS WITHIN THE DIRECTORY /UTDSystemDocGenerator/GanymedeDoc/build MAKE SURE IT 
+# IS THERE.
+nonSphinxSubs () {
 
+   for i; do
 
+	for j in "${arrayOfHTMLDerectives[@]}"; do
+
+	    i="${i// \*\.rst/ \*\.html}"
+	    echo "i = $i"
+                sed -i "s/$j/${!j}/g" $i
+
+	done
+
+   done
+
+}
+
+# A function used to set the sphinx handled substitutions ***WARNING***: THIS FUNCTION ASSUMES IT
+#IS WITHIN THE DIRECTORY /UTDSystemDocGenerator/GanymedeDocs/source MAKE SURE IT IS THERE.
+sphinxSubSetup () {
+
+   for i; do
+        
+	for j in "${arrayOfDerectives[@]}"; do
+		
+            sed -i "s/$j/${!j}/g" $i 
+
+	done
+
+   done
+}
+
+# A function used to replace the names of BaseRST if they contain a replacement directive or just
+#make a new copy of the file in the appropriate directory. ***WARNING***: THIS FUNCTION ASSUMES IT
+#IS WITHIN THE DIRECTORY /UTDSystemDocGenerator/GanymedeDocs/source MAKE SURE IT IS THERE.
+replaceAndCopyBaseRST () {
+  
+
+    local oldNameHold=' ' 
+	
+    for i; do	
+	 oldNameHold=${i}
+	 i="${i//SPuppersysName/${SPuppersysName}}"
+	 cp ../BaseRSTs/${oldNameHold} ${i}
+	 printf " %s" "${i}"
+    done
+
+}
 # Moving to the GanymedeDocs-master subdirectory to change the toctree title then run sphinx-build
 cd GanymedeDocs
 
@@ -60,40 +114,8 @@ cd source
 # Changing the CBuppersysname var to it's value then go out generate the sphinx-build then change it back to the var
 sed -i "s/SPuppersysName/$(echo $SPuppersysName)/g" index.rst
 
-# Changing the names of the rst files to the value of SPuppersysName and making a copy of them
-cp ../BaseRSTs/Connecting-To-SPuppersysName.rst Connecting-To-$(echo $SPuppersysName).rst
-cp ../BaseRSTs/Moving-Around-SPuppersysName.rst Moving-Around-$(echo $SPuppersysName).rst
-cp ../BaseRSTs/Running-Jobs-On-SpuppersysName.rst Running-Jobs-On-$(echo $SPuppersysName).rst
-cp ../BaseRSTs/SPuppersysName-Compilers-And-Modules.rst $(echo $SPuppersysName)-Compilers-And-Modules.rst
-cp ../BaseRSTs/SPuppersysName-Training-v1.2.rst $(echo $SPuppersysName)-Training-v1.2.rst
-cp ../BaseRSTs/SPuppersysName-Space-Constraints.rst $(echo $SPuppersysName)-Space-Constraints.rst
-cp ../BaseRSTs/Appendices.rst $(echo $SPuppersysName)-Appendices.rst
-cp ../BaseRSTs/SPuppersysName-Application-Specific-Instructions.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
-
-# Setting Sphinx handled substitutions
-sed -i "s/SRuppersysName/$(echo $SRuppersysName)/g" Connecting-To-$(echo $SPuppersysName).rst Moving-Around-$(echo $SPuppersysName).rst Running-Jobs-On-$(echo $SPuppersysName).rst $(echo $SPuppersysName)-Compilers-And-Modules.rst $(echo $SPuppersysName)-Training-v1.2.rst $(echo $SPuppersysName)-Space-Constraints.rst $(echo $SPuppersysName)-Appendices.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
-sed -i "s/SRsysName/$(echo $SRsysName)/g" Connecting-To-$(echo $SPuppersysName).rst Moving-Around-$(echo $SPuppersysName).rst Running-Jobs-On-$(echo $SPuppersysName).rst $(echo $SPuppersysName)-Compilers-And-Modules.rst $(echo $SPuppersysName)-Training-v1.2.rst $(echo $SPuppersysName)-Space-Constraints.rst $(echo $SPuppersysName)-Appendices.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
-sed -i "s/SRhostName/$(echo $SRhostName)/g" Connecting-To-$(echo $SPuppersysName).rst Moving-Around-$(echo $SPuppersysName).rst Running-Jobs-On-$(echo $SPuppersysName).rst $(echo $SPuppersysName)-Compilers-And-Modules.rst $(echo $SPuppersysName)-Training-v1.2.rst $(echo $SPuppersysName)-Space-Constraints.rst $(echo $SPuppersysName)-Appendices.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
-sed -i "s/SRnodecpunum/$(echo $SRnodecpunum)/g" Connecting-To-$(echo $SPuppersysName).rst Moving-Around-$(echo $SPuppersysName).rst Running-Jobs-On-$(echo $SPuppersysName).rst $(echo $SPuppersysName)-Compilers-And-Modules.rst $(echo $SPuppersysName)-Training-v1.2.rst $(echo $SPuppersysName)-Space-Constraints.rst $(echo $SPuppersysName)-Appendices.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
-sed -i "s/SRnodememnum/$(echo $SRnodememnum)/g" Connecting-To-$(echo $SPuppersysName).rst Moving-Around-$(echo $SPuppersysName).rst Running-Jobs-On-$(echo $SPuppersysName).rst $(echo $SPuppersysName)-Compilers-And-Modules.rst $(echo $SPuppersysName)-Training-v1.2.rst $(echo $SPuppersysName)-Space-Constraints.rst $(echo $SPuppersysName)-Appendices.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
-sed -i "s/SRcentVer/$(echo $SRcentVer)/g" Connecting-To-$(echo $SPuppersysName).rst Moving-Around-$(echo $SPuppersysName).rst Running-Jobs-On-$(echo $SPuppersysName).rst $(echo $SPuppersysName)-Compilers-And-Modules.rst $(echo $SPuppersysName)-Training-v1.2.rst $(echo $SPuppersysName)-Space-Constraints.rst $(echo $SPuppersysName)-Appendices.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
-sed -i "s/SRmatlabver/$(echo $SRmatlabver)/g" Connecting-To-$(echo $SPuppersysName).rst Moving-Around-$(echo $SPuppersysName).rst Running-Jobs-On-$(echo $SPuppersysName).rst $(echo $SPuppersysName)-Compilers-And-Modules.rst $(echo $SPuppersysName)-Training-v1.2.rst $(echo $SPuppersysName)-Space-Constraints.rst $(echo $SPuppersysName)-Appendices.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
-sed -i "s/SRmatlabsitenum/$(echo $SRmatlabsitenum)/g" Connecting-To-$(echo $SPuppersysName).rst Moving-Around-$(echo $SPuppersysName).rst Running-Jobs-On-$(echo $SPuppersysName).rst $(echo $SPuppersysName)-Compilers-And-Modules.rst $(echo $SPuppersysName)-Training-v1.2.rst $(echo $SPuppersysName)-Space-Constraints.rst $(echo $SPuppersysName)-Appendices.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
-sed -i "s/SRmatlabdist/$(echo $SRmatlabdist)/g" Connecting-To-$(echo $SPuppersysName).rst Moving-Around-$(echo $SPuppersysName).rst Running-Jobs-On-$(echo $SPuppersysName).rst $(echo $SPuppersysName)-Compilers-And-Modules.rst $(echo $SPuppersysName)-Training-v1.2.rst $(echo $SPuppersysName)-Space-Constraints.rst $(echo $SPuppersysName)-Appendices.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
-sed -i "s/SRdefcomp/$(echo $SRdefcomp)/g" Connecting-To-$(echo $SPuppersysName).rst Moving-Around-$(echo $SPuppersysName).rst Running-Jobs-On-$(echo $SPuppersysName).rst $(echo $SPuppersysName)-Compilers-And-Modules.rst $(echo $SPuppersysName)-Training-v1.2.rst $(echo $SPuppersysName)-Space-Constraints.rst $(echo $SPuppersysName)-Appendices.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
-sed -i "s/SRdefmpi/$(echo $SRdefmpi)/g" Connecting-To-$(echo $SPuppersysName).rst Moving-Around-$(echo $SPuppersysName).rst Running-Jobs-On-$(echo $SPuppersysName).rst $(echo $SPuppersysName)-Compilers-And-Modules.rst $(echo $SPuppersysName)-Training-v1.2.rst $(echo $SPuppersysName)-Space-Constraints.rst $(echo $SPuppersysName)-Appendices.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
-sed -i "s/SRadminemail/$(echo $SRadminemail)/g" Connecting-To-$(echo $SPuppersysName).rst Moving-Around-$(echo $SPuppersysName).rst Running-Jobs-On-$(echo $SPuppersysName).rst $(echo $SPuppersysName)-Compilers-And-Modules.rst $(echo $SPuppersysName)-Training-v1.2.rst $(echo $SPuppersysName)-Space-Constraints.rst $(echo $SPuppersysName)-Appendices.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
-sed -i "s/SRmailinglistaddr/$(echo $SRmailinglistaddr)/g" Connecting-To-$(echo $SPuppersysName).rst Moving-Around-$(echo $SPuppersysName).rst Running-Jobs-On-$(echo $SPuppersysName).rst $(echo $SPuppersysName)-Compilers-And-Modules.rst $(echo $SPuppersysName)-Training-v1.2.rst $(echo $SPuppersysName)-Space-Constraints.rst $(echo $SPuppersysName)-Appendices.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
-sed -i "s/SRslurmemail/$(echo $SRslurmemail)/g" Connecting-To-$(echo $SPuppersysName).rst Moving-Around-$(echo $SPuppersysName).rst Running-Jobs-On-$(echo $SPuppersysName).rst $(echo $SPuppersysName)-Compilers-And-Modules.rst $(echo $SPuppersysName)-Training-v1.2.rst $(echo $SPuppersysName)-Space-Constraints.rst $(echo $SPuppersysName)-Appendices.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
-sed -i "s/SRdebugnodenum/$(echo $SRdebugnodenum)/g" Connecting-To-$(echo $SPuppersysName).rst Moving-Around-$(echo $SPuppersysName).rst Running-Jobs-On-$(echo $SPuppersysName).rst $(echo $SPuppersysName)-Compilers-And-Modules.rst $(echo $SPuppersysName)-Training-v1.2.rst $(echo $SPuppersysName)-Space-Constraints.rst $(echo $SPuppersysName)-Appendices.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
-sed -i "s/SRhomequota/$(echo $SRhomequota)/g" Connecting-To-$(echo $SPuppersysName).rst Moving-Around-$(echo $SPuppersysName).rst Running-Jobs-On-$(echo $SPuppersysName).rst $(echo $SPuppersysName)-Compilers-And-Modules.rst $(echo $SPuppersysName)-Training-v1.2.rst $(echo $SPuppersysName)-Space-Constraints.rst $(echo $SPuppersysName)-Appendices.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
-sed -i "s/SRhomemax/$(echo $SRhomemax)/g" Connecting-To-$(echo $SPuppersysName).rst Moving-Around-$(echo $SPuppersysName).rst Running-Jobs-On-$(echo $SPuppersysName).rst $(echo $SPuppersysName)-Compilers-And-Modules.rst $(echo $SPuppersysName)-Training-v1.2.rst $(echo $SPuppersysName)-Space-Constraints.rst $(echo $SPuppersysName)-Appendices.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
-sed -i "s/SRhomerectime/$(echo $SRhomerectime)/g" Connecting-To-$(echo $SPuppersysName).rst Moving-Around-$(echo $SPuppersysName).rst Running-Jobs-On-$(echo $SPuppersysName).rst $(echo $SPuppersysName)-Compilers-And-Modules.rst $(echo $SPuppersysName)-Training-v1.2.rst $(echo $SPuppersysName)-Space-Constraints.rst $(echo $SPuppersysName)-Appendices.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
-sed -i "s/SRscratchquota/$(echo $SRscratchquota)/g" Connecting-To-$(echo $SPuppersysName).rst Moving-Around-$(echo $SPuppersysName).rst Running-Jobs-On-$(echo $SPuppersysName).rst $(echo $SPuppersysName)-Compilers-And-Modules.rst $(echo $SPuppersysName)-Training-v1.2.rst $(echo $SPuppersysName)-Space-Constraints.rst $(echo $SPuppersysName)-Appendices.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
-sed -i "s/SRscratchmax/$(echo $SRscratchmax)/g" Connecting-To-$(echo $SPuppersysName).rst Moving-Around-$(echo $SPuppersysName).rst Running-Jobs-On-$(echo $SPuppersysName).rst $(echo $SPuppersysName)-Compilers-And-Modules.rst $(echo $SPuppersysName)-Training-v1.2.rst $(echo $SPuppersysName)-Space-Constraints.rst $(echo $SPuppersysName)-Appendices.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
-sed -i "s/SRscratchrectime/$(echo $SRscratchrectime)/g" Connecting-To-$(echo $SPuppersysName).rst Moving-Around-$(echo $SPuppersysName).rst Running-Jobs-On-$(echo $SPuppersysName).rst $(echo $SPuppersysName)-Compilers-And-Modules.rst $(echo $SPuppersysName)-Training-v1.2.rst $(echo $SPuppersysName)-Space-Constraints.rst $(echo $SPuppersysName)-Appendices.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
-sed -i "s/SRscratchrectime/$(echo $SRscratchrectime)/g" Connecting-To-$(echo $SPuppersysName).rst Moving-Around-$(echo $SPuppersysName).rst Running-Jobs-On-$(echo $SPuppersysName).rst $(echo $SPuppersysName)-Compilers-And-Modules.rst $(echo $SPuppersysName)-Training-v1.2.rst $(echo $SPuppersysName)-Space-Constraints.rst $(echo $SPuppersysName)-Appendices.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
-
+replaceAndCopyBaseRSTStatus=$(replaceAndCopyBaseRST ${stringOfRSTNames})
+sphinxSubSetupStatus=$(sphinxSubSetup${replaceAndCopyBaseRSTStatus})
 cd ..
 
 # Before generating the new htmls, the old ones are deleted
@@ -108,7 +130,9 @@ sphinx-build -b html ./source ./build
 cd source
 
 # Deleting rst copies
-rm -i Connecting-To-$(echo $SPuppersysName).rst Moving-Around-$(echo $SPuppersysName).rst Running-Jobs-On-$(echo $SPuppersysName).rst $(echo $SPuppersysName)-Compilers-And-Modules.rst $(echo $SPuppersysName)-Training-v1.2.rst $(echo $SPuppersysName)-Space-Constraints.rst $(echo $SPuppersysName)-Appendices.rst $(echo $SPuppersysName)-Application-Specific-Instructions.rst
+echo 'Deleting RST copies...'
+replaceAndCopyBaseRSTStatus=${replaceAndCopyBaseRSTStatus:1}
+rm ${replaceAndCopyBaseRSTStatus}
 
 # Changing SPuppersysname's value in the title back to the variable
 sed -i "s/$(echo $SPuppersysName)/SPuppersysName/g" index.rst
@@ -119,18 +143,7 @@ cd ..
 # Going back to where the main html is stored and replacing the variables (now in build)
 cd build
 echo 'Performing HTML replacements...'
-sed -i "s/CBnetid/$(echo $CBnetId)/g" $(echo $SPuppersysName)-Training-v1.2.html $(echo $SPuppersysName)-Appendices.html $(echo $SPuppersysName)-Application-Specific-Instructions.html Connecting-To-$(echo $SPuppersysName).html $(echo $SPuppersysName)-Compilers-And-Modules.html $(echo $SPuppersysName)-Space-Constraints.html Moving-Around-$(echo $SPuppersysName).html Running-Jobs-On-$(echo $SPuppersysName).html
-sed -i "s/CBsysname/$(echo $CBsysName)/g" $(echo $SPuppersysName)-Training-v1.2.html $(echo $SPuppersysName)-Appendices.html $(echo $SPuppersysName)-Application-Specific-Instructions.html Connecting-To-$(echo $SPuppersysName).html $(echo $SPuppersysName)-Compilers-And-Modules.html $(echo $SPuppersysName)-Space-Constraints.html Moving-Around-$(echo $SPuppersysName).html Running-Jobs-On-$(echo $SPuppersysName).html
-# The one below  catches weird cases where html puts spans between he bracket and the variable name
-sed -i "s/CBsysname/$(echo $CBsysName)/g" $(echo $SPuppersysName)-Training-v1.2.html $(echo $SPuppersysName)-Appendices.html $(echo $SPuppersysName)-Application-Specific-Instructions.html Connecting-To-$(echo $SPuppersysName).html $(echo $SPuppersysName)-Compilers-And-Modules.html $(echo $SPuppersysName)-Space-Constraints.html Moving-Around-$(echo $SPuppersysName).html Running-Jobs-On-$(echo $SPuppersysName).html
-sed -i "s/CB4sys/$(echo $CBfourLetSysName)/g" $(echo $SPuppersysName)-Training-v1.2.html $(echo $SPuppersysName)-Appendices.html $(echo $SPuppersysName)-Application-Specific-Instructions.html Connecting-To-$(echo $SPuppersysName).html $(echo $SPuppersysName)-Compilers-And-Modules.html $(echo $SPuppersysName)-Space-Constraints.html Moving-Around-$(echo $SPuppersysName).html Running-Jobs-On-$(echo $SPuppersysName).html
-sed -i "s/CBuserCompute/$(echo $CBuserCompute)/g" $(echo $SPuppersysName)-Training-v1.2.html $(echo $SPuppersysName)-Appendices.html $(echo $SPuppersysName)-Application-Specific-Instructions.html Connecting-To-$(echo $SPuppersysName).html $(echo $SPuppersysName)-Compilers-And-Modules.html $(echo $SPuppersysName)-Space-Constraints.html Moving-Around-$(echo $SPuppersysName).html Running-Jobs-On-$(echo $SPuppersysName).html
-sed -i "s/CBuppersysname/$(echo $SPuppersysName)/g" $(echo $SPuppersysName)-Training-v1.2.html $(echo $SPuppersysName)-Appendices.html $(echo $SPuppersysName)-Application-Specific-Instructions.html Connecting-To-$(echo $SPuppersysName).html $(echo $SPuppersysName)-Compilers-And-Modules.html $(echo $SPuppersysName)-Space-Constraints.html Moving-Around-$(echo $SPuppersysName).html Running-Jobs-On-$(echo $SPuppersysName).html
-sed -i "s/CNChapter5.4/$(echo $CNChapter54)/g" $(echo $SPuppersysName)-Training-v1.2.html $(echo $SPuppersysName)-Appendices.html $(echo $SPuppersysName)-Application-Specific-Instructions.html Connecting-To-$(echo $SPuppersysName).html $(echo $SPuppersysName)-Compilers-And-Modules.html $(echo $SPuppersysName)-Space-Constraints.html Moving-Around-$(echo $SPuppersysName).html Running-Jobs-On-$(echo $SPuppersysName).html
-sed -i "s/CNChapter5.5.1/$(echo $CNChapter551)/g" $(echo $SPuppersysName)-Training-v1.2.html $(echo $SPuppersysName)-Appendices.html $(echo $SPuppersysName)-Application-Specific-Instructions.html Connecting-To-$(echo $SPuppersysName).html $(echo $SPuppersysName)-Compilers-And-Modules.html $(echo $SPuppersysName)-Space-Constraints.html Moving-Around-$(echo $SPuppersysName).html Running-Jobs-On-$(echo $SPuppersysName).html
-sed -i "s/CNChapter5.5.5/$(echo $CNChapter551)/g" $(echo $SPuppersysName)-Training-v1.2.html $(echo $SPuppersysName)-Appendices.html $(echo $SPuppersysName)-Application-Specific-Instructions.html Connecting-To-$(echo $SPuppersysName).html $(echo $SPuppersysName)-Compilers-And-Modules.html $(echo $SPuppersysName)-Space-Constraints.html Moving-Around-$(echo $SPuppersysName).html Running-Jobs-On-$(echo $SPuppersysName).html
-sed -i "s/CNChapter5.5.2/$(echo $CNChapter552)/g" $(echo $SPuppersysName)-Training-v1.2.html $(echo $SPuppersysName)-Appendices.html $(echo $SPuppersysName)-Application-Specific-Instructions.html Connecting-To-$(echo $SPuppersysName).html $(echo $SPuppersysName)-Compilers-And-Modules.html $(echo $SPuppersysName)-Space-Constraints.html Moving-Around-$(echo $SPuppersysName).html Running-Jobs-On-$(echo $SPuppersysName).html
-sed -i "s/CNChapter5.5.3/$(echo $CNChapter553)/g" $(echo $SPuppersysName)-Training-v1.2.html $(echo $SPuppersysName)-Appendices.html $(echo $SPuppersysName)-Application-Specific-Instructions.html Connecting-To-$(echo $SPuppersysName).html $(echo $SPuppersysName)-Compilers-And-Modules.html $(echo $SPuppersysName)-Space-Constraints.html Moving-Around-$(echo $SPuppersysName).html Running-Jobs-On-$(echo $SPuppersysName).html
+sphinxSubSetupSats=$(nonSphinxSubs ${stringOfRSTNames})
 echo 'HTML replacements finished.'
 
 

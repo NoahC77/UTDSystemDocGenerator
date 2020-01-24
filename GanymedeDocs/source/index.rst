@@ -17,7 +17,7 @@ Welcome to SPuppersysName's documentation!
    SPuppersysName-Compilers-And-Modules
    Running-Jobs-On-SPuppersysName
    SPuppersysName-Application-Specific-Instructions
-   SPuppersysName-Appendices
+   Appendices
 
 Indices and tables
 ==================

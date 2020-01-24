@@ -84,37 +84,37 @@
    
 .. systemName should just replace mentions of the system's name not including things like domain
 .. or user names in code blocks that are upper case of course
-.. |systemName| replace:: SRuppersysName
+.. |systemName| replace:: Ganymede
 
 .. systemNameLower should just replace mentions of the system's name that are lower case, not including
 .. things like domain or user names in code blocks
-.. |systemNameLower| replace:: SRsysName
+.. |systemNameLower| replace:: ganymede
 .. 
-.. |hostName| replace:: SRhostName
+.. |hostName| replace:: @ganymede.utdallas.edu
 
-.. |nodecpunum| replace:: SRnodecpunum
-.. |nodememnum| replace:: SRnodememnum
-.. |centVer| replace:: SRcentVer
+.. |nodecpunum| replace:: 4008
+.. |nodememnum| replace:: 14 TB
+.. |centVer| replace:: 7.5
 
-.. |matlabver| replace:: SRmatlabver
-.. |matlabsitenum| replace:: SRmatlabsitenum
-.. |matlabdist| replace:: SRmatlabdist
+.. |matlabver| replace:: r2018a
+.. |matlabsitenum| replace:: 12,000
+.. |matlabdist| replace:: 32
 
-.. |defcomp| replace:: SRdefcomp
-.. |defmpi| replace:: SRdefmpi
+.. |defcomp| replace:: **Intel**
+.. |defmpi| replace:: **mvapich**
 
 .. admin params
-.. |adminemail| replace:: SRadminemail
-.. |mailinglistaddr| replace:: SRmailinglistaddr
-.. |slurmemail| replace:: SRslurmemail
-.. |debugnodenum| replace:: SRdebugnodenum
+.. |adminemail| replace:: ganymedeadmins@utdallas.edu
+.. |mailinglistaddr| replace:: ganymedeusers@lists.utdallas.edu
+.. |slurmemail| replace:: slurm@ganymede.utdallas.edu
+.. |debugnodenum| replace:: 2
 
 .. space limits
-.. |homequota| replace:: SRhomequota
-.. |homemax| replace:: SRhomemax
-.. |homerectime| replace:: SRhomerectime
-.. |scratchquota| replace:: SRscratchquota
-.. |scratchmax| replace:: SRscratchmax
+.. |homequota| replace:: 20 GB
+.. |homemax| replace:: 30 GB
+.. |homerectime| replace:: 7 Days
+.. |scratchquota| replace:: None
+.. |scratchmax| replace:: None
 .. |scratchrectime| replace:: SRscratchrectime
 
 Appendices
