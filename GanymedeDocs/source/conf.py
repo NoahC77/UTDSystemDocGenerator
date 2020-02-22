@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'UTDallas HPC Cluster Users Guide'
-copyright = '2019, Noah Castetter'
+copyright = '2020, Noah Castetter'
 author = 'Noah Castetter'
 
 # The full version, including alpha/beta/rc tags
