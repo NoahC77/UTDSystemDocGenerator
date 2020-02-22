@@ -14,3 +14,8 @@ The [Read the docs Sphinx Theme] (https://sphinx-rtd-theme.readthedocs.io/en/sta
 
 ## Usage
 To use the UTDSystemDocGenerator: [the Sphinx Python Documentation Generator] (http://www.sphinx-doc.org/en/master/usage/installation.html), [the Read the Docs Sphinx Theme] (https://sphinx-rtd-theme.readthedocs.io/en/stable/), and a bash to run the Makefiles is necessary. This generator was developed using Sphinx 2.3.0 and Python 3.6.6 within Git Bash on Windows 10. Earlier versions of Sphinx have bugs which may affect the search feature within the Read the Docs Sphinx theme. By default, when the root Makefile is run, the documenatation for UTD's Ganymede system is generated. In order to generate the documentation for a different system specify new values for the variables defined at the top of the root Makefile.
+
+## Prerequisites
+
+- Read the Docs Sphinx theme
+- Guzzle Sphinx theme
