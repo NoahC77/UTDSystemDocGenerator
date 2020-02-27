@@ -157,6 +157,119 @@ In addition to the attributes listed above, there are space considerations that 
 
 .. [*] While the petabyte storage device is not metered, the scratch space should be cleaned up when a project is finished to ensure that there is enough room for others interested in using the space.
 
+3.2.1 - Visualizing your scratch space usage
+--------------------------------------------
+
+This section was heavily inspired/copied from [here]_.
+
+We now have a utility which will allow you to visualize your scratch
+space usage. The first step in using this tool can be time-consuming and
+will cause heavy filesystem usage so please do so sparingly.
+
+The command used to generate this information is called **agedu** and
+you can view the man page by running ``man agedu``.
+
+The first step is to create the index file::
+
+  cd $HOME/scratch
+  agedu -s $HOME/scratch
+
+.. note:: If you have a large number of files in your scratch directory,
+   please use the following instead::
+
+     ionice -c3 nice -n 19 agedu -s $HOME/scratch
+
+This will create an inventory of your scratch directory. It will create
+a file agedu.dat. This can take several minutes depending on the number
+of files you have in scratch.
+
+Please delete your inventory file, $HOME/scratch/adedu.dat, after you
+are done with it. These files can be large and become useless once you
+have modified your directory. The file is binary and can be used as
+discussed below.
+
+Once the inventory is created there are many options for displaying the
+data. You can:
+
+- Filter by age
+- Create a text file report
+- Create a static HTML page that can be viewed offline
+- Create a navigable web page that can show subdirectories
+
+Here are some examples of generating a text report filtering by age. The
+first column is the amount of data in kilobytes in the given directory
+of that age or older.
+
+.. [here] http://geco.mines.edu/prototype/How_do_I_see_scratch_usage/
+
+3.2.1.1 - Find data over 2 years old
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+  agedu -a 2y -f $HOME/scratch/agedu.dat -t $HOME/scratch
+
+3.2.1.2 - Find data over 1 year old
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+  agedu -a 1y -f $HOME/scratch/agedu.dat -t $HOME/scratch
+
+3.2.1.3 - Find data over 1 month old
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+  agedu -a 1m -f $HOME/scratch/agedu.dat -t $HOME/scratch
+
+3.2.1.4 - Find data over 9 months old in subdirectory foo
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+  agedu -a 9m -f $HOME/scratch/agedu.dat -t $HOME/scratch/foo
+
+3.2.1.5 - Create a static web page for offline viewing
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+  agedu -a 1y -f $HOME/scratch/agedu.dat -H $HOME/scratch > agedu.html
+
+You can then copy the ``agedu.html`` file to your local machine for
+viewing. This will give you a static top level view of your directory
+structure.
+
+3.2.1.6 - Create a navigable web page
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Maybe the most useful option is to create a navigable web page that
+allows you to dive into subdirectories. When the page is created you
+can view your directory as a tree structure and navigate to see the size
+and ages of directories and files.
+
+The following needs to be run on a machine with a graphical interface so
+you will be able to view the results via a web browser. You can use a
+graphical login node--x2go.ganymede.utdallas.edu for example--to run
+this command and browse the results.
+
+::
+
+  agedu -a 2y -f $HOME/scratch/agedu.dat -w --address localhost --auth basic
+
+This command will block until you do a Control-C. The command shows a
+user name: agedu, a password and a URL. Agedu actually starts a mini
+web server. It will display your data via the given URL. You will need
+to enter the requested username and password.
+
+.. note:: The navigable web page is not updated automatically if you
+   delete files. In order to update the web page, you will need to
+   regenerate your ``agedu.dat`` file.
+
+.. important:: Please remember to delete your inventory file
+   ``$HOME/scratch/agedu.dat`` when you are finished.
+
 
 3.3 - Checking Available Space
 ******************************
